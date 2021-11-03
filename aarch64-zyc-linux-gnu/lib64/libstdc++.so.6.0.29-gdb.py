@@ -19,8 +19,8 @@ import gdb
 import os
 import os.path
 
-pythondir = '/__w/gcc-builder/gcc-builder/aarch64-zyc-linux-gnu/share/gcc-11.2.1/python'
-libdir = '/__w/gcc-builder/gcc-builder/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/lib/../lib64'
+pythondir = '/drone/src/aarch64-zyc-linux-gnu/share/gcc-11.2.1/python'
+libdir = '/drone/src/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/lib/../lib64'
 
 # This file might be loaded when there is no current objfile.  This
 # can happen if the user loads it manually.  In this case we don't

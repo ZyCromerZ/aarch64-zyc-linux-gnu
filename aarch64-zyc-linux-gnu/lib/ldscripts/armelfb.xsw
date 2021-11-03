@@ -7,7 +7,7 @@ OUTPUT_FORMAT("elf32-bigarm", "elf32-bigarm",
 	      "elf32-littlearm")
 OUTPUT_ARCH(arm)
 ENTRY(_start)
-SEARCH_DIR("/__w/gcc-builder/gcc-builder/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/lib");
+SEARCH_DIR("/drone/src/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/lib");
 SECTIONS
 {
   /* Read-only sections, merged into text segment: */
