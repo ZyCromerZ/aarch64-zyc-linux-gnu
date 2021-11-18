@@ -7,7 +7,7 @@ OUTPUT_FORMAT("elf32-littleaarch64", "elf32-bigaarch64",
 	      "elf32-littleaarch64")
 OUTPUT_ARCH(aarch64:ilp32)
 ENTRY(_start)
-SEARCH_DIR("/drone/src/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/libilp32"); SEARCH_DIR("/drone/src/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/lib");
+SEARCH_DIR("/__w/gcc-builder/gcc-builder/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/libilp32"); SEARCH_DIR("/__w/gcc-builder/gcc-builder/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/lib");
 SECTIONS
 {
   /* Read-only sections, merged into text segment: */

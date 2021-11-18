@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "11.2.1 20211116")
+(!version  "11.2.1 20211118")
 (!srcdir  "../../gcc/gcc")
 (!languages 11 ada brig c cp d fortran go jit lto objc objcp)
 (!fileslist 225
@@ -29181,7 +29181,7 @@
   nil 0 nil nil )
  
  (!type struct 2202 nil  gc_used "module_hasher"
-  (!srcfileloc  "fortran/trans-decl.c" 5183)
+  (!srcfileloc  "fortran/trans-decl.c" 5161)
   (!fields 0 )
   nil 32 nil nil )
  
@@ -29190,11 +29190,11 @@
    (!type already_seen 2203)
   )
   gc_pointed_to "hash_table<module_hasher>"
-  (!srcfileloc  "fortran/trans-decl.c" 5183)
+  (!srcfileloc  "fortran/trans-decl.c" 5161)
   (!fields 1 
    (!pair  "module_hasher"
     (!type already_seen 2202)
-    (!srcfileloc  "fortran/trans-decl.c" 5183)
+    (!srcfileloc  "fortran/trans-decl.c" 5161)
     nil )
   )
  )
@@ -29970,11 +29970,11 @@
   nil )
  (!pair  "module_hasher"
   (!type already_seen 2202)
-  (!srcfileloc  "fortran/trans-decl.c" 5183)
+  (!srcfileloc  "fortran/trans-decl.c" 5161)
   nil )
  (!pair  "hash_table<module_hasher>"
   (!type already_seen 2203)
-  (!srcfileloc  "fortran/trans-decl.c" 5183)
+  (!srcfileloc  "fortran/trans-decl.c" 5161)
   nil )
  (!pair  "tree_frame_info"
   (!type already_seen 650)
@@ -31184,7 +31184,7 @@
   nil )
  (!pair  "aarch64_cc"
   (!type already_seen 2)
-  (!srcfileloc  "config/aarch64/aarch64.c" 2155)
+  (!srcfileloc  "config/aarch64/aarch64.c" 2233)
   nil )
  (!pair  "omp_declare_variant_alt_hasher"
   (!type already_seen 1598)
@@ -34235,7 +34235,7 @@
   (!type array 2292 nil  gc_used "2" 
    (!type already_seen 23)
   )
-  (!srcfileloc  "fortran/trans-stmt.c" 3243)
+  (!srcfileloc  "fortran/trans-stmt.c" 3263)
   nil )
  (!pair  "dt_parm"
   (!type already_seen 23)
@@ -34267,27 +34267,27 @@
   nil )
  (!pair  "module_htab"
   (!type already_seen 2204)
-  (!srcfileloc  "fortran/trans-decl.c" 5183)
+  (!srcfileloc  "fortran/trans-decl.c" 5161)
   nil )
  (!pair  "saved_local_decls"
   (!type already_seen 23)
-  (!srcfileloc  "fortran/trans-decl.c" 69)
+  (!srcfileloc  "fortran/trans-decl.c" 68)
   nil )
  (!pair  "saved_parent_function_decls"
   (!type already_seen 23)
-  (!srcfileloc  "fortran/trans-decl.c" 65)
+  (!srcfileloc  "fortran/trans-decl.c" 64)
   nil )
  (!pair  "saved_function_decls"
   (!type already_seen 23)
-  (!srcfileloc  "fortran/trans-decl.c" 64)
+  (!srcfileloc  "fortran/trans-decl.c" 63)
   nil )
  (!pair  "parent_fake_result_decl"
   (!type already_seen 23)
-  (!srcfileloc  "fortran/trans-decl.c" 59)
+  (!srcfileloc  "fortran/trans-decl.c" 58)
   nil )
  (!pair  "current_fake_result_decl"
   (!type already_seen 23)
-  (!srcfileloc  "fortran/trans-decl.c" 58)
+  (!srcfileloc  "fortran/trans-decl.c" 57)
   nil )
  (!pair  "global_binding_level"
   (!type already_seen 431)
@@ -35526,25 +35526,25 @@
   nil )
  (!pair  "aarch64_sls_shared_thunks_needed"
   (!type already_seen 2)
-  (!srcfileloc  "config/aarch64/aarch64.c" 25616)
+  (!srcfileloc  "config/aarch64/aarch64.c" 25694)
   nil )
  (!pair  "aarch64_sls_shared_thunks"
   (!type array 2328 nil  gc_used "30" 
    (!type already_seen 23)
   )
-  (!srcfileloc  "config/aarch64/aarch64.c" 25615)
+  (!srcfileloc  "config/aarch64/aarch64.c" 25693)
   nil )
  (!pair  "va_list_type"
   (!type already_seen 23)
-  (!srcfileloc  "config/aarch64/aarch64.c" 18333)
+  (!srcfileloc  "config/aarch64/aarch64.c" 18411)
   nil )
  (!pair  "aarch64_previous_fndecl"
   (!type already_seen 23)
-  (!srcfileloc  "config/aarch64/aarch64.c" 17315)
+  (!srcfileloc  "config/aarch64/aarch64.c" 17393)
   nil )
  (!pair  "tls_get_addr_libfunc"
   (!type already_seen 100)
-  (!srcfileloc  "config/aarch64/aarch64.c" 3590)
+  (!srcfileloc  "config/aarch64/aarch64.c" 3668)
   nil )
  (!pair  "stack_chk_fail_decl"
   (!type already_seen 23)

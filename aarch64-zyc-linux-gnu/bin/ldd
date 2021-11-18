@@ -24,9 +24,9 @@
 
 # We should be able to find the translation right at the beginning.
 TEXTDOMAIN=libc
-TEXTDOMAINDIR=/drone/src/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/share/locale
+TEXTDOMAINDIR=/__w/gcc-builder/gcc-builder/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/share/locale
 
-RTLDLIST=/drone/src/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/lib/ld-linux-aarch64.so.1
+RTLDLIST=/__w/gcc-builder/gcc-builder/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/lib/ld-linux-aarch64.so.1
 warn=
 bind_now=
 verbose=
