@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/__w/gcc-builder/gcc-builder/aarch64-zyc-linux-gnu/libexec/gcc/aarch64-zyc-linux-gnu/11.2.1'
+libdir='/drone/src/aarch64-zyc-linux-gnu/libexec/gcc/aarch64-zyc-linux-gnu/11.2.1'
