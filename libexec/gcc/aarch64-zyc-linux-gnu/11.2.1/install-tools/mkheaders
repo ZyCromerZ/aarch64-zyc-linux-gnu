@@ -53,7 +53,7 @@ if [ x$1 != x ] ; then
   prefix=$1
   shift
 else
-  prefix=/drone/src/aarch64-zyc-linux-gnu
+  prefix=/__w/gcc-builder/gcc-builder/aarch64-zyc-linux-gnu
 fi
 
 # Allow for alternate isysroot in which to find headers
