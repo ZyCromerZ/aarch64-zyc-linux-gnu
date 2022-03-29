@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "11.2.1 20220328")
+(!version  "11.2.1 20220329")
 (!srcdir  "../../gcc/gcc")
 (!languages 11 ada brig c cp d fortran go jit lto objc objcp)
 (!fileslist 225
@@ -26984,7 +26984,7 @@
    (!type already_seen 1942)
   )
   gc_pointed_to "tinst_level"
-  (!srcfileloc  "cp/pt.c" 9484)
+  (!srcfileloc  "cp/pt.c" 9506)
   (!fields 8 
    (!pair  "next"
     (!type already_seen 1943)
@@ -28853,7 +28853,7 @@
    (!type already_seen 2148)
   )
   gc_pointed_to "pending_template"
-  (!srcfileloc  "cp/pt.c" 9493)
+  (!srcfileloc  "cp/pt.c" 9515)
   (!fields 2 
    (!pair  "next"
     (!type already_seen 2149)
@@ -28925,15 +28925,15 @@
    (!type already_seen 2161)
   )
   gc_pointed_to "hash_map<tree,tree_pair_p>"
-  (!srcfileloc  "cp/pt.c" 29232)
+  (!srcfileloc  "cp/pt.c" 29261)
   (!fields 2 
    (!pair  "tree_pair_p"
     (!type already_seen 532)
-    (!srcfileloc  "cp/pt.c" 29232)
+    (!srcfileloc  "cp/pt.c" 29261)
     nil )
    (!pair  "tree"
     (!type already_seen 23)
-    (!srcfileloc  "cp/pt.c" 29232)
+    (!srcfileloc  "cp/pt.c" 29261)
     nil )
   )
  )
@@ -30066,15 +30066,15 @@
   nil )
  (!pair  "hash_map<tree,tree_pair_p>"
   (!type already_seen 2161)
-  (!srcfileloc  "cp/pt.c" 29232)
+  (!srcfileloc  "cp/pt.c" 29261)
   nil )
  (!pair  "pending_template"
   (!type already_seen 2148)
-  (!srcfileloc  "cp/pt.c" 9493)
+  (!srcfileloc  "cp/pt.c" 9515)
   nil )
  (!pair  "tinst_level"
   (!type already_seen 1942)
-  (!srcfileloc  "cp/pt.c" 9484)
+  (!srcfileloc  "cp/pt.c" 9506)
   nil )
  (!pair  "spec_hash_table"
   (!type already_seen 2151)
@@ -34427,53 +34427,53 @@
   nil )
  (!pair  "dguide_cache"
   (!type already_seen 2162)
-  (!srcfileloc  "cp/pt.c" 29232)
+  (!srcfileloc  "cp/pt.c" 29261)
   (!options 
    (!option deletable string  "")
   )
  )
  (!pair  "explicit_specifier_map"
   (!type already_seen 926)
-  (!srcfileloc  "cp/pt.c" 13802)
+  (!srcfileloc  "cp/pt.c" 13824)
   (!options 
    (!option cache string  "")
   )
  )
  (!pair  "defarg_inst"
   (!type already_seen 1498)
-  (!srcfileloc  "cp/pt.c" 13665)
+  (!srcfileloc  "cp/pt.c" 13687)
   (!options 
    (!option cache string  "")
   )
  )
  (!pair  "last_error_tinst_level"
   (!type already_seen 1943)
-  (!srcfileloc  "cp/pt.c" 10927)
+  (!srcfileloc  "cp/pt.c" 10949)
   nil )
  (!pair  "pending_template_freelist_head"
   (!type already_seen 2149)
-  (!srcfileloc  "cp/pt.c" 9493)
+  (!srcfileloc  "cp/pt.c" 9515)
   (!options 
    (!option deletable string  "")
   )
  )
  (!pair  "tinst_level_freelist_head"
   (!type already_seen 1943)
-  (!srcfileloc  "cp/pt.c" 9484)
+  (!srcfileloc  "cp/pt.c" 9506)
   (!options 
    (!option deletable string  "")
   )
  )
  (!pair  "tree_list_freelist_head"
   (!type already_seen 23)
-  (!srcfileloc  "cp/pt.c" 9475)
+  (!srcfileloc  "cp/pt.c" 9497)
   (!options 
    (!option deletable string  "")
   )
  )
  (!pair  "defaulted_ttp_cache"
   (!type already_seen 392)
-  (!srcfileloc  "cp/pt.c" 7787)
+  (!srcfileloc  "cp/pt.c" 7789)
   (!options 
    (!option deletable string  "")
   )
@@ -34531,14 +34531,14 @@
  )
  (!pair  "free_saved_scope"
   (!type already_seen 1923)
-  (!srcfileloc  "cp/name-lookup.c" 8390)
+  (!srcfileloc  "cp/name-lookup.c" 8393)
   (!options 
    (!option deletable string  "")
   )
  )
  (!pair  "free_binding_level"
   (!type already_seen 82)
-  (!srcfileloc  "cp/name-lookup.c" 4258)
+  (!srcfileloc  "cp/name-lookup.c" 4261)
   (!options 
    (!option deletable string  "")
   )
@@ -34700,11 +34700,11 @@
   nil )
  (!pair  "start_cleanup_cnt"
   (!type already_seen 2)
-  (!srcfileloc  "cp/decl.c" 9059)
+  (!srcfileloc  "cp/decl.c" 9063)
   nil )
  (!pair  "decomp_type_table"
   (!type already_seen 926)
-  (!srcfileloc  "cp/decl.c" 8512)
+  (!srcfileloc  "cp/decl.c" 8516)
   (!options 
    (!option cache string  "")
   )
@@ -34918,7 +34918,7 @@
  )
  (!pair  "cv_cache"
   (!type already_seen 392)
-  (!srcfileloc  "cp/constexpr.c" 7524)
+  (!srcfileloc  "cp/constexpr.c" 7531)
   (!options 
    (!option deletable string  "")
   )
