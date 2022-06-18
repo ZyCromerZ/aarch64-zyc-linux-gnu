@@ -34,7 +34,7 @@
 #define _GLIBCXX_RELEASE 13
 
 // The datestamp of the C++ library in compressed ISO date format.
-#define __GLIBCXX__ 20220520
+#define __GLIBCXX__ 20220618
 
 // Macros for various attributes.
 //   _GLIBCXX_PURE
@@ -1796,7 +1796,7 @@ namespace std
 
 /* Define if ISO/IEC TR 24733 decimal floating point types are supported on
    this host. */
-/* #undef _GLIBCXX_USE_DECIMAL_FLOAT */
+#define _GLIBCXX_USE_DECIMAL_FLOAT 1
 
 /* Define if /dev/random and /dev/urandom are available for
    std::random_device. */
