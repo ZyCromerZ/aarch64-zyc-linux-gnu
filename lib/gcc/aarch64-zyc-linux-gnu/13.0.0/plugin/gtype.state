@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "13.0.0 20220704 (experimental)")
+(!version  "13.0.0 20220705 (experimental)")
 (!srcdir  "../../gcc/gcc")
 (!languages 10 ada c cp d fortran go jit lto objc objcp)
 (!fileslist 229 0
@@ -20494,13 +20494,13 @@
      (!type user_struct 1129 
       (!type already_seen 1128)
       gc_pointed_to "int_range<1>"
-      (!srcfileloc  "value-range.h" 301)
+      (!srcfileloc  "value-range.h" 309)
       (!fields 1 
        (!pair  "1"
         (!type undefined 1130 nil  gc_unused "1"
-         (!srcfileloc  "value-range.h" 301)
+         (!srcfileloc  "value-range.h" 309)
         )
-        (!srcfileloc  "value-range.h" 301)
+        (!srcfileloc  "value-range.h" 309)
         nil )
       )
      )
@@ -22714,23 +22714,23 @@
   nil 0 nil nil )
  
  (!type struct 1355 nil  gc_pointed_to "inline_entry_data"
-  (!srcfileloc  "dwarf2out.cc" 24266)
+  (!srcfileloc  "dwarf2out.cc" 24269)
   (!fields 4 
    (!pair  "block"
     (!type already_seen 23)
-    (!srcfileloc  "dwarf2out.cc" 24258)
+    (!srcfileloc  "dwarf2out.cc" 24261)
     nil )
    (!pair  "label_pfx"
     (!type already_seen 11)
-    (!srcfileloc  "dwarf2out.cc" 24261)
+    (!srcfileloc  "dwarf2out.cc" 24264)
     nil )
    (!pair  "label_num"
     (!type already_seen 2)
-    (!srcfileloc  "dwarf2out.cc" 24262)
+    (!srcfileloc  "dwarf2out.cc" 24265)
     nil )
    (!pair  "view"
     (!type already_seen 2)
-    (!srcfileloc  "dwarf2out.cc" 24265)
+    (!srcfileloc  "dwarf2out.cc" 24268)
     nil )
   )
   (!options 
@@ -22739,7 +22739,7 @@
   1023 nil nil )
  
  (!type struct 1356 nil  gc_used "inline_entry_data_hasher"
-  (!srcfileloc  "dwarf2out.cc" 24292)
+  (!srcfileloc  "dwarf2out.cc" 24295)
   (!fields 0 )
   nil 1023 nil nil )
  
@@ -22748,26 +22748,26 @@
    (!type already_seen 1357)
   )
   gc_pointed_to "hash_table<inline_entry_data_hasher>"
-  (!srcfileloc  "dwarf2out.cc" 24292)
+  (!srcfileloc  "dwarf2out.cc" 24295)
   (!fields 1 
    (!pair  "inline_entry_data_hasher"
     (!type already_seen 1356)
-    (!srcfileloc  "dwarf2out.cc" 24292)
+    (!srcfileloc  "dwarf2out.cc" 24295)
     nil )
   )
  )
  
  (!type struct 1359 nil  gc_unused "macinfo_entry_hasher"
-  (!srcfileloc  "dwarf2out.cc" 28846)
+  (!srcfileloc  "dwarf2out.cc" 28849)
   (!fields 0 )
   nil 1023 nil nil )
  
  (!type user_struct 1360 nil  gc_unused "hash_table<macinfo_entry_hasher>"
-  (!srcfileloc  "dwarf2out.cc" 28846)
+  (!srcfileloc  "dwarf2out.cc" 28849)
   (!fields 1 
    (!pair  "macinfo_entry_hasher"
     (!type already_seen 1359)
-    (!srcfileloc  "dwarf2out.cc" 28846)
+    (!srcfileloc  "dwarf2out.cc" 28849)
     nil )
   )
  )
@@ -22777,16 +22777,16 @@
   nil 0 nil nil )
  
  (!type struct 1362 nil  gc_unused "loc_list_hasher"
-  (!srcfileloc  "dwarf2out.cc" 31901)
+  (!srcfileloc  "dwarf2out.cc" 31904)
   (!fields 0 )
   nil 1023 nil nil )
  
  (!type user_struct 1363 nil  gc_unused "hash_table<loc_list_hasher>"
-  (!srcfileloc  "dwarf2out.cc" 31901)
+  (!srcfileloc  "dwarf2out.cc" 31904)
   (!fields 1 
    (!pair  "loc_list_hasher"
     (!type already_seen 1362)
-    (!srcfileloc  "dwarf2out.cc" 31901)
+    (!srcfileloc  "dwarf2out.cc" 31904)
     nil )
   )
  )
@@ -25488,7 +25488,7 @@
   nil 0 nil nil )
  
  (!type user_struct 1695 nil  gc_unused "irange"
-  (!srcfileloc  "value-range.h" 206)
+  (!srcfileloc  "value-range.h" 214)
   (!fields 0 )
  )
  
@@ -25497,7 +25497,7 @@
   nil 0 nil nil )
  
  (!type user_struct 1697 nil  gc_unused "int_range"
-  (!srcfileloc  "value-range.h" 236)
+  (!srcfileloc  "value-range.h" 244)
   (!fields 0 )
  )
  
@@ -25510,13 +25510,13 @@
  (!type already_seen 1130)
  
  (!type user_struct 1699 nil  gc_unused "int_range<255>"
-  (!srcfileloc  "value-range.h" 305)
+  (!srcfileloc  "value-range.h" 313)
   (!fields 1 
    (!pair  "255"
     (!type undefined 1700 nil  gc_unused "255"
-     (!srcfileloc  "value-range.h" 305)
+     (!srcfileloc  "value-range.h" 313)
     )
-    (!srcfileloc  "value-range.h" 305)
+    (!srcfileloc  "value-range.h" 313)
     nil )
   )
  )
@@ -28523,7 +28523,7 @@
    (!type already_seen 2048)
   )
   gc_pointed_to "cp_parser"
-  (!srcfileloc  "cp/parser.cc" 47932)
+  (!srcfileloc  "cp/parser.cc" 47945)
   (!fields 39 
    (!pair  "lexer"
     (!type already_seen 2034)
@@ -31185,7 +31185,7 @@
   nil )
  (!pair  "cp_parser"
   (!type already_seen 2048)
-  (!srcfileloc  "cp/parser.cc" 47932)
+  (!srcfileloc  "cp/parser.cc" 47945)
   nil )
  (!pair  "iter_t"
   (!type already_seen 2220)
@@ -32271,35 +32271,35 @@
   nil )
  (!pair  "int_range_max"
   (!type already_seen 1699)
-  (!srcfileloc  "value-range.h" 305)
+  (!srcfileloc  "value-range.h" 313)
   nil )
  (!pair  "255"
   (!type already_seen 1700)
-  (!srcfileloc  "value-range.h" 305)
+  (!srcfileloc  "value-range.h" 313)
   nil )
  (!pair  "int_range<255>"
   (!type already_seen 1699)
-  (!srcfileloc  "value-range.h" 305)
+  (!srcfileloc  "value-range.h" 313)
   nil )
  (!pair  "value_range"
   (!type already_seen 1129)
-  (!srcfileloc  "value-range.h" 301)
+  (!srcfileloc  "value-range.h" 309)
   nil )
  (!pair  "1"
   (!type already_seen 1130)
-  (!srcfileloc  "value-range.h" 301)
+  (!srcfileloc  "value-range.h" 309)
   nil )
  (!pair  "int_range<1>"
   (!type already_seen 1129)
-  (!srcfileloc  "value-range.h" 301)
+  (!srcfileloc  "value-range.h" 309)
   nil )
  (!pair  "int_range"
   (!type already_seen 1697)
-  (!srcfileloc  "value-range.h" 236)
+  (!srcfileloc  "value-range.h" 244)
   nil )
  (!pair  "irange"
   (!type already_seen 1695)
-  (!srcfileloc  "value-range.h" 206)
+  (!srcfileloc  "value-range.h" 214)
   nil )
  (!pair  "TRAILING_WIDE_INT_ACCESSOR"
   (!type already_seen 1693)
@@ -32659,7 +32659,7 @@
   nil )
  (!pair  "by_pieces_constfn"
   (!type already_seen 2)
-  (!srcfileloc  "expr.h" 111)
+  (!srcfileloc  "expr.h" 120)
   nil )
  (!pair  "sepops"
   (!type already_seen 1444)
@@ -32883,35 +32883,35 @@
   nil )
  (!pair  "loc_list_hash_type"
   (!type already_seen 1363)
-  (!srcfileloc  "dwarf2out.cc" 31901)
+  (!srcfileloc  "dwarf2out.cc" 31904)
   nil )
  (!pair  "loc_list_hasher"
   (!type already_seen 1362)
-  (!srcfileloc  "dwarf2out.cc" 31901)
+  (!srcfileloc  "dwarf2out.cc" 31904)
   nil )
  (!pair  "hash_table<loc_list_hasher>"
   (!type already_seen 1363)
-  (!srcfileloc  "dwarf2out.cc" 31901)
+  (!srcfileloc  "dwarf2out.cc" 31904)
   nil )
  (!pair  "macinfo_hash_type"
   (!type already_seen 1360)
-  (!srcfileloc  "dwarf2out.cc" 28846)
+  (!srcfileloc  "dwarf2out.cc" 28849)
   nil )
  (!pair  "macinfo_entry_hasher"
   (!type already_seen 1359)
-  (!srcfileloc  "dwarf2out.cc" 28846)
+  (!srcfileloc  "dwarf2out.cc" 28849)
   nil )
  (!pair  "hash_table<macinfo_entry_hasher>"
   (!type already_seen 1360)
-  (!srcfileloc  "dwarf2out.cc" 28846)
+  (!srcfileloc  "dwarf2out.cc" 28849)
   nil )
  (!pair  "inline_entry_data_hasher"
   (!type already_seen 1356)
-  (!srcfileloc  "dwarf2out.cc" 24292)
+  (!srcfileloc  "dwarf2out.cc" 24295)
   nil )
  (!pair  "hash_table<inline_entry_data_hasher>"
   (!type already_seen 1357)
-  (!srcfileloc  "dwarf2out.cc" 24292)
+  (!srcfileloc  "dwarf2out.cc" 24295)
   nil )
  (!pair  "external_ref_hash_type"
   (!type already_seen 1349)
@@ -35763,11 +35763,11 @@
   nil )
  (!pair  "generic_parm_count"
   (!type already_seen 2)
-  (!srcfileloc  "cp/parser.cc" 48444)
+  (!srcfileloc  "cp/parser.cc" 48457)
   nil )
  (!pair  "the_parser"
   (!type already_seen 2049)
-  (!srcfileloc  "cp/parser.cc" 47932)
+  (!srcfileloc  "cp/parser.cc" 47945)
   nil )
  (!pair  "cp_parser_decl_specs_attrs"
   (!type already_seen 83)
@@ -37147,7 +37147,7 @@
   nil )
  (!pair  "next_block_index"
   (!type already_seen 2)
-  (!srcfileloc  "function.cc" 4620)
+  (!srcfileloc  "function.cc" 4631)
   nil )
  (!pair  "temp_slot_address_table"
   (!type already_seen 1452)
@@ -37293,7 +37293,7 @@
   nil )
  (!pair  "inline_entry_data_table"
   (!type already_seen 1358)
-  (!srcfileloc  "dwarf2out.cc" 24292)
+  (!srcfileloc  "dwarf2out.cc" 24295)
   nil )
  (!pair  "external_die_map"
   (!type already_seen 1343)
