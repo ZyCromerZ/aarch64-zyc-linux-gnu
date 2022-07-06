@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "11.3.1 20220519")
+(!version  "11.3.1 20220706")
 (!srcdir  "../../gcc/gcc")
 (!languages 11 ada brig c cp d fortran go jit lto objc objcp)
 (!fileslist 225
@@ -23904,7 +23904,7 @@
   nil 0 nil nil )
  
  (!type struct 1515 nil  gc_used "tm_clone_hasher"
-  (!srcfileloc  "varasm.c" 6343)
+  (!srcfileloc  "varasm.c" 6349)
   (!fields 0 )
   nil 2047 nil nil )
  
@@ -23913,11 +23913,11 @@
    (!type already_seen 1516)
   )
   gc_pointed_to "hash_table<tm_clone_hasher>"
-  (!srcfileloc  "varasm.c" 6343)
+  (!srcfileloc  "varasm.c" 6349)
   (!fields 1 
    (!pair  "tm_clone_hasher"
     (!type already_seen 1515)
-    (!srcfileloc  "varasm.c" 6343)
+    (!srcfileloc  "varasm.c" 6349)
     nil )
   )
  )
@@ -27315,19 +27315,19 @@
   (!fields 4 
    (!pair  "decl"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 8204)
+    (!srcfileloc  "cp/cp-tree.h" 8205)
     nil )
    (!pair  "body"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 8205)
+    (!srcfileloc  "cp/cp-tree.h" 8206)
     nil )
    (!pair  "parms"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 8206)
+    (!srcfileloc  "cp/cp-tree.h" 8207)
     nil )
    (!pair  "result"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 8207)
+    (!srcfileloc  "cp/cp-tree.h" 8208)
     nil )
   )
   (!options 
@@ -27557,7 +27557,7 @@
    (!type already_seen 1986)
   )
   gc_pointed_to "cp_parser"
-  (!srcfileloc  "cp/parser.c" 44893)
+  (!srcfileloc  "cp/parser.c" 44896)
   (!fields 38 
    (!pair  "lexer"
     (!type already_seen 1972)
@@ -28190,7 +28190,7 @@
   nil 0 nil nil )
  
  (!type struct 2054 nil  gc_used "typename_hasher"
-  (!srcfileloc  "cp/decl.c" 3962)
+  (!srcfileloc  "cp/decl.c" 3966)
   (!fields 0 )
   nil 1032 nil nil )
  
@@ -28199,11 +28199,11 @@
    (!type already_seen 2055)
   )
   gc_pointed_to "hash_table<typename_hasher>"
-  (!srcfileloc  "cp/decl.c" 3962)
+  (!srcfileloc  "cp/decl.c" 3966)
   (!fields 1 
    (!pair  "typename_hasher"
     (!type already_seen 2054)
-    (!srcfileloc  "cp/decl.c" 3962)
+    (!srcfileloc  "cp/decl.c" 3966)
     nil )
   )
  )
@@ -28857,7 +28857,7 @@
   nil 0 nil nil )
  
  (!type undefined 2147 nil  gc_unused "class_to_loc_map_t::iterator"
-  (!srcfileloc  "cp/parser.c" 32593)
+  (!srcfileloc  "cp/parser.c" 32596)
  )
  
  (!type struct 2148 
@@ -28937,15 +28937,15 @@
    (!type already_seen 2161)
   )
   gc_pointed_to "hash_map<tree,tree_pair_p>"
-  (!srcfileloc  "cp/pt.c" 29395)
+  (!srcfileloc  "cp/pt.c" 29422)
   (!fields 2 
    (!pair  "tree_pair_p"
     (!type already_seen 532)
-    (!srcfileloc  "cp/pt.c" 29395)
+    (!srcfileloc  "cp/pt.c" 29422)
     nil )
    (!pair  "tree"
     (!type already_seen 23)
-    (!srcfileloc  "cp/pt.c" 29395)
+    (!srcfileloc  "cp/pt.c" 29422)
     nil )
   )
  )
@@ -30078,7 +30078,7 @@
   nil )
  (!pair  "hash_map<tree,tree_pair_p>"
   (!type already_seen 2161)
-  (!srcfileloc  "cp/pt.c" 29395)
+  (!srcfileloc  "cp/pt.c" 29422)
   nil )
  (!pair  "pending_template"
   (!type already_seen 2148)
@@ -30106,15 +30106,15 @@
   nil )
  (!pair  "cp_parser"
   (!type already_seen 1986)
-  (!srcfileloc  "cp/parser.c" 44893)
+  (!srcfileloc  "cp/parser.c" 44896)
   nil )
  (!pair  "iter_t"
   (!type already_seen 2147)
-  (!srcfileloc  "cp/parser.c" 32593)
+  (!srcfileloc  "cp/parser.c" 32596)
   nil )
  (!pair  "class_to_loc_map_t::iterator"
   (!type already_seen 2147)
-  (!srcfileloc  "cp/parser.c" 32593)
+  (!srcfileloc  "cp/parser.c" 32596)
   nil )
  (!pair  "cp_parser_expression_stack"
   (!type array 2270 nil  gc_unused "NUM_PREC_VALUES" 
@@ -30350,11 +30350,11 @@
   nil )
  (!pair  "typename_hasher"
   (!type already_seen 2054)
-  (!srcfileloc  "cp/decl.c" 3962)
+  (!srcfileloc  "cp/decl.c" 3966)
   nil )
  (!pair  "hash_table<typename_hasher>"
   (!type already_seen 2055)
-  (!srcfileloc  "cp/decl.c" 3962)
+  (!srcfileloc  "cp/decl.c" 3966)
   nil )
  (!pair  "incomplete_var"
   (!type already_seen 2049)
@@ -31288,11 +31288,11 @@
   nil )
  (!pair  "tm_clone_hasher"
   (!type already_seen 1515)
-  (!srcfileloc  "varasm.c" 6343)
+  (!srcfileloc  "varasm.c" 6349)
   nil )
  (!pair  "hash_table<tm_clone_hasher>"
   (!type already_seen 1516)
-  (!srcfileloc  "varasm.c" 6343)
+  (!srcfileloc  "varasm.c" 6349)
   nil )
  (!pair  "const_rtx_desc_hasher"
   (!type already_seen 995)
@@ -34439,21 +34439,21 @@
   nil )
  (!pair  "dguide_cache"
   (!type already_seen 2162)
-  (!srcfileloc  "cp/pt.c" 29395)
+  (!srcfileloc  "cp/pt.c" 29422)
   (!options 
    (!option deletable string  "")
   )
  )
  (!pair  "explicit_specifier_map"
   (!type already_seen 926)
-  (!srcfileloc  "cp/pt.c" 13890)
+  (!srcfileloc  "cp/pt.c" 13917)
   (!options 
    (!option cache string  "")
   )
  )
  (!pair  "defarg_inst"
   (!type already_seen 1498)
-  (!srcfileloc  "cp/pt.c" 13753)
+  (!srcfileloc  "cp/pt.c" 13780)
   (!options 
    (!option cache string  "")
   )
@@ -34524,11 +34524,11 @@
   nil )
  (!pair  "generic_parm_count"
   (!type already_seen 2)
-  (!srcfileloc  "cp/parser.c" 45385)
+  (!srcfileloc  "cp/parser.c" 45388)
   nil )
  (!pair  "the_parser"
   (!type already_seen 1987)
-  (!srcfileloc  "cp/parser.c" 44893)
+  (!srcfileloc  "cp/parser.c" 44896)
   nil )
  (!pair  "cp_parser_decl_specs_attrs"
   (!type already_seen 84)
@@ -34712,18 +34712,18 @@
   nil )
  (!pair  "start_cleanup_cnt"
   (!type already_seen 2)
-  (!srcfileloc  "cp/decl.c" 9091)
+  (!srcfileloc  "cp/decl.c" 9105)
   nil )
  (!pair  "decomp_type_table"
   (!type already_seen 926)
-  (!srcfileloc  "cp/decl.c" 8544)
+  (!srcfileloc  "cp/decl.c" 8558)
   (!options 
    (!option cache string  "")
   )
  )
  (!pair  "typename_htab"
   (!type already_seen 2056)
-  (!srcfileloc  "cp/decl.c" 3962)
+  (!srcfileloc  "cp/decl.c" 3966)
   nil )
  (!pair  "local_entities"
   (!type already_seen 84)
@@ -34930,7 +34930,7 @@
  )
  (!pair  "cv_cache"
   (!type already_seen 392)
-  (!srcfileloc  "cp/constexpr.c" 7627)
+  (!srcfileloc  "cp/constexpr.c" 7624)
   (!options 
    (!option deletable string  "")
   )
@@ -34972,7 +34972,7 @@
   nil )
  (!pair  "unemitted_tinfo_decls"
   (!type already_seen 84)
-  (!srcfileloc  "cp/cp-tree.h" 7288)
+  (!srcfileloc  "cp/cp-tree.h" 7289)
   nil )
  (!pair  "ovl_op_alternate"
   (!type array 2303 nil  gc_used "OVL_OP_MAX" 
@@ -35655,7 +35655,7 @@
  )
  (!pair  "addr_list"
   (!type already_seen 219)
-  (!srcfileloc  "tree-ssa-loop-ivopts.c" 2592)
+  (!srcfileloc  "tree-ssa-loop-ivopts.c" 2594)
   nil )
  (!pair  "mem_addr_template_list"
   (!type already_seen 1539)
@@ -35663,22 +35663,22 @@
   nil )
  (!pair  "elf_fini_array_section"
   (!type already_seen 213)
-  (!srcfileloc  "varasm.c" 8354)
+  (!srcfileloc  "varasm.c" 8360)
   nil )
  (!pair  "elf_init_array_section"
   (!type already_seen 213)
-  (!srcfileloc  "varasm.c" 8353)
+  (!srcfileloc  "varasm.c" 8359)
   nil )
  (!pair  "tm_clone_hash"
   (!type already_seen 1517)
-  (!srcfileloc  "varasm.c" 6343)
+  (!srcfileloc  "varasm.c" 6349)
   (!options 
    (!option cache string  "")
   )
  )
  (!pair  "weakref_targets"
   (!type already_seen 23)
-  (!srcfileloc  "varasm.c" 5998)
+  (!srcfileloc  "varasm.c" 6004)
   nil )
  (!pair  "const_desc_htab"
   (!type already_seen 1510)
