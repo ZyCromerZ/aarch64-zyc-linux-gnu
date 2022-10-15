@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "11.3.1 20221014")
+(!version  "11.3.1 20221015")
 (!srcdir  "../../gcc/gcc")
 (!languages 11 ada brig c cp d fortran go jit lto objc objcp)
 (!fileslist 225
@@ -25393,7 +25393,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1772 nil  gc_unused "anonymous:../../gcc/gcc/config/aarch64/aarch64-builtins.c:1329"nil 
+ (!type struct 1772 nil  gc_unused "anonymous:../../gcc/gcc/config/aarch64/aarch64-builtins.c:1335"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -30844,7 +30844,7 @@
   nil )
  (!pair  "builtin_simd_arg"
   (!type already_seen 2)
-  (!srcfileloc  "config/aarch64/aarch64-builtins.c" 1483)
+  (!srcfileloc  "config/aarch64/aarch64-builtins.c" 1521)
   nil )
  (!pair  "aarch64_fcmla_laneq_builtin_datum"
   (!type already_seen 1769)
@@ -35431,7 +35431,7 @@
   (!type array 2326 nil  gc_used "AARCH64_BUILTIN_MAX" 
    (!type already_seen 23)
   )
-  (!srcfileloc  "config/aarch64/aarch64-builtins.c" 551)
+  (!srcfileloc  "config/aarch64/aarch64-builtins.c" 557)
   nil )
  (!pair  "omp_requires_mask"
   (!type already_seen 2)
