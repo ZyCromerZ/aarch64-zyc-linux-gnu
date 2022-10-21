@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "11.3.1 20221020")
+(!version  "11.3.1 20221021")
 (!srcdir  "../../gcc/gcc")
 (!languages 11 ada brig c cp d fortran go jit lto objc objcp)
 (!fileslist 225
@@ -8505,101 +8505,101 @@
                            (!type struct 420 
                             (!type already_seen 419)
                             gc_maybe_pointed_to "machine_function"
-                            (!srcfileloc  "config/aarch64/aarch64.h" 914)
+                            (!srcfileloc  "config/aarch64/aarch64.h" 916)
                             (!fields 4 
                              (!pair  "frame"
                               (!type struct 421 nil  gc_used "aarch64_frame"
-                               (!srcfileloc  "config/aarch64/aarch64.h" 904)
+                               (!srcfileloc  "config/aarch64/aarch64.h" 906)
                                (!fields 17 
                                 (!pair  "reg_offset"
                                  (!type array 422 nil  gc_used "LAST_SAVED_REGNUM + 1" 
                                   (!type already_seen 2)
                                  )
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 827)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 829)
                                  nil )
                                 (!pair  "saved_varargs_size"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 833)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 835)
                                  nil )
                                 (!pair  "saved_regs_size"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 836)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 838)
                                  nil )
                                 (!pair  "below_hard_fp_saved_regs_size"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 840)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 842)
                                  nil )
                                 (!pair  "locals_offset"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 845)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 847)
                                  nil )
                                 (!pair  "hard_fp_offset"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 850)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 852)
                                  nil )
                                 (!pair  "frame_size"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 855)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 857)
                                  nil )
                                 (!pair  "initial_adjust"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 858)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 860)
                                  nil )
                                 (!pair  "callee_adjust"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 862)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 864)
                                  nil )
                                 (!pair  "callee_offset"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 866)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 868)
                                  nil )
                                 (!pair  "sve_callee_adjust"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 870)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 872)
                                  nil )
                                 (!pair  "final_adjust"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 873)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 875)
                                  nil )
                                 (!pair  "emit_frame_chain"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 876)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 878)
                                  nil )
                                 (!pair  "wb_candidate1"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 895)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 897)
                                  nil )
                                 (!pair  "wb_candidate2"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 896)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 898)
                                  nil )
                                 (!pair  "spare_pred_reg"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 901)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 903)
                                  nil )
                                 (!pair  "laid_out"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/aarch64/aarch64.h" 903)
+                                 (!srcfileloc  "config/aarch64/aarch64.h" 905)
                                  nil )
                                )
                                nil 2047 nil nil )
-                              (!srcfileloc  "config/aarch64/aarch64.h" 908)
+                              (!srcfileloc  "config/aarch64/aarch64.h" 910)
                               nil )
                              (!pair  "reg_is_wrapped_separately"
                               (!type array 423 nil  gc_used "LAST_SAVED_REGNUM" 
                                (!type already_seen 2)
                               )
-                              (!srcfileloc  "config/aarch64/aarch64.h" 910)
+                              (!srcfileloc  "config/aarch64/aarch64.h" 912)
                               nil )
                              (!pair  "call_via"
                               (!type array 424 nil  gc_used "SP_REGNUM" 
                                (!type already_seen 100)
                               )
-                              (!srcfileloc  "config/aarch64/aarch64.h" 912)
+                              (!srcfileloc  "config/aarch64/aarch64.h" 914)
                               nil )
                              (!pair  "label_is_assembled"
                               (!type already_seen 2)
-                              (!srcfileloc  "config/aarch64/aarch64.h" 913)
+                              (!srcfileloc  "config/aarch64/aarch64.h" 915)
                               nil )
                             )
                             nil 2047 nil nil )
@@ -17334,7 +17334,7 @@
  
  (!type already_seen 420)
  
- (!type struct 844 nil  gc_unused "anonymous:../../gcc/gcc/config/aarch64/aarch64.h:956"nil 
+ (!type struct 844 nil  gc_unused "anonymous:../../gcc/gcc/config/aarch64/aarch64.h:958"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -32986,7 +32986,7 @@
   nil )
  (!pair  "machine_function"
   (!type already_seen 420)
-  (!srcfileloc  "config/aarch64/aarch64.h" 914)
+  (!srcfileloc  "config/aarch64/aarch64.h" 916)
   nil )
  (!pair  "uchar"
   (!type already_seen 8)
