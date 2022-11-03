@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "12.2.1 20221102")
+(!version  "12.2.1 20221103")
 (!srcdir  "../../gcc/gcc")
 (!languages 10 ada c cp d fortran go jit lto objc objcp)
 (!fileslist 228 0
@@ -36021,7 +36021,7 @@
  )
  (!pair  "cv_cache"
   (!type already_seen 393)
-  (!srcfileloc  "cp/constexpr.cc" 8077)
+  (!srcfileloc  "cp/constexpr.cc" 8089)
   (!options 
    (!option deletable string  "")
   )
@@ -36663,7 +36663,7 @@
   nil )
  (!pair  "critical_name_mutexes"
   (!type already_seen 393)
-  (!srcfileloc  "omp-low.cc" 10343)
+  (!srcfileloc  "omp-low.cc" 10342)
   nil )
  (!pair  "omp_declare_variant_alt"
   (!type already_seen 1648)
