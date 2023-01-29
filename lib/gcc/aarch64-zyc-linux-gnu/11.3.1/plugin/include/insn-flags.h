@@ -561,6 +561,7 @@
 #define HAVE_subp (TARGET_MEMTAG)
 #define HAVE_ldg (TARGET_MEMTAG)
 #define HAVE_stg (TARGET_MEMTAG)
+#define HAVE_patchable_area 1
 #define HAVE_aarch64_simd_dupv8qi (TARGET_SIMD)
 #define HAVE_aarch64_simd_dupv16qi (TARGET_SIMD)
 #define HAVE_aarch64_simd_dupv4hi (TARGET_SIMD)
@@ -10314,6 +10315,7 @@ extern rtx        gen_addg                                           (rtx, rtx, 
 extern rtx        gen_subp                                           (rtx, rtx, rtx);
 extern rtx        gen_ldg                                            (rtx, rtx, rtx);
 extern rtx        gen_stg                                            (rtx, rtx, rtx);
+extern rtx        gen_patchable_area                                 (rtx, rtx);
 extern rtx        gen_aarch64_simd_dupv8qi                           (rtx, rtx);
 extern rtx        gen_aarch64_simd_dupv16qi                          (rtx, rtx);
 extern rtx        gen_aarch64_simd_dupv4hi                           (rtx, rtx);
