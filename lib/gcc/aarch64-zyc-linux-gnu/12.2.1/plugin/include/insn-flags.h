@@ -562,6 +562,7 @@
 #define HAVE_st64b (TARGET_LS64)
 #define HAVE_st64bv (TARGET_LS64)
 #define HAVE_st64bv0 (TARGET_LS64)
+#define HAVE_patchable_area 1
 #define HAVE_aarch64_simd_dupv8qi (TARGET_SIMD)
 #define HAVE_aarch64_simd_dupv16qi (TARGET_SIMD)
 #define HAVE_aarch64_simd_dupv4hi (TARGET_SIMD)
@@ -10522,6 +10523,7 @@ extern rtx        gen_ld64b                                          (rtx, rtx);
 extern rtx        gen_st64b                                          (rtx, rtx);
 extern rtx        gen_st64bv                                         (rtx, rtx, rtx);
 extern rtx        gen_st64bv0                                        (rtx, rtx, rtx);
+extern rtx        gen_patchable_area                                 (rtx, rtx);
 extern rtx        gen_aarch64_simd_dupv8qi                           (rtx, rtx);
 extern rtx        gen_aarch64_simd_dupv16qi                          (rtx, rtx);
 extern rtx        gen_aarch64_simd_dupv4hi                           (rtx, rtx);

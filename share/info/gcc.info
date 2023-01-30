@@ -1,4 +1,4 @@
-This is gcc.info, produced by makeinfo version 6.7 from gcc.texi.
+This is gcc.info, produced by makeinfo version 6.8 from gcc.texi.
 
 Copyright (C) 1988-2022 Free Software Foundation, Inc.
 
@@ -20151,6 +20151,7 @@ These options are defined for AVR implementations:
 
      'avr3'
           "Classic" devices with 16 KiB up to 64 KiB of program memory.
+
           MCU = 'at76c711', 'at43usb355'.
 
      'avr31'
@@ -28766,7 +28767,7 @@ These '-m' options are defined for the x86 family of computers.
           RDPID, AVX512VPOPCNTDQ, PCONFIG, WBNOINVD, CLWB, MOVDIRI,
           MOVDIR64B, ENQCMD, CLDEMOTE, PTWRITE, WAITPKG, SERIALIZE,
           TSXLDTRK, UINTR, AMX-BF16, AMX-TILE, AMX-INT8, AVX-VNNI,
-          AVX512FP16 and AVX512BF16 instruction set support.
+          AVX512-FP16 and AVX512BF16 instruction set support.
 
      'alderlake'
           Intel Alderlake CPU with 64-bit extensions, MOVBE, MMX, SSE,
@@ -28877,6 +28878,17 @@ These '-m' options are defined for the x86 family of computers.
           SSE4.1, SSE4.2, ABM, XSAVEC, XSAVES, CLFLUSHOPT, POPCNT,
           RDPID, WBNOINVD, PKU, VPCLMULQDQ, VAES, and 64-bit instruction
           set extensions.)
+
+     'znver4'
+          AMD Family 19h core based CPUs with x86-64 instruction set
+          support.  (This supersets BMI, BMI2, CLWB, F16C, FMA,
+          FSGSBASE, AVX, AVX2, ADCX, RDSEED, MWAITX, SHA, CLZERO, AES,
+          PCLMUL, CX16, MOVBE, MMX, SSE, SSE2, SSE3, SSE4A, SSSE3,
+          SSE4.1, SSE4.2, ABM, XSAVEC, XSAVES, CLFLUSHOPT, POPCNT,
+          RDPID, WBNOINVD, PKU, VPCLMULQDQ, VAES, AVX512F, AVX512DQ,
+          AVX512IFMA, AVX512CD, AVX512BW, AVX512VL, AVX512BF16,
+          AVX512VBMI, AVX512VBMI2, AVX512VNNI, AVX512BITALG,
+          AVX512VPOPCNTDQ, GFNI and 64-bit instruction set extensions.)
 
      'btver1'
           CPUs based on AMD Family 14h cores with x86-64 instruction set
@@ -29419,7 +29431,7 @@ These '-m' options are defined for the x86 family of computers.
      AVX512VBMI2, GFNI, VAES, WAITPKG, VPCLMULQDQ, AVX512BITALG,
      MOVDIRI, MOVDIR64B, AVX512BF16, ENQCMD, AVX512VPOPCNTDQ,
      AVX5124FMAPS, AVX512VNNI, AVX5124VNNIW, SERIALIZE, UINTR, HRESET,
-     AMXTILE, AMXINT8, AMXBF16, KL, WIDEKL, AVXVNNI, AVX512FP16 or
+     AMXTILE, AMXINT8, AMXBF16, KL, WIDEKL, AVXVNNI, AVX512-FP16 or
      CLDEMOTE extended instruction sets.  Each has a corresponding
      '-mno-' option to disable use of these instructions.
 
@@ -54043,18 +54055,8 @@ to check the target platform type.
      'znver3'
           AMD Family 19h Zen version 3.
 
-     'x86-64'
-          Baseline x86-64 microarchitecture level (as defined in x86-64
-          psABI).
-
-     'x86-64-v2'
-          x86-64-v2 microarchitecture level.
-
-     'x86-64-v3'
-          x86-64-v3 microarchitecture level.
-
-     'x86-64-v4'
-          x86-64-v4 microarchitecture level.
+     'znver4'
+          AMD Family 19h Zen version 4.
 
      Here is an example:
           if (__builtin_cpu_is ("corei7"))
@@ -54143,6 +54145,15 @@ to check the target platform type.
           AVX512VNNI instructions.
      'avx512bitalg'
           AVX512BITALG instructions.
+     'x86-64'
+          Baseline x86-64 microarchitecture level (as defined in x86-64
+          psABI).
+     'x86-64-v2'
+          x86-64-v2 microarchitecture level.
+     'x86-64-v3'
+          x86-64-v3 microarchitecture level.
+     'x86-64-v4'
+          x86-64-v4 microarchitecture level.
 
      Here is an example:
           if (__builtin_cpu_supports ("popcnt"))
@@ -63379,7 +63390,7 @@ look up both forms.
 * -msingle-float:                        LoongArch Options.  (line   70)
 * -msmall-data-limit:                    LoongArch Options.  (line  114)
 * -mstrict-align:                        LoongArch Options.  (line  109)
-* 80387:                                 x86 Options.        (line  592)
+* 80387:                                 x86 Options.        (line  603)
 * A:                                     Preprocessor Options.
                                                              (line  337)
 * allowable_client:                      Darwin Options.     (line  196)
@@ -63457,10 +63468,10 @@ look up both forms.
 * E:                                     Overall Options.    (line  186)
 * E <1>:                                 Link Options.       (line   20)
 * e:                                     Link Options.       (line  172)
-* EB:                                    ARC Options.        (line  590)
+* EB:                                    ARC Options.        (line  588)
 * EB <1>:                                C-SKY Options.      (line   29)
 * EB <2>:                                MIPS Options.       (line    7)
-* EL:                                    ARC Options.        (line  599)
+* EL:                                    ARC Options.        (line  595)
 * EL <1>:                                C-SKY Options.      (line   31)
 * EL <2>:                                MIPS Options.       (line   10)
 * entry:                                 Link Options.       (line  172)
@@ -64042,7 +64053,7 @@ look up both forms.
                                                              (line   46)
 * fno-show-column:                       Diagnostic Message Formatting Options.
                                                              (line  408)
-* fno-signed-bitfields:                  C Dialect Options.  (line  451)
+* fno-signed-bitfields:                  C Dialect Options.  (line  449)
 * fno-signed-zeros:                      Optimize Options.   (line 2412)
 * fno-stack-limit:                       Instrumentation Options.
                                                              (line  823)
@@ -64050,7 +64061,7 @@ look up both forms.
                                                              (line  464)
 * fno-toplevel-reorder:                  Optimize Options.   (line 1859)
 * fno-trapping-math:                     Optimize Options.   (line 2422)
-* fno-unsigned-bitfields:                C Dialect Options.  (line  451)
+* fno-unsigned-bitfields:                C Dialect Options.  (line  449)
 * fno-use-cxa-get-exception-ptr:         C++ Dialect Options.
                                                              (line  477)
 * fno-var-tracking-assignments:          Debugging Options.  (line  193)
@@ -64085,9 +64096,9 @@ look up both forms.
 * foffload-options:                      C Dialect Options.  (line  373)
 * fomit-frame-pointer:                   Optimize Options.   (line  256)
 * fopenacc:                              C Dialect Options.  (line  388)
-* fopenacc-dim:                          C Dialect Options.  (line  397)
-* fopenmp:                               C Dialect Options.  (line  403)
-* fopenmp-simd:                          C Dialect Options.  (line  412)
+* fopenacc-dim:                          C Dialect Options.  (line  396)
+* fopenmp:                               C Dialect Options.  (line  402)
+* fopenmp-simd:                          C Dialect Options.  (line  410)
 * foperator-names:                       C++ Dialect Options.
                                                              (line  383)
 * fopt-info:                             Developer Options.  (line  487)
@@ -64112,14 +64123,14 @@ look up both forms.
 * fpeephole2:                            Optimize Options.   (line 1596)
 * fpermissive:                           C++ Dialect Options.
                                                              (line  392)
-* fpermitted-flt-eval-methods:           C Dialect Options.  (line  416)
-* fpermitted-flt-eval-methods=c11:       C Dialect Options.  (line  416)
-* fpermitted-flt-eval-methods=ts-18661-3: C Dialect Options. (line  416)
+* fpermitted-flt-eval-methods:           C Dialect Options.  (line  414)
+* fpermitted-flt-eval-methods=c11:       C Dialect Options.  (line  414)
+* fpermitted-flt-eval-methods=ts-18661-3: C Dialect Options. (line  414)
 * fpic:                                  Code Gen Options.   (line  356)
 * fPIC:                                  Code Gen Options.   (line  377)
 * fpie:                                  Code Gen Options.   (line  390)
 * fPIE:                                  Code Gen Options.   (line  390)
-* fplan9-extensions:                     C Dialect Options.  (line  438)
+* fplan9-extensions:                     C Dialect Options.  (line  436)
 * fplan9-extensions <1>:                 Unnamed Fields.     (line   43)
 * fplt:                                  Code Gen Options.   (line  399)
 * fplugin:                               Overall Options.    (line  639)
@@ -64298,9 +64309,9 @@ look up both forms.
 * fshrink-wrap:                          Optimize Options.   (line  923)
 * fshrink-wrap-separate:                 Optimize Options.   (line  928)
 * fsignaling-nans:                       Optimize Options.   (line 2457)
-* fsigned-bitfields:                     C Dialect Options.  (line  451)
+* fsigned-bitfields:                     C Dialect Options.  (line  449)
 * fsigned-bitfields <1>:                 Non-bugs.           (line   57)
-* fsigned-char:                          C Dialect Options.  (line  457)
+* fsigned-char:                          C Dialect Options.  (line  455)
 * fsigned-char <1>:                      Characters implementation.
                                                              (line   31)
 * fsigned-zeros:                         Optimize Options.   (line 2412)
@@ -64319,7 +64330,7 @@ look up both forms.
 * fsplit-wide-types-early:               Optimize Options.   (line  482)
 * fssa-backprop:                         Optimize Options.   (line 1188)
 * fssa-phiopt:                           Optimize Options.   (line 1194)
-* fsso-struct:                           C Dialect Options.  (line  482)
+* fsso-struct:                           C Dialect Options.  (line  480)
 * fstack-check:                          Instrumentation Options.
                                                              (line  766)
 * fstack-clash-protection:               Instrumentation Options.
@@ -64345,10 +64356,10 @@ look up both forms.
 * fstrict-enums:                         C++ Dialect Options.
                                                              (line  434)
 * fstrict-overflow:                      Code Gen Options.   (line  115)
-* fstrict-volatile-bitfields:            Code Gen Options.   (line  601)
+* fstrict-volatile-bitfields:            Code Gen Options.   (line  600)
 * fstrong-eval-order:                    C++ Dialect Options.
                                                              (line  443)
-* fsync-libcalls:                        Code Gen Options.   (line  633)
+* fsync-libcalls:                        Code Gen Options.   (line  632)
 * fsyntax-only:                          Warning Options.    (line   14)
 * ftabstop:                              Preprocessor Options.
                                                              (line  241)
@@ -64412,11 +64423,11 @@ look up both forms.
 * funroll-all-loops:                     Optimize Options.   (line 2604)
 * funroll-loops:                         Optimize Options.   (line 2594)
 * funsafe-math-optimizations:            Optimize Options.   (line 2355)
-* funsigned-bitfields:                   C Dialect Options.  (line  451)
+* funsigned-bitfields:                   C Dialect Options.  (line  449)
 * funsigned-bitfields <1>:               Structures unions enumerations and bit-fields implementation.
                                                              (line   17)
 * funsigned-bitfields <2>:               Non-bugs.           (line   57)
-* funsigned-char:                        C Dialect Options.  (line  464)
+* funsigned-char:                        C Dialect Options.  (line  462)
 * funsigned-char <1>:                    Characters implementation.
                                                              (line   31)
 * funswitch-loops:                       Optimize Options.   (line 2636)
@@ -64466,7 +64477,7 @@ look up both forms.
 * fzero-link:                            Objective-C and Objective-C++ Dialect Options.
                                                              (line  140)
 * g:                                     Debugging Options.  (line   28)
-* G:                                     ARC Options.        (line  416)
+* G:                                     ARC Options.        (line  414)
 * G <1>:                                 M32R/D Options.     (line   57)
 * G <2>:                                 MIPS Options.       (line  460)
 * G <3>:                                 Nios II Options.    (line    9)
@@ -64545,9 +64556,9 @@ look up both forms.
                                                              (line  521)
 * m1:                                    SH Options.         (line    9)
 * m10:                                   PDP-11 Options.     (line   29)
-* m128bit-long-double:                   x86 Options.        (line  644)
-* m16:                                   x86 Options.        (line 1531)
-* m16-bit:                               CRIS Options.       (line   63)
+* m128bit-long-double:                   x86 Options.        (line  655)
+* m16:                                   x86 Options.        (line 1542)
+* m16-bit:                               CRIS Options.       (line   62)
 * m16-bit <1>:                           NDS32 Options.      (line   51)
 * m1reg-:                                Adapteva Epiphany Options.
                                                              (line  131)
@@ -64565,16 +64576,16 @@ look up both forms.
 * m32 <1>:                               SPARC Options.      (line  315)
 * m32 <2>:                               TILE-Gx Options.    (line   23)
 * m32 <3>:                               TILEPro Options.    (line   13)
-* m32 <4>:                               x86 Options.        (line 1531)
-* m32-bit:                               CRIS Options.       (line   63)
+* m32 <4>:                               x86 Options.        (line 1542)
+* m32-bit:                               CRIS Options.       (line   62)
 * m32bit-doubles:                        RL78 Options.       (line   73)
 * m32bit-doubles <1>:                    RX Options.         (line   10)
 * m32r:                                  M32R/D Options.     (line   15)
 * m32r2:                                 M32R/D Options.     (line    9)
 * m32rx:                                 M32R/D Options.     (line   12)
 * m340:                                  MCore Options.      (line   43)
-* m3dnow:                                x86 Options.        (line  867)
-* m3dnowa:                               x86 Options.        (line  868)
+* m3dnow:                                x86 Options.        (line  878)
+* m3dnowa:                               x86 Options.        (line  879)
 * m3e:                                   SH Options.         (line   37)
 * m4:                                    SH Options.         (line   51)
 * m4-100:                                SH Options.         (line   54)
@@ -64614,7 +64625,7 @@ look up both forms.
                                                              (line   86)
 * m64 <3>:                               SPARC Options.      (line  315)
 * m64 <4>:                               TILE-Gx Options.    (line   23)
-* m64 <5>:                               x86 Options.        (line 1531)
+* m64 <5>:                               x86 Options.        (line 1542)
 * m64bit-doubles:                        RL78 Options.       (line   73)
 * m64bit-doubles <1>:                    RX Options.         (line   10)
 * m68000:                                M680x0 Options.     (line   94)
@@ -64626,10 +64637,10 @@ look up both forms.
 * m68040:                                M680x0 Options.     (line  118)
 * m68060:                                M680x0 Options.     (line  127)
 * m68881:                                M680x0 Options.     (line  195)
-* m8-bit:                                CRIS Options.       (line   63)
-* m8bit-idiv:                            x86 Options.        (line 1433)
+* m8-bit:                                CRIS Options.       (line   62)
+* m8bit-idiv:                            x86 Options.        (line 1444)
 * m8byte-align:                          V850 Options.       (line  170)
-* m96bit-long-double:                    x86 Options.        (line  644)
+* m96bit-long-double:                    x86 Options.        (line  655)
 * mA6:                                   ARC Options.        (line   23)
 * mA7:                                   ARC Options.        (line   30)
 * mabi:                                  AArch64 Options.    (line    9)
@@ -64639,7 +64650,7 @@ look up both forms.
 * mabi <4>:                              RISC-V Options.     (line   17)
 * mabi <5>:                              RS/6000 and PowerPC Options.
                                                              (line  552)
-* mabi <6>:                              x86 Options.        (line 1126)
+* mabi <6>:                              x86 Options.        (line 1137)
 * mabi <7>:                              Xtensa Options.     (line  103)
 * mabi=32:                               MIPS Options.       (line  156)
 * mabi=64:                               MIPS Options.       (line  156)
@@ -64659,24 +64670,24 @@ look up both forms.
 * mabi=o64:                              MIPS Options.       (line  156)
 * mabi=windowed:                         Xtensa Options.     (line  115)
 * mabicalls:                             MIPS Options.       (line  192)
-* mabm:                                  x86 Options.        (line  870)
+* mabm:                                  x86 Options.        (line  881)
 * mabort-on-noreturn:                    ARM Options.        (line  752)
 * mabs=2008:                             MIPS Options.       (line  300)
 * mabs=legacy:                           MIPS Options.       (line  300)
-* mabsdata:                              AVR Options.        (line  163)
+* mabsdata:                              AVR Options.        (line  162)
 * mabsdiff:                              MeP Options.        (line    7)
 * mac0:                                  PDP-11 Options.     (line   16)
 * macc-4:                                FRV Options.        (line  139)
 * macc-8:                                FRV Options.        (line  143)
-* maccumulate-args:                      AVR Options.        (line  170)
+* maccumulate-args:                      AVR Options.        (line  169)
 * maccumulate-outgoing-args:             SH Options.         (line  314)
-* maccumulate-outgoing-args <1>:         x86 Options.        (line 1170)
-* maddress-mode=long:                    x86 Options.        (line 1581)
-* maddress-mode=short:                   x86 Options.        (line 1586)
+* maccumulate-outgoing-args <1>:         x86 Options.        (line 1181)
+* maddress-mode=long:                    x86 Options.        (line 1592)
+* maddress-mode=short:                   x86 Options.        (line 1597)
 * mads:                                  RS/6000 and PowerPC Options.
                                                              (line  614)
-* madx:                                  x86 Options.        (line  871)
-* maes:                                  x86 Options.        (line  848)
+* madx:                                  x86 Options.        (line  882)
+* maes:                                  x86 Options.        (line  859)
 * maix-struct-return:                    RS/6000 and PowerPC Options.
                                                              (line  545)
 * maix32:                                RS/6000 and PowerPC Options.
@@ -64684,10 +64695,10 @@ look up both forms.
 * maix64:                                RS/6000 and PowerPC Options.
                                                              (line  283)
 * malign-300:                            H8/300 Options.     (line   41)
-* malign-call:                           ARC Options.        (line  435)
+* malign-call:                           ARC Options.        (line  433)
 * malign-data:                           RISC-V Options.     (line  168)
-* malign-data <1>:                       x86 Options.        (line  684)
-* malign-double:                         x86 Options.        (line  629)
+* malign-data <1>:                       x86 Options.        (line  695)
+* malign-double:                         x86 Options.        (line  640)
 * malign-int:                            M680x0 Options.     (line  262)
 * malign-labels:                         FRV Options.        (line  128)
 * malign-loops:                          M32R/D Options.     (line   73)
@@ -64695,7 +64706,7 @@ look up both forms.
                                                              (line  321)
 * malign-power:                          RS/6000 and PowerPC Options.
                                                              (line  321)
-* malign-stringops:                      x86 Options.        (line 1306)
+* malign-stringops:                      x86 Options.        (line 1317)
 * mall-opts:                             MeP Options.        (line   11)
 * malloc-cc:                             FRV Options.        (line   31)
 * mallow-string-insns:                   RX Options.         (line  150)
@@ -64706,9 +64717,9 @@ look up both forms.
 * mam33:                                 MN10300 Options.    (line   17)
 * mam33-2:                               MN10300 Options.    (line   24)
 * mam34:                                 MN10300 Options.    (line   27)
-* mamx-bf16:                             x86 Options.        (line  909)
-* mamx-int8:                             x86 Options.        (line  908)
-* mamx-tile:                             x86 Options.        (line  907)
+* mamx-bf16:                             x86 Options.        (line  920)
+* mamx-int8:                             x86 Options.        (line  919)
+* mamx-tile:                             x86 Options.        (line  918)
 * manchor:                               C-SKY Options.      (line  126)
 * mandroid:                              GNU/Linux Options.  (line   26)
 * mannotate-align:                       ARC Options.        (line  382)
@@ -64738,44 +64749,44 @@ look up both forms.
 * march <15>:                            x86 Options.        (line    9)
 * march=:                                C-SKY Options.      (line    9)
 * marclinux:                             ARC Options.        (line  388)
-* marclinux_prof:                        ARC Options.        (line  395)
-* margonaut:                             ARC Options.        (line  586)
+* marclinux_prof:                        ARC Options.        (line  394)
+* margonaut:                             ARC Options.        (line  584)
 * marm:                                  ARM Options.        (line  824)
 * mas100-syntax:                         RX Options.         (line   76)
 * masm-hex:                              MSP430 Options.     (line    9)
 * masm-syntax-unified:                   ARM Options.        (line  932)
-* masm=DIALECT:                          x86 Options.        (line  578)
+* masm=DIALECT:                          x86 Options.        (line  589)
 * matomic:                               ARC Options.        (line  155)
 * matomic-model=MODEL:                   SH Options.         (line  193)
 * mauto-litpools:                        Xtensa Options.     (line   60)
-* mauto-modify-reg:                      ARC Options.        (line  438)
+* mauto-modify-reg:                      ARC Options.        (line  436)
 * mauto-pic:                             IA-64 Options.      (line   50)
 * maverage:                              MeP Options.        (line   16)
 * mavoid-indexed-addresses:              RS/6000 and PowerPC Options.
                                                              (line  360)
-* mavx:                                  x86 Options.        (line  836)
-* mavx2:                                 x86 Options.        (line  837)
-* mavx256-split-unaligned-load:          x86 Options.        (line 1441)
-* mavx256-split-unaligned-store:         x86 Options.        (line 1441)
-* mavx5124fmaps:                         x86 Options.        (line  901)
-* mavx5124vnniw:                         x86 Options.        (line  904)
-* mavx512bf16:                           x86 Options.        (line  887)
-* mavx512bitalg:                         x86 Options.        (line  893)
-* mavx512bw:                             x86 Options.        (line  843)
-* mavx512cd:                             x86 Options.        (line  841)
-* mavx512dq:                             x86 Options.        (line  844)
-* mavx512er:                             x86 Options.        (line  840)
-* mavx512f:                              x86 Options.        (line  838)
-* mavx512fp16:                           x86 Options.        (line  888)
-* mavx512ifma:                           x86 Options.        (line  845)
-* mavx512pf:                             x86 Options.        (line  839)
-* mavx512vbmi:                           x86 Options.        (line  846)
-* mavx512vbmi2:                          x86 Options.        (line  886)
-* mavx512vl:                             x86 Options.        (line  842)
-* mavx512vnni:                           x86 Options.        (line  902)
-* mavx512vp2intersect:                   x86 Options.        (line  900)
-* mavx512vpopcntdq:                      x86 Options.        (line  899)
-* mavxvnni:                              x86 Options.        (line  903)
+* mavx:                                  x86 Options.        (line  847)
+* mavx2:                                 x86 Options.        (line  848)
+* mavx256-split-unaligned-load:          x86 Options.        (line 1452)
+* mavx256-split-unaligned-store:         x86 Options.        (line 1452)
+* mavx5124fmaps:                         x86 Options.        (line  912)
+* mavx5124vnniw:                         x86 Options.        (line  915)
+* mavx512bf16:                           x86 Options.        (line  898)
+* mavx512bitalg:                         x86 Options.        (line  904)
+* mavx512bw:                             x86 Options.        (line  854)
+* mavx512cd:                             x86 Options.        (line  852)
+* mavx512dq:                             x86 Options.        (line  855)
+* mavx512er:                             x86 Options.        (line  851)
+* mavx512f:                              x86 Options.        (line  849)
+* mavx512fp16:                           x86 Options.        (line  899)
+* mavx512ifma:                           x86 Options.        (line  856)
+* mavx512pf:                             x86 Options.        (line  850)
+* mavx512vbmi:                           x86 Options.        (line  857)
+* mavx512vbmi2:                          x86 Options.        (line  897)
+* mavx512vl:                             x86 Options.        (line  853)
+* mavx512vnni:                           x86 Options.        (line  913)
+* mavx512vp2intersect:                   x86 Options.        (line  911)
+* mavx512vpopcntdq:                      x86 Options.        (line  910)
+* mavxvnni:                              x86 Options.        (line  914)
 * max-vect-align:                        Adapteva Epiphany Options.
                                                              (line  119)
 * mb:                                    SH Options.         (line  126)
@@ -64783,15 +64794,15 @@ look up both forms.
                                                              (line   35)
 * mbarrel-shift-enabled:                 LM32 Options.       (line    9)
 * mbarrel-shifter:                       ARC Options.        (line   10)
-* mbarrel_shifter:                       ARC Options.        (line  606)
+* mbarrel_shifter:                       ARC Options.        (line  601)
 * mbase-addresses:                       MMIX Options.       (line   53)
 * mbased=:                               MeP Options.        (line   20)
-* mbbit-peephole:                        ARC Options.        (line  441)
+* mbbit-peephole:                        ARC Options.        (line  439)
 * mbe8:                                  ARM Options.        (line   72)
 * mbig:                                  RS/6000 and PowerPC Options.
                                                              (line  440)
 * mbig-endian:                           AArch64 Options.    (line   20)
-* mbig-endian <1>:                       ARC Options.        (line  589)
+* mbig-endian <1>:                       ARC Options.        (line  587)
 * mbig-endian <2>:                       ARM Options.        (line   67)
 * mbig-endian <3>:                       C6X Options.        (line   13)
 * mbig-endian <4>:                       C-SKY Options.      (line   28)
@@ -64820,12 +64831,12 @@ look up both forms.
                                                              (line  700)
 * mblock-move-inline-limit:              RS/6000 and PowerPC Options.
                                                              (line  688)
-* mbmi:                                  x86 Options.        (line  872)
-* mbmi2:                                 x86 Options.        (line  873)
+* mbmi:                                  x86 Options.        (line  883)
+* mbmi2:                                 x86 Options.        (line  884)
 * mboard:                                OpenRISC Options.   (line    9)
 * mbranch-cost:                          Adapteva Epiphany Options.
                                                              (line   18)
-* mbranch-cost <1>:                      AVR Options.        (line  185)
+* mbranch-cost <1>:                      AVR Options.        (line  184)
 * mbranch-cost <2>:                      MIPS Options.       (line  791)
 * mbranch-cost <3>:                      RISC-V Options.     (line    9)
 * mbranch-cost=:                         C-SKY Options.      (line  159)
@@ -64852,12 +64863,12 @@ look up both forms.
                                                              (line  529)
 * mcall-linux:                           RS/6000 and PowerPC Options.
                                                              (line  525)
-* mcall-ms2sysv-xlogues:                 x86 Options.        (line 1146)
+* mcall-ms2sysv-xlogues:                 x86 Options.        (line 1157)
 * mcall-netbsd:                          RS/6000 and PowerPC Options.
                                                              (line  533)
 * mcall-netbsd <1>:                      RS/6000 and PowerPC Options.
                                                              (line  537)
-* mcall-prologues:                       AVR Options.        (line  190)
+* mcall-prologues:                       AVR Options.        (line  189)
 * mcall-sysv:                            RS/6000 and PowerPC Options.
                                                              (line  507)
 * mcall-sysv-eabi:                       RS/6000 and PowerPC Options.
@@ -64868,41 +64879,41 @@ look up both forms.
 * mcaller-copies:                        HPPA Options.       (line   23)
 * mcaller-super-interworking:            ARM Options.        (line  860)
 * mcallgraph-data:                       MCore Options.      (line   31)
-* mcase-vector-pcrel:                    ARC Options.        (line  450)
+* mcase-vector-pcrel:                    ARC Options.        (line  448)
 * mcbcond:                               SPARC Options.      (line  260)
 * mcbranch-force-delay-slot:             SH Options.         (line  349)
-* mcc-init:                              CRIS Options.       (line   41)
+* mcc-init:                              CRIS Options.       (line   40)
 * mccrt:                                 C-SKY Options.      (line  155)
 * mcfv4e:                                M680x0 Options.     (line  170)
 * mcheck-zero-division:                  MIPS Options.       (line  570)
 * mcix:                                  DEC Alpha Options.  (line  163)
-* mcld:                                  x86 Options.        (line  964)
-* mcldemote:                             x86 Options.        (line  905)
+* mcld:                                  x86 Options.        (line  975)
+* mcldemote:                             x86 Options.        (line  916)
 * mclear-hwcap:                          Solaris 2 Options.  (line    9)
-* mclflushopt:                           x86 Options.        (line  850)
+* mclflushopt:                           x86 Options.        (line  861)
 * mclip:                                 MeP Options.        (line   35)
-* mclwb:                                 x86 Options.        (line  851)
-* mclzero:                               x86 Options.        (line  884)
+* mclwb:                                 x86 Options.        (line  862)
+* mclzero:                               x86 Options.        (line  895)
 * mcmodel:                               NDS32 Options.      (line   67)
 * mcmodel <1>:                           SPARC Options.      (line  320)
-* mcmodel=kernel:                        x86 Options.        (line 1565)
+* mcmodel=kernel:                        x86 Options.        (line 1576)
 * mcmodel=large:                         AArch64 Options.    (line   45)
 * mcmodel=large <1>:                     OpenRISC Options.   (line   77)
 * mcmodel=large <2>:                     RS/6000 and PowerPC Options.
                                                              (line  131)
 * mcmodel=large <3>:                     TILE-Gx Options.    (line   14)
-* mcmodel=large <4>:                     x86 Options.        (line 1577)
+* mcmodel=large <4>:                     x86 Options.        (line 1588)
 * mcmodel=medany:                        RISC-V Options.     (line  142)
 * mcmodel=medium:                        RS/6000 and PowerPC Options.
                                                              (line  126)
-* mcmodel=medium <1>:                    x86 Options.        (line 1570)
+* mcmodel=medium <1>:                    x86 Options.        (line 1581)
 * mcmodel=medlow:                        RISC-V Options.     (line  135)
 * mcmodel=small:                         AArch64 Options.    (line   39)
 * mcmodel=small <1>:                     OpenRISC Options.   (line   73)
 * mcmodel=small <2>:                     RS/6000 and PowerPC Options.
                                                              (line  122)
 * mcmodel=small <3>:                     TILE-Gx Options.    (line    9)
-* mcmodel=small <4>:                     x86 Options.        (line 1559)
+* mcmodel=small <4>:                     x86 Options.        (line 1570)
 * mcmodel=tiny:                          AArch64 Options.    (line   34)
 * mcmov:                                 NDS32 Options.      (line   21)
 * mcmov <1>:                             OpenRISC Options.   (line   45)
@@ -64913,13 +64924,13 @@ look up both forms.
 * mcmse:                                 ARM Options.        (line  961)
 * mco-re:                                eBPF Options.       (line   56)
 * mcode-density:                         ARC Options.        (line  163)
-* mcode-density-frame:                   ARC Options.        (line  511)
+* mcode-density-frame:                   ARC Options.        (line  509)
 * mcode-readable:                        MIPS Options.       (line  530)
 * mcode-region:                          MSP430 Options.     (line  150)
 * mcompact-branches=always:              MIPS Options.       (line  810)
 * mcompact-branches=never:               MIPS Options.       (line  810)
 * mcompact-branches=optimal:             MIPS Options.       (line  810)
-* mcompact-casesi:                       ARC Options.        (line  454)
+* mcompact-casesi:                       ARC Options.        (line  452)
 * mcompat-align-parm:                    RS/6000 and PowerPC Options.
                                                              (line  899)
 * mcompress:                             FT32 Options.       (line   26)
@@ -64928,7 +64939,7 @@ look up both forms.
 * mconfig=:                              MeP Options.        (line   39)
 * mconsole:                              x86 Windows Options.
                                                              (line    9)
-* mconst-align:                          CRIS Options.       (line   54)
+* mconst-align:                          CRIS Options.       (line   53)
 * mconst16:                              Xtensa Options.     (line   10)
 * mconstant-gp:                          IA-64 Options.      (line   46)
 * mconstpool:                            C-SKY Options.      (line  143)
@@ -64956,7 +64967,7 @@ look up both forms.
 * mcpu <14>:                             TILE-Gx Options.    (line   18)
 * mcpu <15>:                             TILEPro Options.    (line    9)
 * mcpu <16>:                             Visium Options.     (line   33)
-* mcpu <17>:                             x86 Options.        (line  524)
+* mcpu <17>:                             x86 Options.        (line  535)
 * mcpu32:                                M680x0 Options.     (line  136)
 * mcpu=:                                 Blackfin Options.   (line    7)
 * mcpu= <1>:                             C-SKY Options.      (line   14)
@@ -64966,7 +64977,7 @@ look up both forms.
 * mcr16c:                                CR16 Options.       (line   14)
 * mcr16cplus:                            CR16 Options.       (line   14)
 * mcrc:                                  MIPS Options.       (line  416)
-* mcrc32:                                x86 Options.        (line 1042)
+* mcrc32:                                x86 Options.        (line 1053)
 * mcrypto:                               RS/6000 and PowerPC Options.
                                                              (line  178)
 * mcsync-anomaly:                        Blackfin Options.   (line   57)
@@ -64974,11 +64985,11 @@ look up both forms.
 * mctor-dtor:                            NDS32 Options.      (line   81)
 * mcustom-fpu-cfg:                       Nios II Options.    (line  259)
 * mcustom-INSN:                          Nios II Options.    (line  139)
-* mcx16:                                 x86 Options.        (line 1015)
+* mcx16:                                 x86 Options.        (line 1026)
 * MD:                                    Preprocessor Options.
                                                              (line  172)
 * mdalign:                               SH Options.         (line  132)
-* mdata-align:                           CRIS Options.       (line   54)
+* mdata-align:                           CRIS Options.       (line   53)
 * mdata-model:                           CR16 Options.       (line   28)
 * mdata-region:                          MSP430 Options.     (line  150)
 * mdc:                                   MeP Options.        (line   62)
@@ -64988,7 +64999,7 @@ look up both forms.
 * mdebug <2>:                            Visium Options.     (line    7)
 * mdebug-main=PREFIX:                    VMS Options.        (line   13)
 * mdec-asm:                              PDP-11 Options.     (line   46)
-* mdirect-extern-access:                 x86 Options.        (line 1597)
+* mdirect-extern-access:                 x86 Options.        (line 1608)
 * mdisable-callt:                        V850 Options.       (line   92)
 * mdisable-fpregs:                       HPPA Options.       (line   34)
 * mdisable-indexing:                     HPPA Options.       (line   40)
@@ -65008,7 +65019,7 @@ look up both forms.
 * mdlmzb:                                RS/6000 and PowerPC Options.
                                                              (line  385)
 * mdmx:                                  MIPS Options.       (line  376)
-* mdouble:                               AVR Options.        (line  195)
+* mdouble:                               AVR Options.        (line  194)
 * mdouble <1>:                           FRV Options.        (line   48)
 * mdouble-float:                         C-SKY Options.      (line   58)
 * mdouble-float <1>:                     MIPS Options.       (line  288)
@@ -65016,14 +65027,14 @@ look up both forms.
 * mdpfp:                                 ARC Options.        (line   99)
 * mdpfp-compact:                         ARC Options.        (line  100)
 * mdpfp-fast:                            ARC Options.        (line  104)
-* mdpfp_compact:                         ARC Options.        (line  609)
-* mdpfp_fast:                            ARC Options.        (line  612)
+* mdpfp_compact:                         ARC Options.        (line  604)
+* mdpfp_fast:                            ARC Options.        (line  607)
 * mdsp:                                  C-SKY Options.      (line  102)
 * mdsp <1>:                              MIPS Options.       (line  353)
 * mdsp-packa:                            ARC Options.        (line  335)
 * mdspr2:                                MIPS Options.       (line  359)
-* mdsp_packa:                            ARC Options.        (line  615)
-* mdump-tune-features:                   x86 Options.        (line  946)
+* mdsp_packa:                            ARC Options.        (line  610)
+* mdump-tune-features:                   x86 Options.        (line  957)
 * mdvbf:                                 ARC Options.        (line  340)
 * mdwarf2-asm:                           IA-64 Options.      (line   94)
 * mdword:                                FRV Options.        (line   40)
@@ -65031,10 +65042,10 @@ look up both forms.
 * mdynamic-no-pic:                       RS/6000 and PowerPC Options.
                                                              (line  445)
 * mea:                                   ARC Options.        (line  112)
-* mEA:                                   ARC Options.        (line  618)
+* mEA:                                   ARC Options.        (line  613)
 * meabi:                                 RS/6000 and PowerPC Options.
                                                              (line  633)
-* mearly-cbranchsi:                      ARC Options.        (line  476)
+* mearly-cbranchsi:                      ARC Options.        (line  474)
 * mearly-stop-bits:                      IA-64 Options.      (line  100)
 * meb:                                   MeP Options.        (line   68)
 * meb <1>:                               Moxie Options.      (line    7)
@@ -65045,22 +65056,22 @@ look up both forms.
 * mel <1>:                               Moxie Options.      (line   11)
 * mel <2>:                               Nios II Options.    (line   90)
 * mel <3>:                               Score Options.      (line   12)
-* melf:                                  CRIS Options.       (line   79)
+* melf:                                  CRIS Options.       (line   78)
 * melf <1>:                              MMIX Options.       (line   43)
 * melrw:                                 C-SKY Options.      (line   76)
 * memb:                                  RS/6000 and PowerPC Options.
                                                              (line  628)
 * membedded-data:                        MIPS Options.       (line  517)
 * memregs=:                              M32C Options.       (line   21)
-* menqcmd:                               x86 Options.        (line  896)
+* menqcmd:                               x86 Options.        (line  907)
 * mep:                                   V850 Options.       (line   16)
 * mepsilon:                              MMIX Options.       (line   15)
 * mesa:                                  S/390 and zSeries Options.
                                                              (line   94)
-* metrax100:                             CRIS Options.       (line   26)
-* metrax4:                               CRIS Options.       (line   26)
+* metrax100:                             CRIS Options.       (line   25)
+* metrax4:                               CRIS Options.       (line   25)
 * meva:                                  MIPS Options.       (line  403)
-* mexpand-adddi:                         ARC Options.        (line  479)
+* mexpand-adddi:                         ARC Options.        (line  477)
 * mexplicit-relocs:                      DEC Alpha Options.  (line  176)
 * mexplicit-relocs <1>:                  MIPS Options.       (line  561)
 * mexr:                                  H8/300 Options.     (line   28)
@@ -65071,8 +65082,8 @@ look up both forms.
 * mextern-sdata:                         MIPS Options.       (line  480)
 * MF:                                    Preprocessor Options.
                                                              (line  111)
-* mf16c:                                 x86 Options.        (line  855)
-* mfancy-math-387:                       x86 Options.        (line  619)
+* mf16c:                                 x86 Options.        (line  866)
+* mfancy-math-387:                       x86 Options.        (line  630)
 * mfast-fp:                              Blackfin Options.   (line  130)
 * mfast-indirect-calls:                  HPPA Options.       (line   52)
 * mfast-sw-div:                          Nios II Options.    (line  115)
@@ -65081,9 +65092,9 @@ look up both forms.
 * mfdivdu:                               C-SKY Options.      (line   64)
 * mfdpic:                                ARM Options.        (line  984)
 * mfdpic <1>:                            FRV Options.        (line   72)
-* mfentry:                               x86 Options.        (line 1380)
-* mfentry-name:                          x86 Options.        (line 1411)
-* mfentry-section:                       x86 Options.        (line 1415)
+* mfentry:                               x86 Options.        (line 1391)
+* mfentry-name:                          x86 Options.        (line 1422)
+* mfentry-section:                       x86 Options.        (line 1426)
 * mfix:                                  DEC Alpha Options.  (line  163)
 * mfix-24k:                              MIPS Options.       (line  647)
 * mfix-and-continue:                     Darwin Options.     (line  104)
@@ -65121,24 +65132,24 @@ look up both forms.
 * mflush-func:                           MIPS Options.       (line  782)
 * mflush-func=NAME:                      M32R/D Options.     (line   93)
 * mflush-trap=NUMBER:                    M32R/D Options.     (line   86)
-* mfma:                                  x86 Options.        (line  856)
-* mfma4:                                 x86 Options.        (line  859)
+* mfma:                                  x86 Options.        (line  867)
+* mfma4:                                 x86 Options.        (line  870)
 * mfmaf:                                 SPARC Options.      (line  267)
 * mfmovd:                                SH Options.         (line  148)
-* mforce-indirect-call:                  x86 Options.        (line 1135)
+* mforce-indirect-call:                  x86 Options.        (line 1146)
 * mforce-no-pic:                         Xtensa Options.     (line   41)
 * mfp-exceptions:                        MIPS Options.       (line  830)
 * mfp-mode:                              Adapteva Epiphany Options.
                                                              (line   71)
 * mfp-reg:                               DEC Alpha Options.  (line   25)
-* mfp-ret-in-387:                        x86 Options.        (line  609)
+* mfp-ret-in-387:                        x86 Options.        (line  620)
 * mfp-rounding-mode:                     DEC Alpha Options.  (line   85)
 * mfp-trap-mode:                         DEC Alpha Options.  (line   63)
 * mfp16-format:                          ARM Options.        (line  730)
 * mfp32:                                 MIPS Options.       (line  258)
 * mfp64:                                 MIPS Options.       (line  261)
 * mfpmath:                               Optimize Options.   (line 2316)
-* mfpmath <1>:                           x86 Options.        (line  527)
+* mfpmath <1>:                           x86 Options.        (line  538)
 * mfpr-32:                               FRV Options.        (line   15)
 * mfpr-64:                               FRV Options.        (line   19)
 * mfprnd:                                RS/6000 and PowerPC Options.
@@ -65151,19 +65162,19 @@ look up both forms.
 * mfpu <5>:                              Visium Options.     (line   19)
 * mfpu=:                                 C-SKY Options.      (line   69)
 * mfpxx:                                 MIPS Options.       (line  264)
-* mfract-convert-truncate:               AVR Options.        (line  286)
+* mfract-convert-truncate:               AVR Options.        (line  284)
 * mframe-header-opt:                     MIPS Options.       (line  891)
 * mfriz:                                 RS/6000 and PowerPC Options.
                                                              (line  870)
 * mfsca:                                 SH Options.         (line  365)
-* mfsgsbase:                             x86 Options.        (line  852)
+* mfsgsbase:                             x86 Options.        (line  863)
 * mfsmuld:                               SPARC Options.      (line  274)
 * mfsrra:                                SH Options.         (line  374)
 * mft32b:                                FT32 Options.       (line   23)
 * mfull-regs:                            NDS32 Options.      (line   18)
 * mfull-toc:                             RS/6000 and PowerPC Options.
                                                              (line  256)
-* mfunction-return:                      x86 Options.        (line 1489)
+* mfunction-return:                      x86 Options.        (line 1500)
 * mfused-madd:                           IA-64 Options.      (line   88)
 * mfused-madd <1>:                       MIPS Options.       (line  630)
 * mfused-madd <2>:                       RS/6000 and PowerPC Options.
@@ -65172,7 +65183,7 @@ look up both forms.
                                                              (line  183)
 * mfused-madd <4>:                       SH Options.         (line  356)
 * mfused-madd <5>:                       Xtensa Options.     (line   19)
-* mfxsr:                                 x86 Options.        (line  875)
+* mfxsr:                                 x86 Options.        (line  886)
 * MG:                                    Preprocessor Options.
                                                              (line  122)
 * mg:                                    VAX Options.        (line   17)
@@ -65180,12 +65191,12 @@ look up both forms.
 * mg13:                                  RL78 Options.       (line   62)
 * mg14:                                  RL78 Options.       (line   62)
 * mgas:                                  HPPA Options.       (line   75)
-* mgas-isr-prologues:                    AVR Options.        (line  203)
+* mgas-isr-prologues:                    AVR Options.        (line  202)
 * mgcc-abi:                              V850 Options.       (line  148)
 * mgeneral-regs-only:                    AArch64 Options.    (line   24)
 * mgeneral-regs-only <1>:                ARM Options.        (line   57)
-* mgeneral-regs-only <2>:                x86 Options.        (line 1459)
-* mgfni:                                 x86 Options.        (line  889)
+* mgeneral-regs-only <2>:                x86 Options.        (line 1470)
+* mgfni:                                 x86 Options.        (line  900)
 * mghs:                                  V850 Options.       (line  127)
 * mginv:                                 MIPS Options.       (line  421)
 * mglibc:                                GNU/Linux Options.  (line    9)
@@ -65227,18 +65238,18 @@ look up both forms.
 * mhard-float <8>:                       SPARC Options.      (line   34)
 * mhard-float <9>:                       V850 Options.       (line  113)
 * mhard-float <10>:                      Visium Options.     (line   19)
-* mhard-float <11>:                      x86 Options.        (line  592)
+* mhard-float <11>:                      x86 Options.        (line  603)
 * mhard-mul:                             OpenRISC Options.   (line   24)
 * mhard-quad-float:                      SPARC Options.      (line   55)
 * mharden-sls:                           AArch64 Options.    (line  301)
-* mharden-sls <1>:                       x86 Options.        (line 1511)
+* mharden-sls <1>:                       x86 Options.        (line 1522)
 * mhardlit:                              MCore Options.      (line   10)
 * mhigh-registers:                       C-SKY Options.      (line  120)
-* mhle:                                  x86 Options.        (line  881)
+* mhle:                                  x86 Options.        (line  892)
 * mhotpatch:                             S/390 and zSeries Options.
                                                              (line  218)
 * mhp-ld:                                HPPA Options.       (line  123)
-* mhreset:                               x86 Options.        (line  910)
+* mhreset:                               x86 Options.        (line  921)
 * mhtm:                                  RS/6000 and PowerPC Options.
                                                              (line  184)
 * mhtm <1>:                              S/390 and zSeries Options.
@@ -65247,24 +65258,24 @@ look up both forms.
 * mhw-mul:                               Nios II Options.    (line  124)
 * mhw-mulx:                              Nios II Options.    (line  124)
 * mhwmult=:                              MSP430 Options.     (line   93)
-* miamcu:                                x86 Options.        (line 1531)
+* miamcu:                                x86 Options.        (line 1542)
 * micplb:                                Blackfin Options.   (line  175)
 * mid-shared-library:                    Blackfin Options.   (line   78)
 * mid-shared-library <1>:                Blackfin Options.   (line   85)
 * mieee:                                 DEC Alpha Options.  (line   39)
 * mieee <1>:                             SH Options.         (line  165)
 * mieee-conformant:                      DEC Alpha Options.  (line  134)
-* mieee-fp:                              x86 Options.        (line  586)
+* mieee-fp:                              x86 Options.        (line  597)
 * mieee-with-inexact:                    DEC Alpha Options.  (line   52)
 * milp32:                                IA-64 Options.      (line  121)
 * mimadd:                                MIPS Options.       (line  623)
 * mimpure-text:                          Solaris 2 Options.  (line   15)
-* mincoming-stack-boundary:              x86 Options.        (line  802)
-* mindexed-loads:                        ARC Options.        (line  483)
-* mindirect-branch:                      x86 Options.        (line 1470)
-* mindirect-branch-cs-prefix:            x86 Options.        (line 1518)
-* mindirect-branch-register:             x86 Options.        (line 1508)
-* minline-all-stringops:                 x86 Options.        (line 1311)
+* mincoming-stack-boundary:              x86 Options.        (line  813)
+* mindexed-loads:                        ARC Options.        (line  481)
+* mindirect-branch:                      x86 Options.        (line 1481)
+* mindirect-branch-cs-prefix:            x86 Options.        (line 1529)
+* mindirect-branch-register:             x86 Options.        (line 1519)
+* minline-all-stringops:                 x86 Options.        (line 1322)
 * minline-float-divide-max-throughput:   IA-64 Options.      (line   58)
 * minline-float-divide-min-latency:      IA-64 Options.      (line   54)
 * minline-ic_invalidate:                 SH Options.         (line  174)
@@ -65275,18 +65286,18 @@ look up both forms.
 * minline-plt <1>:                       FRV Options.        (line   81)
 * minline-sqrt-max-throughput:           IA-64 Options.      (line   80)
 * minline-sqrt-min-latency:              IA-64 Options.      (line   76)
-* minline-stringops-dynamically:         x86 Options.        (line 1319)
+* minline-stringops-dynamically:         x86 Options.        (line 1330)
 * minrt:                                 MSP430 Options.     (line  115)
 * minrt <1>:                             PRU Options.        (line    9)
 * minsert-sched-nops:                    RS/6000 and PowerPC Options.
                                                              (line  485)
-* minstrument-return:                    x86 Options.        (line 1399)
+* minstrument-return:                    x86 Options.        (line 1410)
 * mint-register:                         RX Options.         (line  100)
 * mint16:                                PDP-11 Options.     (line   33)
 * mint32:                                CR16 Options.       (line   22)
 * mint32 <1>:                            H8/300 Options.     (line   38)
 * mint32 <2>:                            PDP-11 Options.     (line   37)
-* mint8:                                 AVR Options.        (line  213)
+* mint8:                                 AVR Options.        (line  211)
 * minterlink-compressed:                 MIPS Options.       (line  135)
 * minterlink-mips16:                     MIPS Options.       (line  147)
 * mio-volatile:                          MeP Options.        (line   74)
@@ -65323,13 +65334,13 @@ look up both forms.
 * mjump-in-delay:                        HPPA Options.       (line   30)
 * mkernel:                               Darwin Options.     (line   82)
 * mkernel <1>:                           eBPF Options.       (line   13)
-* mkl:                                   x86 Options.        (line  911)
+* mkl:                                   x86 Options.        (line  922)
 * mknuthdiv:                             MMIX Options.       (line   32)
 * ml:                                    MeP Options.        (line   78)
 * ml <1>:                                SH Options.         (line  129)
 * mlarge:                                MSP430 Options.     (line   82)
 * mlarge-data:                           DEC Alpha Options.  (line  187)
-* mlarge-data-threshold:                 x86 Options.        (line  691)
+* mlarge-data-threshold:                 x86 Options.        (line  702)
 * mlarge-text:                           DEC Alpha Options.  (line  205)
 * mleadz:                                MeP Options.        (line   81)
 * mleaf-id-shared-library:               Blackfin Options.   (line   89)
@@ -65341,7 +65352,7 @@ look up both forms.
 * mlittle:                               RS/6000 and PowerPC Options.
                                                              (line  434)
 * mlittle-endian:                        AArch64 Options.    (line   30)
-* mlittle-endian <1>:                    ARC Options.        (line  598)
+* mlittle-endian <1>:                    ARC Options.        (line  594)
 * mlittle-endian <2>:                    ARM Options.        (line   63)
 * mlittle-endian <3>:                    C6X Options.        (line   16)
 * mlittle-endian <4>:                    C-SKY Options.      (line   30)
@@ -65363,21 +65374,21 @@ look up both forms.
 * mlock:                                 ARC Options.        (line  345)
 * mlong-calls:                           Adapteva Epiphany Options.
                                                              (line   55)
-* mlong-calls <1>:                       ARC Options.        (line  404)
+* mlong-calls <1>:                       ARC Options.        (line  402)
 * mlong-calls <2>:                       ARM Options.        (line  757)
 * mlong-calls <3>:                       Blackfin Options.   (line  118)
 * mlong-calls <4>:                       FRV Options.        (line  122)
 * mlong-calls <5>:                       HPPA Options.       (line  136)
 * mlong-calls <6>:                       MIPS Options.       (line  609)
 * mlong-calls <7>:                       V850 Options.       (line   10)
-* mlong-double:                          AVR Options.        (line  195)
+* mlong-double:                          AVR Options.        (line  194)
 * mlong-double-128:                      S/390 and zSeries Options.
                                                              (line   29)
-* mlong-double-128 <1>:                  x86 Options.        (line  670)
+* mlong-double-128 <1>:                  x86 Options.        (line  681)
 * mlong-double-64:                       S/390 and zSeries Options.
                                                              (line   29)
-* mlong-double-64 <1>:                   x86 Options.        (line  670)
-* mlong-double-80:                       x86 Options.        (line  670)
+* mlong-double-64 <1>:                   x86 Options.        (line  681)
+* mlong-double-80:                       x86 Options.        (line  681)
 * mlong-jump-table-offsets:              M680x0 Options.     (line  340)
 * mlong-jumps:                           V850 Options.       (line  108)
 * mlong-load-store:                      HPPA Options.       (line   66)
@@ -65397,17 +65408,17 @@ look up both forms.
 * mlow64k:                               Blackfin Options.   (line   67)
 * mlp64:                                 IA-64 Options.      (line  121)
 * mlpc-width:                            ARC Options.        (line  313)
-* mlra:                                  ARC Options.        (line  488)
+* mlra:                                  ARC Options.        (line  486)
 * mlra <1>:                              FT32 Options.       (line   16)
 * mlra <2>:                              PDP-11 Options.     (line   52)
 * mlra <3>:                              SPARC Options.      (line  111)
 * mlra <4>:                              VAX Options.        (line   22)
-* mlra-priority-compact:                 ARC Options.        (line  496)
-* mlra-priority-noncompact:              ARC Options.        (line  499)
-* mlra-priority-none:                    ARC Options.        (line  493)
-* mlwp:                                  x86 Options.        (line  866)
+* mlra-priority-compact:                 ARC Options.        (line  494)
+* mlra-priority-noncompact:              ARC Options.        (line  497)
+* mlra-priority-none:                    ARC Options.        (line  491)
+* mlwp:                                  x86 Options.        (line  877)
 * mlxc1-sxc1:                            MIPS Options.       (line  901)
-* mlzcnt:                                x86 Options.        (line  874)
+* mlzcnt:                                x86 Options.        (line  885)
 * MM:                                    Preprocessor Options.
                                                              (line  102)
 * mm:                                    MeP Options.        (line   84)
@@ -65415,18 +65426,18 @@ look up both forms.
 * mmac <1>:                              Score Options.      (line   21)
 * mmac-24:                               ARC Options.        (line  354)
 * mmac-d16:                              ARC Options.        (line  350)
-* mmac_24:                               ARC Options.        (line  621)
-* mmac_d16:                              ARC Options.        (line  624)
+* mmac_24:                               ARC Options.        (line  616)
+* mmac_d16:                              ARC Options.        (line  619)
 * mmad:                                  MIPS Options.       (line  618)
 * mmadd4:                                MIPS Options.       (line  906)
-* mmain-is-OS_task:                      AVR Options.        (line  219)
+* mmain-is-OS_task:                      AVR Options.        (line  217)
 * mmainkernel:                           Nvidia PTX Options. (line   41)
 * mmalloc64:                             VMS Options.        (line   17)
-* mmanual-endbr:                         x86 Options.        (line 1140)
+* mmanual-endbr:                         x86 Options.        (line 1151)
 * mmax:                                  DEC Alpha Options.  (line  163)
 * mmax-constant-size:                    RX Options.         (line   82)
 * mmax-inline-shift=:                    MSP430 Options.     (line  134)
-* mmax-stack-frame:                      CRIS Options.       (line   22)
+* mmax-stack-frame:                      CRIS Options.       (line   21)
 * mmcount-ra-address:                    MIPS Options.       (line  878)
 * mmcu:                                  AVR Options.        (line    9)
 * mmcu <1>:                              MIPS Options.       (line  399)
@@ -65435,38 +65446,38 @@ look up both forms.
 * MMD:                                   Preprocessor Options.
                                                              (line  188)
 * mmedia:                                FRV Options.        (line   56)
-* mmedium-calls:                         ARC Options.        (line  408)
+* mmedium-calls:                         ARC Options.        (line  406)
 * mmemcpy:                               MicroBlaze Options. (line   13)
 * mmemcpy <1>:                           MIPS Options.       (line  603)
-* mmemcpy-strategy=STRATEGY:             x86 Options.        (line 1341)
+* mmemcpy-strategy=STRATEGY:             x86 Options.        (line 1352)
 * mmemory-latency:                       DEC Alpha Options.  (line  268)
 * mmemory-model:                         SPARC Options.      (line  348)
-* mmemset-strategy=STRATEGY:             x86 Options.        (line 1353)
+* mmemset-strategy=STRATEGY:             x86 Options.        (line 1364)
 * mmfcrf:                                RS/6000 and PowerPC Options.
                                                              (line   25)
 * mmicromips:                            MIPS Options.       (line  387)
-* mmillicode:                            ARC Options.        (line  502)
+* mmillicode:                            ARC Options.        (line  500)
 * mminimal-toc:                          RS/6000 and PowerPC Options.
                                                              (line  256)
 * mminmax:                               MeP Options.        (line   87)
-* mmixed-code:                           ARC Options.        (line  516)
+* mmixed-code:                           ARC Options.        (line  514)
 * mmma:                                  RS/6000 and PowerPC Options.
                                                              (line  944)
-* mmmx:                                  x86 Options.        (line  827)
+* mmmx:                                  x86 Options.        (line  838)
 * mmodel=large:                          M32R/D Options.     (line   33)
 * mmodel=medium:                         M32R/D Options.     (line   27)
 * mmodel=small:                          M32R/D Options.     (line   18)
-* mmovbe:                                x86 Options.        (line 1034)
-* mmovdir64b:                            x86 Options.        (line  895)
-* mmovdiri:                              x86 Options.        (line  894)
-* mmove-max:                             x86 Options.        (line  992)
+* mmovbe:                                x86 Options.        (line 1045)
+* mmovdir64b:                            x86 Options.        (line  906)
+* mmovdiri:                              x86 Options.        (line  905)
+* mmove-max:                             x86 Options.        (line 1003)
 * mmp:                                   C-SKY Options.      (line   87)
 * mmpy:                                  ARC Options.        (line  117)
 * mmpy-option:                           ARC Options.        (line  173)
-* mms-bitfields:                         x86 Options.        (line 1186)
+* mms-bitfields:                         x86 Options.        (line 1197)
 * mmt:                                   MIPS Options.       (line  395)
 * mmul:                                  RL78 Options.       (line   15)
-* mmul-bug-workaround:                   CRIS Options.       (line   31)
+* mmul-bug-workaround:                   CRIS Options.       (line   30)
 * mmul.x:                                Moxie Options.      (line   14)
 * mmul32x16:                             ARC Options.        (line  121)
 * mmul64:                                ARC Options.        (line  124)
@@ -65475,7 +65486,7 @@ look up both forms.
                                                              (line  378)
 * mmult:                                 MeP Options.        (line   90)
 * mmult-bug:                             MN10300 Options.    (line    9)
-* mmultcost:                             ARC Options.        (line  576)
+* mmultcost:                             ARC Options.        (line  574)
 * mmulti-cond-exec:                      FRV Options.        (line  215)
 * mmulticore:                            Blackfin Options.   (line  139)
 * mmultiple:                             RS/6000 and PowerPC Options.
@@ -65486,13 +65497,13 @@ look up both forms.
                                                              (line  138)
 * mmvme:                                 RS/6000 and PowerPC Options.
                                                              (line  609)
-* mmwait:                                x86 Options.        (line 1048)
-* mmwaitx:                               x86 Options.        (line  883)
+* mmwait:                                x86 Options.        (line 1059)
+* mmwaitx:                               x86 Options.        (line  894)
 * mn:                                    H8/300 Options.     (line   20)
-* mn-flash:                              AVR Options.        (line  224)
+* mn-flash:                              AVR Options.        (line  222)
 * mnan=2008:                             MIPS Options.       (line  320)
 * mnan=legacy:                           MIPS Options.       (line  320)
-* mneeded:                               x86 Options.        (line 1592)
+* mneeded:                               x86 Options.        (line 1603)
 * mneon-for-64bits:                      ARM Options.        (line  923)
 * mnested-cond-exec:                     FRV Options.        (line  230)
 * mnewlib:                               OpenRISC Options.   (line   13)
@@ -65502,10 +65513,10 @@ look up both forms.
 * mno-8byte-align:                       V850 Options.       (line  170)
 * mno-abicalls:                          MIPS Options.       (line  192)
 * mno-ac0:                               PDP-11 Options.     (line   20)
-* mno-align-double:                      x86 Options.        (line  629)
+* mno-align-double:                      x86 Options.        (line  640)
 * mno-align-int:                         M680x0 Options.     (line  262)
 * mno-align-loops:                       M32R/D Options.     (line   76)
-* mno-align-stringops:                   x86 Options.        (line 1306)
+* mno-align-stringops:                   x86 Options.        (line 1317)
 * mno-allow-string-insns:                RX Options.         (line  150)
 * mno-altivec:                           RS/6000 and PowerPC Options.
                                                              (line  137)
@@ -65524,11 +65535,11 @@ look up both forms.
 * mno-bitfield:                          M680x0 Options.     (line  228)
 * mno-branch-likely:                     MIPS Options.       (line  798)
 * mno-branch-predict:                    MMIX Options.       (line   48)
-* mno-brcc:                              ARC Options.        (line  444)
+* mno-brcc:                              ARC Options.        (line  442)
 * mno-bwx:                               DEC Alpha Options.  (line  163)
 * mno-bypass-cache:                      Nios II Options.    (line  103)
 * mno-cache-volatile:                    Nios II Options.    (line  109)
-* mno-call-ms2sysv-xlogues:              x86 Options.        (line 1146)
+* mno-call-ms2sysv-xlogues:              x86 Options.        (line 1157)
 * mno-callgraph-data:                    MCore Options.      (line   31)
 * mno-cbcond:                            SPARC Options.      (line  260)
 * mno-check-zero-division:               MIPS Options.       (line  570)
@@ -65538,10 +65549,10 @@ look up both forms.
 * mno-cmpb:                              RS/6000 and PowerPC Options.
                                                              (line   25)
 * mno-co-re:                             eBPF Options.       (line   60)
-* mno-cond-exec:                         ARC Options.        (line  458)
+* mno-cond-exec:                         ARC Options.        (line  456)
 * mno-cond-exec <1>:                     FRV Options.        (line  194)
 * mno-cond-move:                         FRV Options.        (line  166)
-* mno-const-align:                       CRIS Options.       (line   54)
+* mno-const-align:                       CRIS Options.       (line   53)
 * mno-const16:                           Xtensa Options.     (line   10)
 * mno-crc:                               MIPS Options.       (line  416)
 * mno-crt0:                              MN10300 Options.    (line   43)
@@ -65550,11 +65561,11 @@ look up both forms.
                                                              (line  178)
 * mno-csync-anomaly:                     Blackfin Options.   (line   63)
 * mno-custom-INSN:                       Nios II Options.    (line  139)
-* mno-data-align:                        CRIS Options.       (line   54)
+* mno-data-align:                        CRIS Options.       (line   53)
 * mno-debug:                             S/390 and zSeries Options.
                                                              (line  144)
-* mno-default:                           x86 Options.        (line  960)
-* mno-direct-extern-access:              x86 Options.        (line 1597)
+* mno-default:                           x86 Options.        (line  971)
+* mno-direct-extern-access:              x86 Options.        (line 1608)
 * mno-direct-extern-access <1>:          x86 Function Attributes.
                                                              (line  712)
 * mno-disable-callt:                     V850 Options.       (line   92)
@@ -65583,7 +65594,7 @@ look up both forms.
 * mno-ext-perf2:                         NDS32 Options.      (line   36)
 * mno-ext-string:                        NDS32 Options.      (line   42)
 * mno-extern-sdata:                      MIPS Options.       (line  480)
-* mno-fancy-math-387:                    x86 Options.        (line  619)
+* mno-fancy-math-387:                    x86 Options.        (line  630)
 * mno-fast-sw-div:                       Nios II Options.    (line  115)
 * mno-faster-structs:                    SPARC Options.      (line   91)
 * mno-fdpic:                             ARM Options.        (line  984)
@@ -65606,7 +65617,7 @@ look up both forms.
 * mno-fp-in-toc:                         RS/6000 and PowerPC Options.
                                                              (line  256)
 * mno-fp-regs:                           DEC Alpha Options.  (line   25)
-* mno-fp-ret-in-387:                     x86 Options.        (line  609)
+* mno-fp-ret-in-387:                     x86 Options.        (line  620)
 * mno-fprnd:                             RS/6000 and PowerPC Options.
                                                              (line   25)
 * mno-fpu:                               SPARC Options.      (line   39)
@@ -65643,7 +65654,7 @@ look up both forms.
 * mno-hw-mulx:                           Nios II Options.    (line  124)
 * mno-id-shared-library:                 Blackfin Options.   (line   85)
 * mno-ieee:                              SH Options.         (line  165)
-* mno-ieee-fp:                           x86 Options.        (line  586)
+* mno-ieee-fp:                           x86 Options.        (line  597)
 * mno-imadd:                             MIPS Options.       (line  623)
 * mno-inline-float-divide:               IA-64 Options.      (line   62)
 * mno-inline-int-divide:                 IA-64 Options.      (line   73)
@@ -65652,7 +65663,7 @@ look up both forms.
 * mno-int32:                             PDP-11 Options.     (line   33)
 * mno-interlink-compressed:              MIPS Options.       (line  135)
 * mno-interlink-mips16:                  MIPS Options.       (line  147)
-* mno-interrupts:                        AVR Options.        (line  227)
+* mno-interrupts:                        AVR Options.        (line  225)
 * mno-isel:                              RS/6000 and PowerPC Options.
                                                              (line  167)
 * mno-jsr:                               RX Options.         (line  169)
@@ -65700,9 +65711,9 @@ look up both forms.
 * Mno-modules:                           Preprocessor Options.
                                                              (line  132)
 * mno-mpy:                               ARC Options.        (line  117)
-* mno-ms-bitfields:                      x86 Options.        (line 1186)
+* mno-ms-bitfields:                      x86 Options.        (line 1197)
 * mno-mt:                                MIPS Options.       (line  395)
-* mno-mul-bug-workaround:                CRIS Options.       (line   31)
+* mno-mul-bug-workaround:                CRIS Options.       (line   30)
 * mno-muladd:                            FRV Options.        (line   68)
 * mno-mulhw:                             RS/6000 and PowerPC Options.
                                                              (line  378)
@@ -65753,17 +65764,17 @@ look up both forms.
 * mno-privileged:                        RS/6000 and PowerPC Options.
                                                              (line  955)
 * mno-prolog-function:                   V850 Options.       (line   23)
-* mno-prologue-epilogue:                 CRIS Options.       (line   70)
+* mno-prologue-epilogue:                 CRIS Options.       (line   69)
 * mno-prototype:                         RS/6000 and PowerPC Options.
                                                              (line  593)
-* mno-push-args:                         x86 Options.        (line 1163)
+* mno-push-args:                         x86 Options.        (line 1174)
 * mno-quad-memory:                       RS/6000 and PowerPC Options.
                                                              (line  203)
 * mno-quad-memory-atomic:                RS/6000 and PowerPC Options.
                                                              (line  209)
 * mno-readonly-in-sdata:                 RS/6000 and PowerPC Options.
                                                              (line  684)
-* mno-red-zone:                          x86 Options.        (line 1551)
+* mno-red-zone:                          x86 Options.        (line 1562)
 * mno-register-names:                    IA-64 Options.      (line   37)
 * mno-regnames:                          RS/6000 and PowerPC Options.
                                                              (line  722)
@@ -65791,7 +65802,7 @@ look up both forms.
 * mno-sched-prefer-non-control-spec-insns: IA-64 Options.    (line  178)
 * mno-sched-prefer-non-data-spec-insns:  IA-64 Options.      (line  171)
 * mno-sched-prolog:                      ARM Options.        (line   32)
-* mno-sdata:                             ARC Options.        (line  422)
+* mno-sdata:                             ARC Options.        (line  420)
 * mno-sdata <1>:                         IA-64 Options.      (line   42)
 * mno-sdata <2>:                         RS/6000 and PowerPC Options.
                                                              (line  679)
@@ -65799,7 +65810,7 @@ look up both forms.
 * mno-serialize-volatile:                Xtensa Options.     (line   35)
 * mno-setlb:                             MN10300 Options.    (line   69)
 * mno-short:                             M680x0 Options.     (line  223)
-* mno-side-effects:                      CRIS Options.       (line   45)
+* mno-side-effects:                      CRIS Options.       (line   44)
 * mno-sim:                               RX Options.         (line   71)
 * mno-single-exit:                       MMIX Options.       (line   65)
 * mno-slow-bytes:                        MCore Options.      (line   35)
@@ -65814,7 +65825,7 @@ look up both forms.
 * mno-split-addresses:                   MIPS Options.       (line  555)
 * mno-split-lohi:                        Adapteva Epiphany Options.
                                                              (line  109)
-* mno-stack-align:                       CRIS Options.       (line   54)
+* mno-stack-align:                       CRIS Options.       (line   53)
 * mno-stack-bias:                        SPARC Options.      (line  372)
 * mno-std-struct-return:                 SPARC Options.      (line  102)
 * mno-strict-align:                      AArch64 Options.    (line   52)
@@ -65856,7 +65867,7 @@ look up both forms.
 * mno-vis4b:                             SPARC Options.      (line  251)
 * mno-vliw-branch:                       FRV Options.        (line  208)
 * mno-volatile-asm-stop:                 IA-64 Options.      (line   32)
-* mno-volatile-cache:                    ARC Options.        (line  431)
+* mno-volatile-cache:                    ARC Options.        (line  429)
 * mno-vrsave:                            RS/6000 and PowerPC Options.
                                                              (line  153)
 * mno-vsx:                               RS/6000 and PowerPC Options.
@@ -65881,7 +65892,7 @@ look up both forms.
 * mnomacsave:                            SH Options.         (line  160)
 * mnop-fun-dllimport:                    x86 Windows Options.
                                                              (line   22)
-* mnop-mcount:                           x86 Options.        (line 1393)
+* mnop-mcount:                           x86 Options.        (line 1404)
 * mnopm:                                 FT32 Options.       (line   29)
 * mnops:                                 Adapteva Epiphany Options.
                                                              (line   26)
@@ -65889,7 +65900,7 @@ look up both forms.
 * modd-spreg:                            MIPS Options.       (line  293)
 * momit-leaf-frame-pointer:              AArch64 Options.    (line   58)
 * momit-leaf-frame-pointer <1>:          Blackfin Options.   (line   43)
-* momit-leaf-frame-pointer <2>:          x86 Options.        (line 1357)
+* momit-leaf-frame-pointer <2>:          x86 Options.        (line 1368)
 * mone-byte-bool:                        Darwin Options.     (line   90)
 * moptimize:                             Nvidia PTX Options. (line   45)
 * moptimize-membar:                      FRV Options.        (line  244)
@@ -65906,15 +65917,15 @@ look up both forms.
 * mpadstruct:                            SH Options.         (line  189)
 * mpaired-single:                        MIPS Options.       (line  370)
 * mpc-relative-literal-loads:            AArch64 Options.    (line  274)
-* mpc32:                                 x86 Options.        (line  751)
-* mpc64:                                 x86 Options.        (line  751)
-* mpc80:                                 x86 Options.        (line  751)
-* mpclmul:                               x86 Options.        (line  849)
-* mpconfig:                              x86 Options.        (line  857)
+* mpc32:                                 x86 Options.        (line  762)
+* mpc64:                                 x86 Options.        (line  762)
+* mpc80:                                 x86 Options.        (line  762)
+* mpclmul:                               x86 Options.        (line  860)
+* mpconfig:                              x86 Options.        (line  868)
 * mpcrel:                                M680x0 Options.     (line  273)
 * mpcrel <1>:                            RS/6000 and PowerPC Options.
                                                              (line  932)
-* mpdebug:                               CRIS Options.       (line   35)
+* mpdebug:                               CRIS Options.       (line   34)
 * mpe:                                   RS/6000 and PowerPC Options.
                                                              (line  310)
 * mpe-aligned-commons:                   x86 Windows Options.
@@ -65923,7 +65934,7 @@ look up both forms.
 * mpic-data-is-text-relative <1>:        MicroBlaze Options. (line   92)
 * mpic-register:                         ARM Options.        (line  787)
 * mpid:                                  RX Options.         (line  117)
-* mpku:                                  x86 Options.        (line  885)
+* mpku:                                  x86 Options.        (line  896)
 * mplt:                                  MIPS Options.       (line  219)
 * mpltseq:                               RS/6000 and PowerPC Options.
                                                              (line  765)
@@ -65932,7 +65943,7 @@ look up both forms.
                                                              (line  878)
 * mpoke-function-name:                   ARM Options.        (line  802)
 * mpopc:                                 SPARC Options.      (line  281)
-* mpopcnt:                               x86 Options.        (line  869)
+* mpopcnt:                               x86 Options.        (line  880)
 * mpopcntb:                              RS/6000 and PowerPC Options.
                                                              (line   25)
 * mpopcntd:                              RS/6000 and PowerPC Options.
@@ -65952,65 +65963,65 @@ look up both forms.
                                                              (line   25)
 * mpowerpc64:                            RS/6000 and PowerPC Options.
                                                              (line   25)
-* mprefer-avx128:                        x86 Options.        (line  984)
+* mprefer-avx128:                        x86 Options.        (line  995)
 * mprefer-short-insn-regs:               Adapteva Epiphany Options.
                                                              (line   13)
-* mprefer-vector-width:                  x86 Options.        (line  988)
+* mprefer-vector-width:                  x86 Options.        (line  999)
 * mprefergot:                            SH Options.         (line  268)
 * mpreferred-stack-boundary:             RISC-V Options.     (line  101)
-* mpreferred-stack-boundary <1>:         x86 Options.        (line  781)
-* mprefetchwt1:                          x86 Options.        (line  862)
+* mpreferred-stack-boundary <1>:         x86 Options.        (line  792)
+* mprefetchwt1:                          x86 Options.        (line  873)
 * mprefixed:                             RS/6000 and PowerPC Options.
                                                              (line  938)
 * mpretend-cmove:                        SH Options.         (line  383)
-* mprfchw:                               x86 Options.        (line  860)
+* mprfchw:                               x86 Options.        (line  871)
 * mprint-tune-info:                      ARM Options.        (line  944)
 * mprioritize-restricted-insns:          RS/6000 and PowerPC Options.
                                                              (line  457)
 * mprivileged:                           RS/6000 and PowerPC Options.
                                                              (line  955)
 * mprolog-function:                      V850 Options.       (line   23)
-* mprologue-epilogue:                    CRIS Options.       (line   70)
+* mprologue-epilogue:                    CRIS Options.       (line   69)
 * mprototype:                            RS/6000 and PowerPC Options.
                                                              (line  593)
-* mptwrite:                              x86 Options.        (line  853)
+* mptwrite:                              x86 Options.        (line  864)
 * mptx:                                  Nvidia PTX Options. (line   30)
 * mpure-code:                            ARM Options.        (line  954)
-* mpush-args:                            x86 Options.        (line 1163)
+* mpush-args:                            x86 Options.        (line 1174)
 * mpushpop:                              C-SKY Options.      (line  130)
 * MQ:                                    Preprocessor Options.
                                                              (line  162)
-* mq-class:                              ARC Options.        (line  519)
+* mq-class:                              ARC Options.        (line  517)
 * mquad-memory:                          RS/6000 and PowerPC Options.
                                                              (line  203)
 * mquad-memory-atomic:                   RS/6000 and PowerPC Options.
                                                              (line  209)
 * mr0rel-sec:                            Nios II Options.    (line   76)
 * mr10k-cache-barrier:                   MIPS Options.       (line  720)
-* mRcq:                                  ARC Options.        (line  523)
-* mRcw:                                  ARC Options.        (line  527)
-* mrdpid:                                x86 Options.        (line  861)
-* mrdrnd:                                x86 Options.        (line  854)
-* mrdseed:                               x86 Options.        (line  863)
+* mRcq:                                  ARC Options.        (line  521)
+* mRcw:                                  ARC Options.        (line  525)
+* mrdpid:                                x86 Options.        (line  872)
+* mrdrnd:                                x86 Options.        (line  865)
+* mrdseed:                               x86 Options.        (line  874)
 * mreadonly-in-sdata:                    RS/6000 and PowerPC Options.
                                                              (line  684)
 * mrecip:                                RS/6000 and PowerPC Options.
                                                              (line  785)
-* mrecip <1>:                            x86 Options.        (line 1053)
+* mrecip <1>:                            x86 Options.        (line 1064)
 * mrecip-precision:                      RS/6000 and PowerPC Options.
                                                              (line  842)
 * mrecip=opt:                            RS/6000 and PowerPC Options.
                                                              (line  798)
-* mrecip=opt <1>:                        x86 Options.        (line 1075)
-* mrecord-mcount:                        x86 Options.        (line 1387)
-* mrecord-return:                        x86 Options.        (line 1407)
-* mred-zone:                             x86 Options.        (line 1551)
+* mrecip=opt <1>:                        x86 Options.        (line 1086)
+* mrecord-mcount:                        x86 Options.        (line 1398)
+* mrecord-return:                        x86 Options.        (line 1418)
+* mred-zone:                             x86 Options.        (line 1562)
 * mreduced-regs:                         NDS32 Options.      (line   15)
 * mregister-names:                       IA-64 Options.      (line   37)
 * mregnames:                             RS/6000 and PowerPC Options.
                                                              (line  722)
-* mregparm:                              x86 Options.        (line  721)
-* mrelax:                                AVR Options.        (line  231)
+* mregparm:                              x86 Options.        (line  732)
+* mrelax:                                AVR Options.        (line  229)
 * mrelax <1>:                            H8/300 Options.     (line    9)
 * mrelax <2>:                            MN10300 Options.    (line   46)
 * mrelax <3>:                            MSP430 Options.     (line   88)
@@ -66018,7 +66029,7 @@ look up both forms.
 * mrelax <5>:                            RX Options.         (line   95)
 * mrelax <6>:                            SH Options.         (line  137)
 * mrelax <7>:                            V850 Options.       (line  103)
-* mrelax-cmpxchg-loop:                   x86 Options.        (line 1464)
+* mrelax-cmpxchg-loop:                   x86 Options.        (line 1475)
 * mrelax-immediate:                      MCore Options.      (line   19)
 * mrelax-pic-calls:                      MIPS Options.       (line  865)
 * mrelocatable:                          RS/6000 and PowerPC Options.
@@ -66033,7 +66044,7 @@ look up both forms.
 * mrgf-banked-regs:                      ARC Options.        (line  304)
 * mrh850-abi:                            V850 Options.       (line  127)
 * mrl78:                                 RL78 Options.       (line   62)
-* mrmw:                                  AVR Options.        (line  245)
+* mrmw:                                  AVR Options.        (line  243)
 * mrop-protect:                          RS/6000 and PowerPC Options.
                                                              (line  949)
 * mror:                                  OpenRISC Options.   (line   49)
@@ -66041,16 +66052,16 @@ look up both forms.
 * mround-nearest:                        Adapteva Epiphany Options.
                                                              (line   51)
 * mrtd:                                  M680x0 Options.     (line  237)
-* mrtd <1>:                              x86 Options.        (line  697)
+* mrtd <1>:                              x86 Options.        (line  708)
 * mrtd <2>:                              x86 Function Attributes.
                                                              (line    9)
-* mrtm:                                  x86 Options.        (line  880)
+* mrtm:                                  x86 Options.        (line  891)
 * mrtp:                                  VxWorks Options.    (line   11)
 * mrtsc:                                 ARC Options.        (line  358)
 * ms:                                    H8/300 Options.     (line   17)
 * ms <1>:                                MeP Options.        (line  100)
 * ms2600:                                H8/300 Options.     (line   24)
-* msahf:                                 x86 Options.        (line 1024)
+* msahf:                                 x86 Options.        (line 1035)
 * msatur:                                MeP Options.        (line  105)
 * msave-acc-in-interrupts:               RX Options.         (line  109)
 * msave-mduc-in-interrupts:              RL78 Options.       (line   79)
@@ -66083,7 +66094,7 @@ look up both forms.
 * mscore7:                               Score Options.      (line   31)
 * mscore7d:                              Score Options.      (line   35)
 * msda:                                  V850 Options.       (line   40)
-* msdata:                                ARC Options.        (line  422)
+* msdata:                                ARC Options.        (line  420)
 * msdata <1>:                            IA-64 Options.      (line   42)
 * msdata <2>:                            RS/6000 and PowerPC Options.
                                                              (line  666)
@@ -66111,20 +66122,20 @@ look up both forms.
 * msel-sched-dont-check-control-spec:    IA-64 Options.      (line  207)
 * msep-data:                             Blackfin Options.   (line  107)
 * msep-data <1>:                         Blackfin Options.   (line  113)
-* mserialize:                            x86 Options.        (line  906)
+* mserialize:                            x86 Options.        (line  917)
 * mserialize-volatile:                   Xtensa Options.     (line   35)
 * msetlb:                                MN10300 Options.    (line   64)
 * msext:                                 OpenRISC Options.   (line   59)
 * msfimm:                                OpenRISC Options.   (line   63)
-* msgx:                                  x86 Options.        (line  864)
-* msha:                                  x86 Options.        (line  847)
+* msgx:                                  x86 Options.        (line  875)
+* msha:                                  x86 Options.        (line  858)
 * mshared-library-id:                    Blackfin Options.   (line  100)
 * mshftimm:                              OpenRISC Options.   (line   68)
 * mshort:                                M680x0 Options.     (line  217)
-* mshort-calls:                          AVR Options.        (line  249)
+* mshort-calls:                          AVR Options.        (line  247)
 * mshorten-memrefs:                      RISC-V Options.     (line  121)
-* mshstk:                                x86 Options.        (line 1038)
-* mside-effects:                         CRIS Options.       (line   45)
+* mshstk:                                x86 Options.        (line 1049)
+* mside-effects:                         CRIS Options.       (line   44)
 * msign-extend-enabled:                  LM32 Options.       (line   18)
 * msign-return-address:                  AArch64 Options.    (line  280)
 * msilicon-errata:                       MSP430 Options.     (line  159)
@@ -66151,8 +66162,8 @@ look up both forms.
 * msingle-pic-base <1>:                  RS/6000 and PowerPC Options.
                                                              (line  451)
 * msio:                                  HPPA Options.       (line  105)
-* msize-level:                           ARC Options.        (line  531)
-* mskip-rax-setup:                       x86 Options.        (line 1420)
+* msize-level:                           ARC Options.        (line  529)
+* mskip-rax-setup:                       x86 Options.        (line 1431)
 * mslow-bytes:                           MCore Options.      (line   35)
 * mslow-flash-data:                      ARM Options.        (line  926)
 * msmall:                                MSP430 Options.     (line   85)
@@ -66190,11 +66201,11 @@ look up both forms.
 * msoft-float <13>:                      SPARC Options.      (line   39)
 * msoft-float <14>:                      V850 Options.       (line  113)
 * msoft-float <15>:                      Visium Options.     (line   24)
-* msoft-float <16>:                      x86 Options.        (line  596)
+* msoft-float <16>:                      x86 Options.        (line  607)
 * msoft-mul:                             OpenRISC Options.   (line   24)
 * msoft-quad-float:                      SPARC Options.      (line   59)
 * msoft-stack:                           Nvidia PTX Options. (line   49)
-* msp8:                                  AVR Options.        (line  256)
+* msp8:                                  AVR Options.        (line  254)
 * mspace:                                V850 Options.       (line   30)
 * mspace-regs:                           HPPA Options.       (line   45)
 * mspecld-anomaly:                       Blackfin Options.   (line   48)
@@ -66202,8 +66213,8 @@ look up both forms.
 * mspfp:                                 ARC Options.        (line  132)
 * mspfp-compact:                         ARC Options.        (line  133)
 * mspfp-fast:                            ARC Options.        (line  137)
-* mspfp_compact:                         ARC Options.        (line  627)
-* mspfp_fast:                            ARC Options.        (line  630)
+* mspfp_compact:                         ARC Options.        (line  622)
+* mspfp_fast:                            ARC Options.        (line  625)
 * msplit:                                PDP-11 Options.     (line   40)
 * msplit-addresses:                      MIPS Options.       (line  555)
 * msplit-lohi:                           Adapteva Epiphany Options.
@@ -66211,17 +66222,17 @@ look up both forms.
 * msplit-vecmove-early:                  Adapteva Epiphany Options.
                                                              (line  126)
 * msram-ecc:                             AMD GCN Options.    (line   25)
-* msse:                                  x86 Options.        (line  828)
-* msse2:                                 x86 Options.        (line  829)
-* msse2avx:                              x86 Options.        (line 1375)
-* msse3:                                 x86 Options.        (line  830)
-* msse4:                                 x86 Options.        (line  832)
-* msse4.1:                               x86 Options.        (line  834)
-* msse4.2:                               x86 Options.        (line  835)
-* msse4a:                                x86 Options.        (line  833)
-* msseregparm:                           x86 Options.        (line  732)
-* mssse3:                                x86 Options.        (line  831)
-* mstack-align:                          CRIS Options.       (line   54)
+* msse:                                  x86 Options.        (line  839)
+* msse2:                                 x86 Options.        (line  840)
+* msse2avx:                              x86 Options.        (line 1386)
+* msse3:                                 x86 Options.        (line  841)
+* msse4:                                 x86 Options.        (line  843)
+* msse4.1:                               x86 Options.        (line  845)
+* msse4.2:                               x86 Options.        (line  846)
+* msse4a:                                x86 Options.        (line  844)
+* msseregparm:                           x86 Options.        (line  743)
+* mssse3:                                x86 Options.        (line  842)
+* mstack-align:                          CRIS Options.       (line   53)
 * mstack-bias:                           SPARC Options.      (line  372)
 * mstack-check-l1:                       Blackfin Options.   (line   74)
 * mstack-guard:                          S/390 and zSeries Options.
@@ -66234,36 +66245,36 @@ look up both forms.
 * mstack-protector-guard <2>:            RISC-V Options.     (line  185)
 * mstack-protector-guard <3>:            RS/6000 and PowerPC Options.
                                                              (line  916)
-* mstack-protector-guard <4>:            x86 Options.        (line 1446)
+* mstack-protector-guard <4>:            x86 Options.        (line 1457)
 * mstack-protector-guard-offset:         AArch64 Options.    (line   64)
 * mstack-protector-guard-offset <1>:     ARM Options.        (line  976)
 * mstack-protector-guard-offset <2>:     RISC-V Options.     (line  185)
 * mstack-protector-guard-offset <3>:     RS/6000 and PowerPC Options.
                                                              (line  916)
-* mstack-protector-guard-offset <4>:     x86 Options.        (line 1446)
+* mstack-protector-guard-offset <4>:     x86 Options.        (line 1457)
 * mstack-protector-guard-reg:            AArch64 Options.    (line   64)
 * mstack-protector-guard-reg <1>:        RISC-V Options.     (line  185)
 * mstack-protector-guard-reg <2>:        RS/6000 and PowerPC Options.
                                                              (line  916)
-* mstack-protector-guard-reg <3>:        x86 Options.        (line 1446)
+* mstack-protector-guard-reg <3>:        x86 Options.        (line 1457)
 * mstack-protector-guard-symbol:         RS/6000 and PowerPC Options.
                                                              (line  916)
 * mstack-size:                           AMD GCN Options.    (line   31)
 * mstack-size <1>:                       C-SKY Options.      (line  150)
 * mstack-size <2>:                       S/390 and zSeries Options.
                                                              (line  202)
-* mstackrealign:                         x86 Options.        (line  772)
+* mstackrealign:                         x86 Options.        (line  783)
 * mstd-struct-return:                    SPARC Options.      (line  102)
-* mstore-max:                            x86 Options.        (line  997)
+* mstore-max:                            x86 Options.        (line 1008)
 * mstrict-align:                         AArch64 Options.    (line   52)
 * mstrict-align <1>:                     M680x0 Options.     (line  281)
 * mstrict-align <2>:                     RISC-V Options.     (line  130)
 * mstrict-align <3>:                     RS/6000 and PowerPC Options.
                                                              (line  403)
-* mstrict-X:                             AVR Options.        (line  269)
+* mstrict-X:                             AVR Options.        (line  267)
 * mstring-compare-inline-limit:          RS/6000 and PowerPC Options.
                                                              (line  708)
-* mstringop-strategy=ALG:                x86 Options.        (line 1323)
+* mstringop-strategy=ALG:                x86 Options.        (line 1334)
 * mstructure-size-boundary:              ARM Options.        (line  736)
 * msubxc:                                SPARC Options.      (line  288)
 * msv-mode:                              Visium Options.     (line   52)
@@ -66280,26 +66291,26 @@ look up both forms.
                                                              (line  147)
 * mtarget-align:                         Xtensa Options.     (line   74)
 * mtas:                                  SH Options.         (line  259)
-* mtbm:                                  x86 Options.        (line  882)
+* mtbm:                                  x86 Options.        (line  893)
 * mtda:                                  V850 Options.       (line   34)
 * mtelephony:                            ARC Options.        (line  368)
 * mtext-section-literals:                Xtensa Options.     (line   47)
 * mtf:                                   MeP Options.        (line  121)
-* mthreads:                              x86 Options.        (line 1178)
+* mthreads:                              x86 Options.        (line 1189)
 * mthreads <1>:                          x86 Windows Options.
                                                              (line   26)
 * mthumb:                                ARM Options.        (line  824)
 * mthumb-interwork:                      ARM Options.        (line   24)
 * mtiny-printf:                          MSP430 Options.     (line  122)
-* mtiny-stack:                           AVR Options.        (line  283)
+* mtiny-stack:                           AVR Options.        (line  281)
 * mtiny=:                                MeP Options.        (line  125)
 * mTLS:                                  FRV Options.        (line   90)
 * mtls:                                  FRV Options.        (line   94)
 * mtls-dialect:                          ARM Options.        (line  876)
-* mtls-dialect <1>:                      x86 Options.        (line 1156)
+* mtls-dialect <1>:                      x86 Options.        (line 1167)
 * mtls-dialect=desc:                     AArch64 Options.    (line   77)
 * mtls-dialect=traditional:              AArch64 Options.    (line   81)
-* mtls-direct-seg-refs:                  x86 Options.        (line 1365)
+* mtls-direct-seg-refs:                  x86 Options.        (line 1376)
 * mtls-markers:                          RS/6000 and PowerPC Options.
                                                              (line  777)
 * mtls-size:                             AArch64 Options.    (line   85)
@@ -66320,13 +66331,13 @@ look up both forms.
                                                              (line  541)
 * mtrap-precision:                       DEC Alpha Options.  (line  109)
 * mtrust:                                C-SKY Options.      (line   99)
-* mtsxldtrk:                             x86 Options.        (line  898)
+* mtsxldtrk:                             x86 Options.        (line  909)
 * mtune:                                 AArch64 Options.    (line  189)
 * mtune <1>:                             AMD GCN Options.    (line   10)
-* mtune <2>:                             ARC Options.        (line  552)
-* mtune <3>:                             ARC Options.        (line  633)
+* mtune <2>:                             ARC Options.        (line  550)
+* mtune <3>:                             ARC Options.        (line  628)
 * mtune <4>:                             ARM Options.        (line  571)
-* mtune <5>:                             CRIS Options.       (line   16)
+* mtune <5>:                             CRIS Options.       (line   15)
 * mtune <6>:                             DEC Alpha Options.  (line  259)
 * mtune <7>:                             IA-64 Options.      (line  116)
 * mtune <8>:                             LoongArch Options.  (line   32)
@@ -66340,19 +66351,19 @@ look up both forms.
                                                              (line  162)
 * mtune <15>:                            SPARC Options.      (line  199)
 * mtune <16>:                            Visium Options.     (line   47)
-* mtune <17>:                            x86 Options.        (line  470)
-* mtune-ctrl=FEATURE-LIST:               x86 Options.        (line  951)
+* mtune <17>:                            x86 Options.        (line  481)
+* mtune-ctrl=FEATURE-LIST:               x86 Options.        (line  962)
 * muclibc:                               GNU/Linux Options.  (line   14)
-* muintr:                                x86 Options.        (line  897)
+* muintr:                                x86 Options.        (line  908)
 * muls:                                  Score Options.      (line   18)
-* multcost:                              ARC Options.        (line  638)
+* multcost:                              ARC Options.        (line  633)
 * multcost=NUMBER:                       SH Options.         (line  281)
 * multilib-library-pic:                  FRV Options.        (line  110)
 * multiply-enabled:                      LM32 Options.       (line   15)
 * multiply_defined:                      Darwin Options.     (line  196)
 * multiply_defined_unused:               Darwin Options.     (line  196)
 * multi_module:                          Darwin Options.     (line  196)
-* munalign-prob-threshold:               ARC Options.        (line  580)
+* munalign-prob-threshold:               ARC Options.        (line  578)
 * munaligned-access:                     ARM Options.        (line  910)
 * munaligned-access <1>:                 MIPS Options.       (line  597)
 * munaligned-doubles:                    SPARC Options.      (line   73)
@@ -66379,14 +66390,14 @@ look up both forms.
 * mv850e3v5:                             V850 Options.       (line   52)
 * mv850es:                               V850 Options.       (line   75)
 * mv8plus:                               SPARC Options.      (line  214)
-* mvaes:                                 x86 Options.        (line  890)
+* mvaes:                                 x86 Options.        (line  901)
 * mvdsp:                                 C-SKY Options.      (line  104)
 * mveclibabi:                            RS/6000 and PowerPC Options.
                                                              (line  851)
-* mveclibabi <1>:                        x86 Options.        (line 1104)
+* mveclibabi <1>:                        x86 Options.        (line 1115)
 * mvect-double:                          Adapteva Epiphany Options.
                                                              (line  115)
-* mvect8-ret-in-mem:                     x86 Options.        (line  742)
+* mvect8-ret-in-mem:                     x86 Options.        (line  753)
 * mverbose-cost-dump:                    AArch64 Options.    (line  269)
 * mverbose-cost-dump <1>:                ARM Options.        (line  950)
 * mvirt:                                 MIPS Options.       (line  407)
@@ -66398,9 +66409,9 @@ look up both forms.
 * mvliw-branch:                          FRV Options.        (line  201)
 * mvms-return-codes:                     VMS Options.        (line    9)
 * mvolatile-asm-stop:                    IA-64 Options.      (line   32)
-* mvolatile-cache:                       ARC Options.        (line  427)
-* mvolatile-cache <1>:                   ARC Options.        (line  431)
-* mvpclmulqdq:                           x86 Options.        (line  892)
+* mvolatile-cache:                       ARC Options.        (line  425)
+* mvolatile-cache <1>:                   ARC Options.        (line  429)
+* mvpclmulqdq:                           x86 Options.        (line  903)
 * mvr4130-align:                         MIPS Options.       (line  840)
 * mvrsave:                               RS/6000 and PowerPC Options.
                                                              (line  153)
@@ -66410,8 +66421,8 @@ look up both forms.
                                                              (line  112)
 * mvxworks:                              RS/6000 and PowerPC Options.
                                                              (line  624)
-* mvzeroupper:                           x86 Options.        (line  978)
-* mwaitpkg:                              x86 Options.        (line  891)
+* mvzeroupper:                           x86 Options.        (line  989)
+* mwaitpkg:                              x86 Options.        (line  902)
 * mwarn-devices-csv:                     MSP430 Options.     (line  168)
 * mwarn-dynamicstack:                    S/390 and zSeries Options.
                                                              (line  196)
@@ -66419,15 +66430,15 @@ look up both forms.
                                                              (line  188)
 * mwarn-mcu:                             MSP430 Options.     (line   65)
 * mwarn-multiple-fast-interrupts:        RX Options.         (line  143)
-* mwbnoinvd:                             x86 Options.        (line  858)
+* mwbnoinvd:                             x86 Options.        (line  869)
 * mwide-bitfields:                       MCore Options.      (line   23)
-* mwidekl:                               x86 Options.        (line  912)
+* mwidekl:                               x86 Options.        (line  923)
 * mwin32:                                x86 Windows Options.
                                                              (line   35)
 * mwindows:                              x86 Windows Options.
                                                              (line   41)
 * mword-relocations:                     ARM Options.        (line  887)
-* mx32:                                  x86 Options.        (line 1531)
+* mx32:                                  x86 Options.        (line 1542)
 * mxgot:                                 M680x0 Options.     (line  313)
 * mxgot <1>:                             MIPS Options.       (line  229)
 * mxl-barrel-shift:                      MicroBlaze Options. (line   32)
@@ -66443,12 +66454,12 @@ look up both forms.
 * mxl-soft-mul:                          MicroBlaze Options. (line   26)
 * mxl-stack-check:                       MicroBlaze Options. (line   41)
 * mxnack:                                AMD GCN Options.    (line   38)
-* mxop:                                  x86 Options.        (line  865)
+* mxop:                                  x86 Options.        (line  876)
 * mxpa:                                  MIPS Options.       (line  411)
-* mxsave:                                x86 Options.        (line  876)
-* mxsavec:                               x86 Options.        (line  878)
-* mxsaveopt:                             x86 Options.        (line  877)
-* mxsaves:                               x86 Options.        (line  879)
+* mxsave:                                x86 Options.        (line  887)
+* mxsavec:                               x86 Options.        (line  889)
+* mxsaveopt:                             x86 Options.        (line  888)
+* mxsaves:                               x86 Options.        (line  890)
 * mxy:                                   ARC Options.        (line  373)
 * myellowknife:                          RS/6000 and PowerPC Options.
                                                              (line  619)
@@ -66459,7 +66470,7 @@ look up both forms.
 * mzero-extend:                          MMIX Options.       (line   26)
 * mzvector:                              S/390 and zSeries Options.
                                                              (line  123)
-* no-80387:                              x86 Options.        (line  596)
+* no-80387:                              x86 Options.        (line  607)
 * no-block-ops-unaligned-vsx:            RS/6000 and PowerPC Options.
                                                              (line  959)
 * no-canonical-prefixes:                 Directory Options.  (line  164)
@@ -66470,8 +66481,8 @@ look up both forms.
 * noall_load:                            Darwin Options.     (line  196)
 * nocpp:                                 MIPS Options.       (line  642)
 * nodefaultlibs:                         Link Options.       (line  122)
-* nodevicelib:                           AVR Options.        (line  290)
-* nodevicespecs:                         AVR Options.        (line  293)
+* nodevicelib:                           AVR Options.        (line  288)
+* nodevicespecs:                         AVR Options.        (line  291)
 * nofixprebinding:                       Darwin Options.     (line  196)
 * nofpu:                                 RX Options.         (line   17)
 * nolibc:                                Link Options.       (line  134)
@@ -66576,8 +66587,8 @@ look up both forms.
 * shared-libgcc:                         Link Options.       (line  230)
 * short-calls:                           Adapteva Epiphany Options.
                                                              (line   61)
-* sim:                                   CRIS Options.       (line   82)
-* sim2:                                  CRIS Options.       (line   87)
+* sim:                                   CRIS Options.       (line   81)
+* sim2:                                  CRIS Options.       (line   86)
 * single_module:                         Darwin Options.     (line  196)
 * specs:                                 Overall Options.    (line  611)
 * static:                                Link Options.       (line  217)
@@ -66634,7 +66645,7 @@ look up both forms.
 * Wabi-tag:                              C++ Dialect Options.
                                                              (line  590)
 * Wabsolute-value:                       Warning Options.    (line 2352)
-* Waddr-space-convert:                   AVR Options.        (line  308)
+* Waddr-space-convert:                   AVR Options.        (line  306)
 * Waddress:                              Warning Options.    (line 2781)
 * Waddress-of-packed-member:             Warning Options.    (line 2815)
 * Waggregate-return:                     Warning Options.    (line 2843)
@@ -66888,7 +66899,7 @@ look up both forms.
 * Wmissing-prototypes:                   Warning Options.    (line 2928)
 * Wmissing-requires:                     Warning Options.    (line 2978)
 * Wmissing-template-keyword:             Warning Options.    (line 2995)
-* Wmisspelled-isr:                       AVR Options.        (line  313)
+* Wmisspelled-isr:                       AVR Options.        (line  311)
 * Wmultichar:                            Warning Options.    (line 3023)
 * Wmultiple-inheritance:                 C++ Dialect Options.
                                                              (line 1098)
@@ -66900,7 +66911,7 @@ look up both forms.
 * Wnested-externs:                       Warning Options.    (line 3195)
 * Wno-abi:                               Warning Options.    (line  267)
 * Wno-absolute-value:                    Warning Options.    (line 2352)
-* Wno-addr-space-convert:                AVR Options.        (line  308)
+* Wno-addr-space-convert:                AVR Options.        (line  306)
 * Wno-address:                           Warning Options.    (line 2781)
 * Wno-address-of-packed-member:          Warning Options.    (line 2815)
 * Wno-aggregate-return:                  Warning Options.    (line 2843)
@@ -67136,7 +67147,7 @@ look up both forms.
 * Wno-missing-prototypes:                Warning Options.    (line 2928)
 * Wno-missing-requires:                  Warning Options.    (line 2978)
 * Wno-missing-template-keyword:          Warning Options.    (line 2995)
-* Wno-misspelled-isr:                    AVR Options.        (line  313)
+* Wno-misspelled-isr:                    AVR Options.        (line  311)
 * Wno-multichar:                         Warning Options.    (line 3023)
 * Wno-multiple-inheritance:              C++ Dialect Options.
                                                              (line 1098)
@@ -67696,7 +67707,7 @@ Keyword Index
 * __builtin_cpu_supports:                Basic PowerPC Built-in Functions Available on all Configurations.
                                                              (line   70)
 * __builtin_cpu_supports <1>:            x86 Built-in Functions.
-                                                             (line  262)
+                                                             (line  252)
 * __builtin_ctz:                         Other Builtins.     (line  969)
 * __builtin_ctzl:                        Other Builtins.     (line  991)
 * __builtin_ctzll:                       Other Builtins.     (line 1014)
@@ -67997,7 +68008,7 @@ Keyword Index
 * __far M32C Named Address Spaces:       Named Address Spaces.
                                                              (line  153)
 * __far RL78 Named Address Spaces:       Named Address Spaces.
-                                                             (line  177)
+                                                             (line  176)
 * __flash AVR Named Address Spaces:      Named Address Spaces.
                                                              (line   44)
 * __flash1 AVR Named Address Spaces:     Named Address Spaces.
@@ -68024,11 +68035,11 @@ Keyword Index
 * __PRETTY_FUNCTION__ identifier:        Function Names.     (line    6)
 * __real__ keyword:                      Complex.            (line   43)
 * __regio_symbol PRU Named Address Spaces: Named Address Spaces.
-                                                             (line  162)
+                                                             (line  161)
 * __seg_fs x86 named address space:      Named Address Spaces.
-                                                             (line  190)
+                                                             (line  189)
 * __seg_gs x86 named address space:      Named Address Spaces.
-                                                             (line  190)
+                                                             (line  189)
 * __STDC_HOSTED__:                       Standards.          (line   13)
 * __sync_add_and_fetch:                  __sync Builtins.    (line   72)
 * __sync_and_and_fetch:                  __sync Builtins.    (line   72)
@@ -68438,13 +68449,13 @@ Keyword Index
 * declaring static data in C++:          Static Definitions. (line    6)
 * defining static data in C++:           Static Definitions. (line    6)
 * dependencies for make as output:       Environment Variables.
-                                                             (line  173)
+                                                             (line  172)
 * dependencies for make as output <1>:   Environment Variables.
-                                                             (line  189)
+                                                             (line  188)
 * dependencies, make:                    Preprocessor Options.
                                                              (line   77)
 * DEPENDENCIES_OUTPUT:                   Environment Variables.
-                                                             (line  172)
+                                                             (line  171)
 * dependent name lookup:                 Name lookup.        (line    6)
 * deprecated enumerator attribute:       Enumerator Attributes.
                                                              (line   28)
@@ -68506,7 +68517,7 @@ Keyword Index
                                                              (line    9)
 * eightbit_data variable attribute, H8/300: H8/300 Variable Attributes.
                                                              (line    9)
-* EIND:                                  AVR Options.        (line  319)
+* EIND:                                  AVR Options.        (line  317)
 * either function attribute, MSP430:     MSP430 Function Attributes.
                                                              (line   57)
 * either variable attribute, MSP430:     MSP430 Variable Attributes.
@@ -68796,7 +68807,7 @@ Keyword Index
 * increment operators:                   Bug Criteria.       (line   17)
 * index:                                 Other Builtins.     (line    6)
 * indirect calls, ARC:                   ARC Function Attributes.
-                                                             (line   27)
+                                                             (line   26)
 * indirect calls, ARM:                   ARM Function Attributes.
                                                              (line   38)
 * indirect calls, Blackfin:              Blackfin Function Attributes.
@@ -68943,9 +68954,9 @@ Keyword Index
 * j1f:                                   Other Builtins.     (line    6)
 * j1l:                                   Other Builtins.     (line    6)
 * jli_always function attribute, ARC:    ARC Function Attributes.
-                                                             (line   44)
+                                                             (line   43)
 * jli_fixed function attribute, ARC:     ARC Function Attributes.
-                                                             (line   50)
+                                                             (line   49)
 * jn:                                    Other Builtins.     (line    6)
 * jnf:                                   Other Builtins.     (line    6)
 * jnl:                                   Other Builtins.     (line    6)
@@ -69062,7 +69073,7 @@ Keyword Index
 * longjmp incompatibilities:             Incompatibilities.  (line   39)
 * longjmp warnings:                      Warning Options.    (line 1375)
 * long_call function attribute, ARC:     ARC Function Attributes.
-                                                             (line   27)
+                                                             (line   26)
 * long_call function attribute, ARM:     ARM Function Attributes.
                                                              (line   38)
 * long_call function attribute, Epiphany: Epiphany Function Attributes.
@@ -69105,7 +69116,7 @@ Keyword Index
                                                              (line  245)
 * MCore options:                         MCore Options.      (line    6)
 * medium_call function attribute, ARC:   ARC Function Attributes.
-                                                             (line   27)
+                                                             (line   26)
 * member fns, automatically inline:      Inline.             (line   68)
 * memchr:                                Other Builtins.     (line    6)
 * memcmp:                                Other Builtins.     (line    6)
@@ -69168,7 +69179,7 @@ Keyword Index
 * multiprecision arithmetic:             Long Long.          (line    6)
 * n in constraint:                       Simple Constraints. (line   73)
 * naked function attribute, ARC:         ARC Function Attributes.
-                                                             (line   59)
+                                                             (line   58)
 * naked function attribute, ARM:         ARM Function Attributes.
                                                              (line   48)
 * naked function attribute, AVR:         AVR Function Attributes.
@@ -69322,14 +69333,14 @@ Keyword Index
 * omitted middle-operands:               Conditionals.       (line    6)
 * open coding:                           Inline.             (line    6)
 * OpenACC accelerator programming:       C Dialect Options.  (line  388)
-* OpenACC accelerator programming <1>:   C Dialect Options.  (line  397)
+* OpenACC accelerator programming <1>:   C Dialect Options.  (line  396)
 * OpenACC accelerator programming <2>:   Warning Options.    (line 3096)
 * OpenACC offloading options:            C Dialect Options.  (line  373)
 * OpenACC offloading targets:            C Dialect Options.  (line  360)
 * OpenMP offloading options:             C Dialect Options.  (line  373)
 * OpenMP offloading targets:             C Dialect Options.  (line  360)
-* OpenMP parallel:                       C Dialect Options.  (line  403)
-* OpenMP SIMD:                           C Dialect Options.  (line  412)
+* OpenMP parallel:                       C Dialect Options.  (line  402)
+* OpenMP SIMD:                           C Dialect Options.  (line  410)
 * OpenRISC Options:                      OpenRISC Options.   (line    6)
 * operand constraints, asm:              Constraints.        (line    6)
 * optimize function attribute:           Common Function Attributes.
@@ -69495,10 +69506,10 @@ Keyword Index
 * r fixed-suffix:                        Fixed-Point.        (line    6)
 * R fixed-suffix:                        Fixed-Point.        (line    6)
 * r in constraint:                       Simple Constraints. (line   64)
-* RAMPD:                                 AVR Options.        (line  430)
-* RAMPX:                                 AVR Options.        (line  430)
-* RAMPY:                                 AVR Options.        (line  430)
-* RAMPZ:                                 AVR Options.        (line  430)
+* RAMPD:                                 AVR Options.        (line  428)
+* RAMPX:                                 AVR Options.        (line  428)
+* RAMPY:                                 AVR Options.        (line  428)
+* RAMPZ:                                 AVR Options.        (line  428)
 * range1 GCC_COLORS capability:          Diagnostic Message Formatting Options.
                                                              (line  107)
 * range2 GCC_COLORS capability:          Diagnostic Message Formatting Options.
@@ -69610,7 +69621,7 @@ Keyword Index
 * section variable attribute:            Common Variable Attributes.
                                                              (line  307)
 * secure_call function attribute, ARC:   ARC Function Attributes.
-                                                             (line   54)
+                                                             (line   53)
 * selectany variable attribute:          Microsoft Windows Variable Attributes.
                                                              (line   16)
 * sentinel function attribute:           Common Function Attributes.
@@ -69628,7 +69639,7 @@ Keyword Index
 * shortcall function attribute, PowerPC: PowerPC Function Attributes.
                                                              (line   10)
 * short_call function attribute, ARC:    ARC Function Attributes.
-                                                             (line   27)
+                                                             (line   26)
 * short_call function attribute, ARM:    ARM Function Attributes.
                                                              (line   38)
 * short_call function attribute, Epiphany: Epiphany Function Attributes.
@@ -69653,7 +69664,7 @@ Keyword Index
 * significand:                           Other Builtins.     (line    6)
 * significandf:                          Other Builtins.     (line    6)
 * significandl:                          Other Builtins.     (line    6)
-* SIMD:                                  C Dialect Options.  (line  412)
+* SIMD:                                  C Dialect Options.  (line  410)
 * simd function attribute:               Common Function Attributes.
                                                              (line 1180)
 * simple constraints:                    Simple Constraints. (line    6)
@@ -69674,7 +69685,7 @@ Keyword Index
 * snprintf:                              Other Builtins.     (line    6)
 * Solaris 2 options:                     Solaris 2 Options.  (line    6)
 * SOURCE_DATE_EPOCH:                     Environment Variables.
-                                                             (line  194)
+                                                             (line  193)
 * SPARC options:                         SPARC Options.      (line    6)
 * Spec Files:                            Spec Files.         (line    6)
 * specified registers:                   Explicit Register Variables.
@@ -69742,7 +69753,7 @@ Keyword Index
 * subscripting and function values:      Subscripting.       (line    6)
 * suffixes for C++ source:               Invoking G++.       (line    6)
 * SUNPRO_DEPENDENCIES:                   Environment Variables.
-                                                             (line  188)
+                                                             (line  187)
 * suppressing warnings:                  Warning Options.    (line    6)
 * surprises in C++:                      C++ Misunderstandings.
                                                              (line    6)
@@ -70319,7 +70330,7 @@ Keyword Index
 * X in constraint:                       Simple Constraints. (line  122)
 * X3.159-1989:                           Standards.          (line   13)
 * x86 named address spaces:              Named Address Spaces.
-                                                             (line  185)
+                                                             (line  184)
 * x86 Options:                           x86 Options.        (line    6)
 * x86 Windows Options:                   x86 Windows Options.
                                                              (line    6)
@@ -70380,407 +70391,407 @@ Node: AMD GCN Options819874
 Node: ARC Options821437
 Node: ARM Options842206
 Node: AVR Options884231
-Node: Blackfin Options910768
-Node: C6X Options918660
-Node: CRIS Options920203
-Node: CR16 Options923389
-Node: C-SKY Options924301
-Node: Darwin Options930028
-Node: DEC Alpha Options937469
-Node: eBPF Options949085
-Node: FR30 Options951461
-Node: FT32 Options952021
-Node: FRV Options952967
-Node: GNU/Linux Options959731
-Node: H8/300 Options961112
-Node: HPPA Options962564
-Node: IA-64 Options972096
-Node: LM32 Options980224
-Node: LoongArch Options980752
-Node: M32C Options987030
-Node: M32R/D Options988308
-Node: M680x0 Options991853
-Node: MCore Options1006008
-Node: MeP Options1007510
-Node: MicroBlaze Options1011470
-Node: MIPS Options1014535
-Node: MMIX Options1051332
-Node: MN10300 Options1053809
-Node: Moxie Options1056352
-Node: MSP430 Options1056839
-Node: NDS32 Options1064600
-Node: Nios II Options1066770
-Node: Nvidia PTX Options1079986
-Node: OpenRISC Options1083482
-Node: PDP-11 Options1086236
-Node: picoChip Options1087485
-Node: PowerPC Options1089623
-Node: PRU Options1089843
-Node: RISC-V Options1092052
-Node: RL78 Options1100453
-Node: RS/6000 and PowerPC Options1104228
-Node: RX Options1145744
-Node: S/390 and zSeries Options1154346
-Node: Score Options1165146
-Node: SH Options1165995
-Node: Solaris 2 Options1181135
-Node: SPARC Options1182373
-Node: System V Options1198025
-Node: TILE-Gx Options1198853
-Node: TILEPro Options1199871
-Node: V850 Options1200375
-Node: VAX Options1207062
-Node: Visium Options1207754
-Node: VMS Options1210062
-Node: VxWorks Options1210878
-Node: x86 Options1212030
-Node: x86 Windows Options1280512
-Node: Xstormy16 Options1283318
-Node: Xtensa Options1283612
-Node: zSeries Options1289748
-Node: Spec Files1289944
-Node: Environment Variables1316023
-Node: Precompiled Headers1325456
-Node: C++ Modules1331665
-Ref: C++ Modules-Footnote-11337660
-Node: C++ Module Mapper1337913
-Node: C++ Module Preprocessing1343066
-Node: C++ Compiled Module Interface1344895
-Ref: C++ Compiled Module Interface-Footnote-11348279
-Ref: C++ Compiled Module Interface-Footnote-21348368
-Node: C Implementation1348424
-Node: Translation implementation1350115
-Node: Environment implementation1350706
-Node: Identifiers implementation1351260
-Node: Characters implementation1352346
-Node: Integers implementation1355996
-Node: Floating point implementation1358045
-Node: Arrays and pointers implementation1361108
-Ref: Arrays and pointers implementation-Footnote-11362568
-Node: Hints implementation1362694
-Node: Structures unions enumerations and bit-fields implementation1364189
-Node: Qualifiers implementation1366413
-Node: Declarators implementation1368474
-Node: Statements implementation1368815
-Node: Preprocessing directives implementation1369141
-Node: Library functions implementation1371462
-Node: Architecture implementation1372111
-Node: Locale-specific behavior implementation1373756
-Node: C++ Implementation1374061
-Node: Conditionally-supported behavior1375345
-Node: Exception handling1375962
-Node: C Extensions1376429
-Node: Statement Exprs1381652
-Node: Local Labels1387024
-Node: Labels as Values1389997
-Ref: Labels as Values-Footnote-11392524
-Node: Nested Functions1392709
-Node: Nonlocal Gotos1396663
-Node: Constructing Calls1398929
-Node: Typeof1403644
-Node: Conditionals1407573
-Node: __int1281408462
-Node: Long Long1408987
-Node: Complex1410478
-Node: Floating Types1415223
-Node: Half-Precision1418744
-Node: Decimal Float1422212
-Node: Hex Floats1424066
-Node: Fixed-Point1425140
-Node: Named Address Spaces1428398
-Ref: AVR Named Address Spaces1429084
-Node: Zero Length1436378
-Node: Empty Structures1440559
-Node: Variable Length1440965
-Node: Variadic Macros1443683
-Node: Escaped Newlines1446061
-Node: Subscripting1446922
-Node: Pointer Arith1447647
-Node: Variadic Pointer Args1448224
-Node: Pointers to Arrays1448949
-Node: Initializers1449702
-Node: Compound Literals1450203
-Node: Designated Inits1453770
-Node: Case Ranges1457694
-Node: Cast to Union1458375
-Node: Mixed Labels and Declarations1460109
-Node: Function Attributes1460746
-Node: Common Function Attributes1465257
-Ref: Common Function Attributes-Footnote-11542198
-Node: AArch64 Function Attributes1542515
-Node: AMD GCN Function Attributes1548709
-Node: ARC Function Attributes1551762
-Node: ARM Function Attributes1554699
-Node: AVR Function Attributes1559838
-Node: Blackfin Function Attributes1564373
-Node: BPF Function Attributes1566870
-Node: CR16 Function Attributes1567458
-Node: C-SKY Function Attributes1567977
-Node: Epiphany Function Attributes1569276
-Node: H8/300 Function Attributes1572031
-Node: IA-64 Function Attributes1573229
-Node: M32C Function Attributes1574271
-Node: M32R/D Function Attributes1576609
-Node: m68k Function Attributes1578083
-Node: MCORE Function Attributes1579027
-Node: MeP Function Attributes1579838
-Node: MicroBlaze Function Attributes1581139
-Node: Microsoft Windows Function Attributes1582646
-Node: MIPS Function Attributes1587215
-Node: MSP430 Function Attributes1592833
-Node: NDS32 Function Attributes1596912
-Node: Nios II Function Attributes1599336
-Node: Nvidia PTX Function Attributes1600633
-Node: PowerPC Function Attributes1601248
-Node: RISC-V Function Attributes1608022
-Node: RL78 Function Attributes1609438
-Node: RX Function Attributes1610677
-Node: S/390 Function Attributes1613224
-Node: SH Function Attributes1615052
-Node: Symbian OS Function Attributes1618480
-Node: V850 Function Attributes1618816
-Node: Visium Function Attributes1619361
-Node: x86 Function Attributes1619889
-Node: Xstormy16 Function Attributes1643844
-Node: Variable Attributes1644351
-Node: Common Variable Attributes1645884
-Node: ARC Variable Attributes1667791
-Node: AVR Variable Attributes1668173
-Node: Blackfin Variable Attributes1673336
-Node: H8/300 Variable Attributes1674194
-Node: IA-64 Variable Attributes1675267
-Node: M32R/D Variable Attributes1676018
-Node: MeP Variable Attributes1676801
-Node: Microsoft Windows Variable Attributes1678894
-Node: MSP430 Variable Attributes1681347
-Node: Nvidia PTX Variable Attributes1682561
-Node: PowerPC Variable Attributes1683178
-Node: RL78 Variable Attributes1683735
-Node: V850 Variable Attributes1684154
-Node: x86 Variable Attributes1684787
-Node: Xstormy16 Variable Attributes1685843
-Node: Type Attributes1686413
-Node: Common Type Attributes1688101
-Node: ARC Type Attributes1710462
-Node: ARM Type Attributes1710934
-Node: BPF Type Attributes1711716
-Node: MeP Type Attributes1712233
-Node: PowerPC Type Attributes1712635
-Node: x86 Type Attributes1713624
-Node: Label Attributes1714616
-Node: Enumerator Attributes1716643
-Node: Statement Attributes1718175
-Node: Attribute Syntax1719658
-Node: Function Prototypes1730916
-Node: C++ Comments1732696
-Node: Dollar Signs1733215
-Node: Character Escapes1733680
-Node: Alignment1733964
-Node: Inline1735617
-Node: Volatiles1740434
-Node: Using Assembly Language with C1743333
-Node: Basic Asm1744570
-Node: Extended Asm1750193
-Ref: Volatile1754307
-Ref: AssemblerTemplate1758420
-Ref: OutputOperands1762660
-Ref: FlagOutputOperands1769623
-Ref: InputOperands1772570
-Ref: Clobbers and Scratch Registers1776838
-Ref: GotoLabels1785479
-Ref: x86Operandmodifiers1789102
-Ref: x86floatingpointasmoperands1793918
-Ref: msp430Operandmodifiers1797247
-Node: Constraints1798905
-Node: Simple Constraints1800011
-Node: Multi-Alternative1807325
-Node: Modifiers1809000
-Node: Machine Constraints1811799
-Node: Asm Labels1869570
-Node: Explicit Register Variables1871190
-Ref: Explicit Reg Vars1871404
-Node: Global Register Variables1872013
-Ref: Global Reg Vars1872221
-Node: Local Register Variables1877003
-Ref: Local Reg Vars1877223
-Node: Size of an asm1880851
-Node: Alternate Keywords1882329
-Node: Incomplete Enums1883834
-Node: Function Names1884591
-Node: Return Address1886495
-Node: Vector Extensions1891082
-Node: Offsetof1902065
-Node: __sync Builtins1902898
-Node: __atomic Builtins1909341
-Node: Integer Overflow Builtins1922854
-Node: x86 specific memory model extensions for transactional memory1929337
-Node: Object Size Checking1930603
-Node: Other Builtins1937619
-Node: Target Builtins1990223
-Node: AArch64 Built-in Functions1991998
-Node: Alpha Built-in Functions1992694
-Node: Altera Nios II Built-in Functions1995788
-Node: ARC Built-in Functions2000227
-Node: ARC SIMD Built-in Functions2005439
-Node: ARM iWMMXt Built-in Functions2014437
-Node: ARM C Language Extensions (ACLE)2021573
-Node: ARM Floating Point Status and Control Intrinsics2022850
-Node: ARM ARMv8-M Security Extensions2023337
-Node: AVR Built-in Functions2024629
-Node: Blackfin Built-in Functions2028395
-Node: BPF Built-in Functions2029015
-Node: FR-V Built-in Functions2030474
-Node: Argument Types2031337
-Node: Directly-mapped Integer Functions2033168
-Node: Directly-mapped Media Functions2034328
-Node: Raw read/write Functions2042610
-Node: Other Built-in Functions2043518
-Node: MIPS DSP Built-in Functions2044704
-Node: MIPS Paired-Single Support2057459
-Node: MIPS Loongson Built-in Functions2058958
-Node: Paired-Single Arithmetic2065480
-Node: Paired-Single Built-in Functions2066503
-Node: MIPS-3D Built-in Functions2069170
-Node: MIPS SIMD Architecture (MSA) Support2074564
-Node: MIPS SIMD Architecture Built-in Functions2077404
-Node: Other MIPS Built-in Functions2104258
-Node: MSP430 Built-in Functions2105267
-Node: NDS32 Built-in Functions2106668
-Node: picoChip Built-in Functions2107961
-Node: Basic PowerPC Built-in Functions2109310
-Node: Basic PowerPC Built-in Functions Available on all Configurations2110168
-Node: Basic PowerPC Built-in Functions Available on ISA 2.052118678
-Node: Basic PowerPC Built-in Functions Available on ISA 2.062123513
-Node: Basic PowerPC Built-in Functions Available on ISA 2.072125593
-Node: Basic PowerPC Built-in Functions Available on ISA 3.02126447
-Node: Basic PowerPC Built-in Functions Available on ISA 3.12133425
-Node: PowerPC AltiVec/VSX Built-in Functions2136590
-Node: PowerPC AltiVec Built-in Functions on ISA 2.052144659
-Node: PowerPC AltiVec Built-in Functions Available on ISA 2.062170059
-Node: PowerPC AltiVec Built-in Functions Available on ISA 2.072177125
-Node: PowerPC AltiVec Built-in Functions Available on ISA 3.02186935
-Node: PowerPC AltiVec Built-in Functions Available on ISA 3.12202658
-Node: PowerPC Hardware Transactional Memory Built-in Functions2235942
-Node: PowerPC Atomic Memory Operation Functions2244492
-Node: PowerPC Matrix-Multiply Assist Built-in Functions2247055
-Node: PRU Built-in Functions2253180
-Node: RISC-V Built-in Functions2254368
-Node: RX Built-in Functions2254779
-Node: S/390 System z Built-in Functions2258781
-Node: SH Built-in Functions2264011
-Node: SPARC VIS Built-in Functions2265739
-Node: TI C6X Built-in Functions2274270
-Node: TILE-Gx Built-in Functions2275321
-Node: TILEPro Built-in Functions2276446
-Node: x86 Built-in Functions2277554
-Node: x86 transactional memory intrinsics2342853
-Node: x86 control-flow protection intrinsics2346120
-Node: Target Format Checks2347891
-Node: Solaris Format Checks2348323
-Node: Darwin Format Checks2348749
-Node: Pragmas2349712
-Node: AArch64 Pragmas2350653
-Node: ARM Pragmas2351110
-Node: M32C Pragmas2351737
-Node: MeP Pragmas2352809
-Node: PRU Pragmas2354861
-Node: RS/6000 and PowerPC Pragmas2355439
-Node: S/390 Pragmas2356179
-Node: Darwin Pragmas2356745
-Node: Solaris Pragmas2357798
-Node: Symbol-Renaming Pragmas2358962
-Node: Structure-Layout Pragmas2360599
-Node: Weak Pragmas2362879
-Node: Diagnostic Pragmas2363614
-Node: Visibility Pragmas2368365
-Node: Push/Pop Macro Pragmas2369050
-Node: Function Specific Option Pragmas2370023
-Node: Loop-Specific Pragmas2371989
-Node: Unnamed Fields2373589
-Node: Thread-Local2375786
-Node: C99 Thread-Local Edits2377892
-Node: C++98 Thread-Local Edits2379890
-Node: Binary constants2383335
-Node: C++ Extensions2384006
-Node: C++ Volatiles2385636
-Node: Restricted Pointers2387984
-Node: Vague Linkage2389575
-Node: C++ Interface2393198
-Ref: C++ Interface-Footnote-12396995
-Node: Template Instantiation2397133
-Node: Bound member functions2403224
-Node: C++ Attributes2404756
-Node: Function Multiversioning2408828
-Node: Type Traits2410636
-Node: C++ Concepts2417607
-Node: Deprecated Features2419113
-Node: Backwards Compatibility2420938
-Node: Objective-C2422010
-Node: GNU Objective-C runtime API2422617
-Node: Modern GNU Objective-C runtime API2423624
-Node: Traditional GNU Objective-C runtime API2426060
-Node: Executing code before main2426787
-Node: What you can and what you cannot do in +load2429531
-Node: Type encoding2431901
-Node: Legacy type encoding2437267
-Node: @encode2438357
-Node: Method signatures2438902
-Node: Garbage Collection2440894
-Node: Constant string objects2443584
-Node: compatibility_alias2446093
-Node: Exceptions2446818
-Node: Synchronization2449528
-Node: Fast enumeration2450712
-Node: Using fast enumeration2451024
-Node: c99-like fast enumeration syntax2452235
-Node: Fast enumeration details2452938
-Node: Fast enumeration protocol2455278
-Node: Messaging with the GNU Objective-C runtime2458430
-Node: Dynamically registering methods2459802
-Node: Forwarding hook2461493
-Node: Compatibility2464533
-Node: Gcov2471089
-Node: Gcov Intro2471624
-Node: Invoking Gcov2474342
-Node: Gcov and Optimization2497075
-Node: Gcov Data Files2500828
-Node: Cross-profiling2502237
-Node: Gcov-tool2504091
-Node: Gcov-tool Intro2504516
-Node: Invoking Gcov-tool2506486
-Node: Gcov-dump2509064
-Node: Gcov-dump Intro2509387
-Node: Invoking Gcov-dump2509654
-Node: lto-dump2510311
-Node: lto-dump Intro2510610
-Node: Invoking lto-dump2510860
-Node: Trouble2511956
-Node: Actual Bugs2513373
-Node: Interoperation2513820
-Node: Incompatibilities2520711
-Node: Fixed Headers2528863
-Node: Standard Libraries2530521
-Node: Disappointments2531893
-Node: C++ Misunderstandings2536252
-Node: Static Definitions2537063
-Node: Name lookup2538116
-Ref: Name lookup-Footnote-12542897
-Node: Temporaries2543086
-Node: Copy Assignment2545062
-Node: Non-bugs2546897
-Node: Warnings and Errors2557403
-Node: Bugs2559165
-Node: Bug Criteria2559632
-Node: Bug Reporting2561842
-Node: Service2562060
-Node: Contributing2562881
-Node: Funding2563627
-Node: GNU Project2566117
-Node: Copying2566765
-Node: GNU Free Documentation License2604276
-Node: Contributors2629396
-Node: Option Index2670370
-Node: Keyword Index2969469
+Node: Blackfin Options910769
+Node: C6X Options918661
+Node: CRIS Options920204
+Node: CR16 Options923390
+Node: C-SKY Options924302
+Node: Darwin Options930029
+Node: DEC Alpha Options937470
+Node: eBPF Options949086
+Node: FR30 Options951462
+Node: FT32 Options952022
+Node: FRV Options952968
+Node: GNU/Linux Options959732
+Node: H8/300 Options961113
+Node: HPPA Options962565
+Node: IA-64 Options972097
+Node: LM32 Options980225
+Node: LoongArch Options980753
+Node: M32C Options987031
+Node: M32R/D Options988309
+Node: M680x0 Options991854
+Node: MCore Options1006009
+Node: MeP Options1007511
+Node: MicroBlaze Options1011471
+Node: MIPS Options1014536
+Node: MMIX Options1051333
+Node: MN10300 Options1053810
+Node: Moxie Options1056353
+Node: MSP430 Options1056840
+Node: NDS32 Options1064601
+Node: Nios II Options1066771
+Node: Nvidia PTX Options1079987
+Node: OpenRISC Options1083483
+Node: PDP-11 Options1086237
+Node: picoChip Options1087486
+Node: PowerPC Options1089624
+Node: PRU Options1089844
+Node: RISC-V Options1092053
+Node: RL78 Options1100454
+Node: RS/6000 and PowerPC Options1104229
+Node: RX Options1145745
+Node: S/390 and zSeries Options1154347
+Node: Score Options1165147
+Node: SH Options1165996
+Node: Solaris 2 Options1181136
+Node: SPARC Options1182374
+Node: System V Options1198026
+Node: TILE-Gx Options1198854
+Node: TILEPro Options1199872
+Node: V850 Options1200376
+Node: VAX Options1207063
+Node: Visium Options1207755
+Node: VMS Options1210063
+Node: VxWorks Options1210879
+Node: x86 Options1212031
+Node: x86 Windows Options1281134
+Node: Xstormy16 Options1283940
+Node: Xtensa Options1284234
+Node: zSeries Options1290370
+Node: Spec Files1290566
+Node: Environment Variables1316645
+Node: Precompiled Headers1326078
+Node: C++ Modules1332287
+Ref: C++ Modules-Footnote-11338282
+Node: C++ Module Mapper1338535
+Node: C++ Module Preprocessing1343688
+Node: C++ Compiled Module Interface1345517
+Ref: C++ Compiled Module Interface-Footnote-11348901
+Ref: C++ Compiled Module Interface-Footnote-21348990
+Node: C Implementation1349046
+Node: Translation implementation1350737
+Node: Environment implementation1351328
+Node: Identifiers implementation1351882
+Node: Characters implementation1352968
+Node: Integers implementation1356618
+Node: Floating point implementation1358667
+Node: Arrays and pointers implementation1361730
+Ref: Arrays and pointers implementation-Footnote-11363190
+Node: Hints implementation1363316
+Node: Structures unions enumerations and bit-fields implementation1364811
+Node: Qualifiers implementation1367035
+Node: Declarators implementation1369096
+Node: Statements implementation1369437
+Node: Preprocessing directives implementation1369763
+Node: Library functions implementation1372084
+Node: Architecture implementation1372733
+Node: Locale-specific behavior implementation1374378
+Node: C++ Implementation1374683
+Node: Conditionally-supported behavior1375967
+Node: Exception handling1376584
+Node: C Extensions1377051
+Node: Statement Exprs1382274
+Node: Local Labels1387646
+Node: Labels as Values1390619
+Ref: Labels as Values-Footnote-11393146
+Node: Nested Functions1393331
+Node: Nonlocal Gotos1397285
+Node: Constructing Calls1399551
+Node: Typeof1404266
+Node: Conditionals1408195
+Node: __int1281409084
+Node: Long Long1409609
+Node: Complex1411100
+Node: Floating Types1415845
+Node: Half-Precision1419366
+Node: Decimal Float1422834
+Node: Hex Floats1424688
+Node: Fixed-Point1425762
+Node: Named Address Spaces1429020
+Ref: AVR Named Address Spaces1429706
+Node: Zero Length1437000
+Node: Empty Structures1441181
+Node: Variable Length1441587
+Node: Variadic Macros1444305
+Node: Escaped Newlines1446683
+Node: Subscripting1447544
+Node: Pointer Arith1448269
+Node: Variadic Pointer Args1448846
+Node: Pointers to Arrays1449571
+Node: Initializers1450324
+Node: Compound Literals1450825
+Node: Designated Inits1454392
+Node: Case Ranges1458316
+Node: Cast to Union1458997
+Node: Mixed Labels and Declarations1460731
+Node: Function Attributes1461368
+Node: Common Function Attributes1465879
+Ref: Common Function Attributes-Footnote-11542820
+Node: AArch64 Function Attributes1543137
+Node: AMD GCN Function Attributes1549331
+Node: ARC Function Attributes1552384
+Node: ARM Function Attributes1555321
+Node: AVR Function Attributes1560460
+Node: Blackfin Function Attributes1564995
+Node: BPF Function Attributes1567492
+Node: CR16 Function Attributes1568080
+Node: C-SKY Function Attributes1568599
+Node: Epiphany Function Attributes1569898
+Node: H8/300 Function Attributes1572653
+Node: IA-64 Function Attributes1573851
+Node: M32C Function Attributes1574893
+Node: M32R/D Function Attributes1577231
+Node: m68k Function Attributes1578705
+Node: MCORE Function Attributes1579649
+Node: MeP Function Attributes1580460
+Node: MicroBlaze Function Attributes1581761
+Node: Microsoft Windows Function Attributes1583268
+Node: MIPS Function Attributes1587837
+Node: MSP430 Function Attributes1593455
+Node: NDS32 Function Attributes1597534
+Node: Nios II Function Attributes1599958
+Node: Nvidia PTX Function Attributes1601255
+Node: PowerPC Function Attributes1601870
+Node: RISC-V Function Attributes1608644
+Node: RL78 Function Attributes1610060
+Node: RX Function Attributes1611299
+Node: S/390 Function Attributes1613846
+Node: SH Function Attributes1615674
+Node: Symbian OS Function Attributes1619102
+Node: V850 Function Attributes1619438
+Node: Visium Function Attributes1619983
+Node: x86 Function Attributes1620511
+Node: Xstormy16 Function Attributes1644466
+Node: Variable Attributes1644973
+Node: Common Variable Attributes1646506
+Node: ARC Variable Attributes1668413
+Node: AVR Variable Attributes1668795
+Node: Blackfin Variable Attributes1673958
+Node: H8/300 Variable Attributes1674816
+Node: IA-64 Variable Attributes1675889
+Node: M32R/D Variable Attributes1676640
+Node: MeP Variable Attributes1677423
+Node: Microsoft Windows Variable Attributes1679516
+Node: MSP430 Variable Attributes1681969
+Node: Nvidia PTX Variable Attributes1683183
+Node: PowerPC Variable Attributes1683800
+Node: RL78 Variable Attributes1684357
+Node: V850 Variable Attributes1684776
+Node: x86 Variable Attributes1685409
+Node: Xstormy16 Variable Attributes1686465
+Node: Type Attributes1687035
+Node: Common Type Attributes1688723
+Node: ARC Type Attributes1711084
+Node: ARM Type Attributes1711556
+Node: BPF Type Attributes1712338
+Node: MeP Type Attributes1712855
+Node: PowerPC Type Attributes1713257
+Node: x86 Type Attributes1714246
+Node: Label Attributes1715238
+Node: Enumerator Attributes1717265
+Node: Statement Attributes1718797
+Node: Attribute Syntax1720280
+Node: Function Prototypes1731538
+Node: C++ Comments1733318
+Node: Dollar Signs1733837
+Node: Character Escapes1734302
+Node: Alignment1734586
+Node: Inline1736239
+Node: Volatiles1741056
+Node: Using Assembly Language with C1743955
+Node: Basic Asm1745192
+Node: Extended Asm1750815
+Ref: Volatile1754929
+Ref: AssemblerTemplate1759042
+Ref: OutputOperands1763282
+Ref: FlagOutputOperands1770245
+Ref: InputOperands1773192
+Ref: Clobbers and Scratch Registers1777460
+Ref: GotoLabels1786101
+Ref: x86Operandmodifiers1789724
+Ref: x86floatingpointasmoperands1794540
+Ref: msp430Operandmodifiers1797869
+Node: Constraints1799527
+Node: Simple Constraints1800633
+Node: Multi-Alternative1807947
+Node: Modifiers1809622
+Node: Machine Constraints1812421
+Node: Asm Labels1870192
+Node: Explicit Register Variables1871812
+Ref: Explicit Reg Vars1872026
+Node: Global Register Variables1872635
+Ref: Global Reg Vars1872843
+Node: Local Register Variables1877625
+Ref: Local Reg Vars1877845
+Node: Size of an asm1881473
+Node: Alternate Keywords1882951
+Node: Incomplete Enums1884456
+Node: Function Names1885213
+Node: Return Address1887117
+Node: Vector Extensions1891704
+Node: Offsetof1902687
+Node: __sync Builtins1903520
+Node: __atomic Builtins1909963
+Node: Integer Overflow Builtins1923476
+Node: x86 specific memory model extensions for transactional memory1929959
+Node: Object Size Checking1931225
+Node: Other Builtins1938241
+Node: Target Builtins1990845
+Node: AArch64 Built-in Functions1992620
+Node: Alpha Built-in Functions1993316
+Node: Altera Nios II Built-in Functions1996410
+Node: ARC Built-in Functions2000849
+Node: ARC SIMD Built-in Functions2006061
+Node: ARM iWMMXt Built-in Functions2015059
+Node: ARM C Language Extensions (ACLE)2022195
+Node: ARM Floating Point Status and Control Intrinsics2023472
+Node: ARM ARMv8-M Security Extensions2023959
+Node: AVR Built-in Functions2025251
+Node: Blackfin Built-in Functions2029017
+Node: BPF Built-in Functions2029637
+Node: FR-V Built-in Functions2031096
+Node: Argument Types2031959
+Node: Directly-mapped Integer Functions2033790
+Node: Directly-mapped Media Functions2034950
+Node: Raw read/write Functions2043232
+Node: Other Built-in Functions2044140
+Node: MIPS DSP Built-in Functions2045326
+Node: MIPS Paired-Single Support2058081
+Node: MIPS Loongson Built-in Functions2059580
+Node: Paired-Single Arithmetic2066102
+Node: Paired-Single Built-in Functions2067125
+Node: MIPS-3D Built-in Functions2069792
+Node: MIPS SIMD Architecture (MSA) Support2075186
+Node: MIPS SIMD Architecture Built-in Functions2078026
+Node: Other MIPS Built-in Functions2104880
+Node: MSP430 Built-in Functions2105889
+Node: NDS32 Built-in Functions2107290
+Node: picoChip Built-in Functions2108583
+Node: Basic PowerPC Built-in Functions2109932
+Node: Basic PowerPC Built-in Functions Available on all Configurations2110790
+Node: Basic PowerPC Built-in Functions Available on ISA 2.052119300
+Node: Basic PowerPC Built-in Functions Available on ISA 2.062124135
+Node: Basic PowerPC Built-in Functions Available on ISA 2.072126215
+Node: Basic PowerPC Built-in Functions Available on ISA 3.02127069
+Node: Basic PowerPC Built-in Functions Available on ISA 3.12134047
+Node: PowerPC AltiVec/VSX Built-in Functions2137212
+Node: PowerPC AltiVec Built-in Functions on ISA 2.052145281
+Node: PowerPC AltiVec Built-in Functions Available on ISA 2.062170681
+Node: PowerPC AltiVec Built-in Functions Available on ISA 2.072177747
+Node: PowerPC AltiVec Built-in Functions Available on ISA 3.02187557
+Node: PowerPC AltiVec Built-in Functions Available on ISA 3.12203280
+Node: PowerPC Hardware Transactional Memory Built-in Functions2236564
+Node: PowerPC Atomic Memory Operation Functions2245114
+Node: PowerPC Matrix-Multiply Assist Built-in Functions2247677
+Node: PRU Built-in Functions2253802
+Node: RISC-V Built-in Functions2254990
+Node: RX Built-in Functions2255401
+Node: S/390 System z Built-in Functions2259403
+Node: SH Built-in Functions2264633
+Node: SPARC VIS Built-in Functions2266361
+Node: TI C6X Built-in Functions2274892
+Node: TILE-Gx Built-in Functions2275943
+Node: TILEPro Built-in Functions2277068
+Node: x86 Built-in Functions2278176
+Node: x86 transactional memory intrinsics2343526
+Node: x86 control-flow protection intrinsics2346793
+Node: Target Format Checks2348564
+Node: Solaris Format Checks2348996
+Node: Darwin Format Checks2349422
+Node: Pragmas2350385
+Node: AArch64 Pragmas2351326
+Node: ARM Pragmas2351783
+Node: M32C Pragmas2352410
+Node: MeP Pragmas2353482
+Node: PRU Pragmas2355534
+Node: RS/6000 and PowerPC Pragmas2356112
+Node: S/390 Pragmas2356852
+Node: Darwin Pragmas2357418
+Node: Solaris Pragmas2358471
+Node: Symbol-Renaming Pragmas2359635
+Node: Structure-Layout Pragmas2361272
+Node: Weak Pragmas2363552
+Node: Diagnostic Pragmas2364287
+Node: Visibility Pragmas2369038
+Node: Push/Pop Macro Pragmas2369723
+Node: Function Specific Option Pragmas2370696
+Node: Loop-Specific Pragmas2372662
+Node: Unnamed Fields2374262
+Node: Thread-Local2376459
+Node: C99 Thread-Local Edits2378565
+Node: C++98 Thread-Local Edits2380563
+Node: Binary constants2384008
+Node: C++ Extensions2384679
+Node: C++ Volatiles2386309
+Node: Restricted Pointers2388657
+Node: Vague Linkage2390248
+Node: C++ Interface2393871
+Ref: C++ Interface-Footnote-12397668
+Node: Template Instantiation2397806
+Node: Bound member functions2403897
+Node: C++ Attributes2405429
+Node: Function Multiversioning2409501
+Node: Type Traits2411309
+Node: C++ Concepts2418280
+Node: Deprecated Features2419786
+Node: Backwards Compatibility2421611
+Node: Objective-C2422683
+Node: GNU Objective-C runtime API2423290
+Node: Modern GNU Objective-C runtime API2424297
+Node: Traditional GNU Objective-C runtime API2426733
+Node: Executing code before main2427460
+Node: What you can and what you cannot do in +load2430204
+Node: Type encoding2432574
+Node: Legacy type encoding2437940
+Node: @encode2439030
+Node: Method signatures2439575
+Node: Garbage Collection2441567
+Node: Constant string objects2444257
+Node: compatibility_alias2446766
+Node: Exceptions2447491
+Node: Synchronization2450201
+Node: Fast enumeration2451385
+Node: Using fast enumeration2451697
+Node: c99-like fast enumeration syntax2452908
+Node: Fast enumeration details2453611
+Node: Fast enumeration protocol2455951
+Node: Messaging with the GNU Objective-C runtime2459103
+Node: Dynamically registering methods2460475
+Node: Forwarding hook2462166
+Node: Compatibility2465206
+Node: Gcov2471762
+Node: Gcov Intro2472297
+Node: Invoking Gcov2475015
+Node: Gcov and Optimization2497748
+Node: Gcov Data Files2501501
+Node: Cross-profiling2502910
+Node: Gcov-tool2504764
+Node: Gcov-tool Intro2505189
+Node: Invoking Gcov-tool2507159
+Node: Gcov-dump2509737
+Node: Gcov-dump Intro2510060
+Node: Invoking Gcov-dump2510327
+Node: lto-dump2510984
+Node: lto-dump Intro2511283
+Node: Invoking lto-dump2511533
+Node: Trouble2512629
+Node: Actual Bugs2514046
+Node: Interoperation2514493
+Node: Incompatibilities2521384
+Node: Fixed Headers2529536
+Node: Standard Libraries2531194
+Node: Disappointments2532566
+Node: C++ Misunderstandings2536925
+Node: Static Definitions2537736
+Node: Name lookup2538789
+Ref: Name lookup-Footnote-12543570
+Node: Temporaries2543759
+Node: Copy Assignment2545735
+Node: Non-bugs2547570
+Node: Warnings and Errors2558076
+Node: Bugs2559838
+Node: Bug Criteria2560305
+Node: Bug Reporting2562515
+Node: Service2562733
+Node: Contributing2563554
+Node: Funding2564300
+Node: GNU Project2566790
+Node: Copying2567438
+Node: GNU Free Documentation License2604949
+Node: Contributors2630069
+Node: Option Index2671043
+Node: Keyword Index2970142
 
 End Tag Table
 
