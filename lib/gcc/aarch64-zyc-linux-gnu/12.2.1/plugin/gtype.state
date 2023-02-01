@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "12.2.1 20230131")
+(!version  "12.2.1 20230201")
 (!srcdir  "../../gcc/gcc")
 (!languages 10 ada c cp d fortran go jit lto objc objcp)
 (!fileslist 228 0
@@ -15085,27 +15085,27 @@
                        )
                        (!pair  "userdef_literal"
                         (!type struct 675 nil  gc_used "tree_userdef_literal"
-                         (!srcfileloc  "c-family/c-common.h" 1319)
+                         (!srcfileloc  "c-family/c-common.h" 1320)
                          (!fields 5 
                           (!pair  "base"
                            (!type already_seen 25)
-                           (!srcfileloc  "c-family/c-common.h" 1314)
+                           (!srcfileloc  "c-family/c-common.h" 1315)
                            nil )
                           (!pair  "suffix_id"
                            (!type already_seen 23)
-                           (!srcfileloc  "c-family/c-common.h" 1315)
+                           (!srcfileloc  "c-family/c-common.h" 1316)
                            nil )
                           (!pair  "value"
                            (!type already_seen 23)
-                           (!srcfileloc  "c-family/c-common.h" 1316)
+                           (!srcfileloc  "c-family/c-common.h" 1317)
                            nil )
                           (!pair  "num_string"
                            (!type already_seen 23)
-                           (!srcfileloc  "c-family/c-common.h" 1317)
+                           (!srcfileloc  "c-family/c-common.h" 1318)
                            nil )
                           (!pair  "overflow"
                            (!type already_seen 2)
-                           (!srcfileloc  "c-family/c-common.h" 1318)
+                           (!srcfileloc  "c-family/c-common.h" 1319)
                            nil )
                          )
                          nil 774 nil nil )
@@ -26995,7 +26995,7 @@
   nil 0 nil nil )
  
  (!type undefined 1916 nil  gc_unused "wide_int_bitmask"
-  (!srcfileloc  "c-family/c-common.h" 1193)
+  (!srcfileloc  "c-family/c-common.h" 1194)
  )
  
  (!type struct 1917 nil  gc_unused "c_omp_directive"nil 
@@ -28232,19 +28232,19 @@
   (!fields 4 
    (!pair  "decl"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 8397)
+    (!srcfileloc  "cp/cp-tree.h" 8396)
     nil )
    (!pair  "body"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 8398)
+    (!srcfileloc  "cp/cp-tree.h" 8397)
     nil )
    (!pair  "parms"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 8399)
+    (!srcfileloc  "cp/cp-tree.h" 8398)
     nil )
    (!pair  "result"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 8400)
+    (!srcfileloc  "cp/cp-tree.h" 8399)
     nil )
   )
   (!options 
@@ -31631,15 +31631,15 @@
   nil )
  (!pair  "omp_clause_mask"
   (!type already_seen 1916)
-  (!srcfileloc  "c-family/c-common.h" 1193)
+  (!srcfileloc  "c-family/c-common.h" 1194)
   nil )
  (!pair  "wide_int_bitmask"
   (!type already_seen 1916)
-  (!srcfileloc  "c-family/c-common.h" 1193)
+  (!srcfileloc  "c-family/c-common.h" 1194)
   nil )
  (!pair  "bc_state_t"
   (!type already_seen 1915)
-  (!srcfileloc  "c-family/c-common.h" 1149)
+  (!srcfileloc  "c-family/c-common.h" 1150)
   nil )
  (!pair  "stmt_tree"
   (!type already_seen 451)
@@ -36063,7 +36063,7 @@
   nil )
  (!pair  "unemitted_tinfo_decls"
   (!type already_seen 84)
-  (!srcfileloc  "cp/cp-tree.h" 7464)
+  (!srcfileloc  "cp/cp-tree.h" 7463)
   nil )
  (!pair  "ovl_op_alternate"
   (!type array 2360 nil  gc_used "OVL_OP_MAX" 
@@ -36179,15 +36179,15 @@
   nil )
  (!pair  "g_string_concat_db"
   (!type already_seen 726)
-  (!srcfileloc  "c-family/c-common.h" 1139)
+  (!srcfileloc  "c-family/c-common.h" 1140)
   nil )
  (!pair  "registered_builtin_types"
   (!type already_seen 23)
-  (!srcfileloc  "c-family/c-common.h" 1122)
+  (!srcfileloc  "c-family/c-common.h" 1123)
   nil )
  (!pair  "pending_lang_change"
   (!type already_seen 2)
-  (!srcfileloc  "c-family/c-common.h" 1075)
+  (!srcfileloc  "c-family/c-common.h" 1076)
   nil )
  (!pair  "c_global_trees"
   (!type array 2366 nil  gc_used "CTI_MAX" 
