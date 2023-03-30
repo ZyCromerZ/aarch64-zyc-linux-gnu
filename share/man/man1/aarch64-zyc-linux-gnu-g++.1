@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "GCC 1"
-.TH GCC 1 "2023-03-29" "gcc-12.2.1" "GNU"
+.TH GCC 1 "2023-03-30" "gcc-12.2.1" "GNU"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -9007,6 +9007,13 @@ for \*(L"interesting\*(R" interprocedural paths through the
 code, and issues warnings for problems found on them.
 .Sp
 This analysis is much more expensive than other \s-1GCC\s0 warnings.
+.Sp
+In technical terms, it performs coverage-guided symbolic execution of
+the code being compiled.  It is neither sound nor complete: it can
+have false positives and false negatives.  It is a bug-finding tool,
+rather than a tool for proving program correctness.
+.Sp
+The analyzer is only suitable for use on C code in this release.
 .Sp
 Enabling this option effectively enables the following warnings:
 .Sp
