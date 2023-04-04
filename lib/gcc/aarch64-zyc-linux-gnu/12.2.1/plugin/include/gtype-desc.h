@@ -93,6 +93,10 @@ extern void gt_ggc_mx_edge_def (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_basic_block_def (X);\
   } while (0)
 extern void gt_ggc_mx_basic_block_def (void *);
+#define gt_ggc_m_14hash_set_tree_(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_hash_set_tree_ (X);\
+  } while (0)
+extern void gt_ggc_mx_hash_set_tree_ (void *);
 #define gt_ggc_m_16machine_function(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_machine_function (X);\
   } while (0)
@@ -297,10 +301,6 @@ extern void gt_ggc_mx_loops (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_language_function (X);\
   } while (0)
 extern void gt_ggc_mx_language_function (void *);
-#define gt_ggc_m_14hash_set_tree_(X) do { \
-  if ((intptr_t)(X) != 0) gt_ggc_mx_hash_set_tree_ (X);\
-  } while (0)
-extern void gt_ggc_mx_hash_set_tree_ (void *);
 #define gt_ggc_m_24types_used_by_vars_entry(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_types_used_by_vars_entry (X);\
   } while (0)
@@ -1546,6 +1546,10 @@ extern void gt_pch_nx_edge_def (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_basic_block_def (X);\
   } while (0)
 extern void gt_pch_nx_basic_block_def (void *);
+#define gt_pch_n_14hash_set_tree_(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_hash_set_tree_ (X);\
+  } while (0)
+extern void gt_pch_nx_hash_set_tree_ (void *);
 #define gt_pch_n_16machine_function(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_machine_function (X);\
   } while (0)
@@ -1750,10 +1754,6 @@ extern void gt_pch_nx_loops (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_language_function (X);\
   } while (0)
 extern void gt_pch_nx_language_function (void *);
-#define gt_pch_n_14hash_set_tree_(X) do { \
-  if ((intptr_t)(X) != 0) gt_pch_nx_hash_set_tree_ (X);\
-  } while (0)
-extern void gt_pch_nx_hash_set_tree_ (void *);
 #define gt_pch_n_24types_used_by_vars_entry(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_types_used_by_vars_entry (X);\
   } while (0)
@@ -3051,6 +3051,8 @@ extern void gt_pch_p_8edge_def
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_15basic_block_def
     (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_14hash_set_tree_
+    (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_16machine_function
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_14bitmap_element
@@ -3152,8 +3154,6 @@ extern void gt_pch_p_18control_flow_graph
 extern void gt_pch_p_5loops
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_17language_function
-    (void *, void *, gt_pointer_operator, void *);
-extern void gt_pch_p_14hash_set_tree_
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_24types_used_by_vars_entry
     (void *, void *, gt_pointer_operator, void *);

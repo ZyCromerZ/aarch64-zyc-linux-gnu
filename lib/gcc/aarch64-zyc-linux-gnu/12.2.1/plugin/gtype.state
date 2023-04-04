@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "12.2.1 20230403")
+(!version  "12.2.1 20230404")
 (!srcdir  "../../gcc/gcc")
 (!languages 10 ada c cp d fortran go jit lto objc objcp)
 (!fileslist 228 0
@@ -8543,8 +8543,8 @@
                            (!type struct 421 
                             (!type already_seen 420)
                             gc_maybe_pointed_to "machine_function"
-                            (!srcfileloc  "config/aarch64/aarch64.h" 965)
-                            (!fields 4 
+                            (!srcfileloc  "config/aarch64/aarch64.h" 969)
+                            (!fields 5 
                              (!pair  "frame"
                               (!type struct 422 nil  gc_used "aarch64_frame"
                                (!srcfileloc  "config/aarch64/aarch64.h" 955)
@@ -8633,23 +8633,39 @@
                                  nil )
                                )
                                nil 1023 nil nil )
-                              (!srcfileloc  "config/aarch64/aarch64.h" 959)
+                              (!srcfileloc  "config/aarch64/aarch64.h" 960)
                               nil )
                              (!pair  "reg_is_wrapped_separately"
                               (!type array 424 nil  gc_used "LAST_SAVED_REGNUM" 
                                (!type already_seen 2)
                               )
-                              (!srcfileloc  "config/aarch64/aarch64.h" 961)
+                              (!srcfileloc  "config/aarch64/aarch64.h" 962)
                               nil )
                              (!pair  "call_via"
                               (!type array 425 nil  gc_used "SP_REGNUM" 
                                (!type already_seen 99)
                               )
-                              (!srcfileloc  "config/aarch64/aarch64.h" 963)
+                              (!srcfileloc  "config/aarch64/aarch64.h" 964)
                               nil )
                              (!pair  "label_is_assembled"
                               (!type already_seen 2)
-                              (!srcfileloc  "config/aarch64/aarch64.h" 964)
+                              (!srcfileloc  "config/aarch64/aarch64.h" 965)
+                              nil )
+                             (!pair  "vector_load_decls"
+                              (!type pointer 426 nil  gc_used
+                               (!type user_struct 427 
+                                (!type already_seen 426)
+                                gc_pointed_to "hash_set<tree>"
+                                (!srcfileloc  "config/aarch64/aarch64.h" 968)
+                                (!fields 1 
+                                 (!pair  "tree"
+                                  (!type already_seen 23)
+                                  (!srcfileloc  "config/aarch64/aarch64.h" 968)
+                                  nil )
+                                )
+                               )
+                              )
+                              (!srcfileloc  "config/aarch64/aarch64.h" 968)
                               nil )
                             )
                             nil 1023 nil nil )
@@ -8660,15 +8676,15 @@
                           )
                          )
                          (!pair  "language"
-                          (!type pointer 426 nil  gc_used
-                           (!type lang_struct 427 
-                            (!type already_seen 426)
+                          (!type pointer 428 nil  gc_used
+                           (!type lang_struct 429 
+                            (!type already_seen 428)
                             gc_pointed_to "language_function"
                             (!srcfileloc  "ada/gcc-interface/trans.cc" 121)
                             (!fields 0 )
                             nil 1023 
                             (!homotypes 8
-                             (!type struct 428 nil  gc_pointed_to "language_function"
+                             (!type struct 430 nil  gc_pointed_to "language_function"
                               (!srcfileloc  "lto/lto-tree.h" 42)
                               (!fields 1 
                                (!pair  "dummy"
@@ -8677,10 +8693,10 @@
                                 nil )
                               )
                               nil 128 
-                              (!type already_seen 427)
+                              (!type already_seen 429)
                               nil )
                              
-                             (!type struct 429 nil  gc_pointed_to "language_function"
+                             (!type struct 431 nil  gc_pointed_to "language_function"
                               (!srcfileloc  "jit/dummy-frontend.cc" 523)
                               (!fields 1 
                                (!pair  "dummy"
@@ -8689,10 +8705,10 @@
                                 nil )
                               )
                               nil 64 
-                              (!type already_seen 427)
+                              (!type already_seen 429)
                               nil )
                              
-                             (!type struct 430 nil  gc_pointed_to "language_function"
+                             (!type struct 432 nil  gc_pointed_to "language_function"
                               (!srcfileloc  "go/go-lang.cc" 84)
                               (!fields 1 
                                (!pair  "dummy"
@@ -8701,16 +8717,16 @@
                                 nil )
                               )
                               nil 32 
-                              (!type already_seen 427)
+                              (!type already_seen 429)
                               nil )
                              
-                             (!type struct 431 nil  gc_pointed_to "language_function"
+                             (!type struct 433 nil  gc_pointed_to "language_function"
                               (!srcfileloc  "fortran/f95-lang.cc" 68)
                               (!fields 1 
                                (!pair  "binding_level"
-                                (!type pointer 432 nil  gc_used
-                                 (!type lang_struct 433 
-                                  (!type already_seen 432)
+                                (!type pointer 434 nil  gc_used
+                                 (!type lang_struct 435 
+                                  (!type already_seen 434)
                                   gc_pointed_to "binding_level"
                                   (!srcfileloc  "d/d-tree.h" 124)
                                   (!fields 0 )
@@ -8719,7 +8735,7 @@
                                   )
                                   24 
                                   (!homotypes 2
-                                   (!type struct 434 nil  gc_pointed_to "binding_level"
+                                   (!type struct 436 nil  gc_pointed_to "binding_level"
                                     (!srcfileloc  "fortran/f95-lang.cc" 310)
                                     (!fields 4 
                                      (!pair  "names"
@@ -8731,7 +8747,7 @@
                                       (!srcfileloc  "fortran/f95-lang.cc" 304)
                                       nil )
                                      (!pair  "level_chain"
-                                      (!type already_seen 432)
+                                      (!type already_seen 434)
                                       (!srcfileloc  "fortran/f95-lang.cc" 306)
                                       nil )
                                      (!pair  "reversed"
@@ -8740,10 +8756,10 @@
                                       nil )
                                     )
                                     nil 16 
-                                    (!type already_seen 433)
+                                    (!type already_seen 435)
                                     nil )
                                    
-                                   (!type struct 435 nil  gc_pointed_to "binding_level"
+                                   (!type struct 437 nil  gc_pointed_to "binding_level"
                                     (!srcfileloc  "d/d-tree.h" 124)
                                     (!fields 4 
                                      (!pair  "names"
@@ -8755,7 +8771,7 @@
                                       (!srcfileloc  "d/d-tree.h" 117)
                                       nil )
                                      (!pair  "level_chain"
-                                      (!type already_seen 432)
+                                      (!type already_seen 434)
                                       (!srcfileloc  "d/d-tree.h" 120)
                                       nil )
                                      (!pair  "kind"
@@ -8767,7 +8783,7 @@
                                      (!option chain_next string  "%h.level_chain")
                                     )
                                     8 
-                                    (!type already_seen 433)
+                                    (!type already_seen 435)
                                     nil )
                                   )
                                  )
@@ -8776,16 +8792,16 @@
                                 nil )
                               )
                               nil 16 
-                              (!type already_seen 427)
+                              (!type already_seen 429)
                               nil )
                              
-                             (!type struct 436 nil  gc_pointed_to "language_function"
+                             (!type struct 438 nil  gc_pointed_to "language_function"
                               (!srcfileloc  "d/d-tree.h" 251)
                               (!fields 6 
                                (!pair  "function"
-                                (!type pointer 437 nil  gc_unused
-                                 (!type struct 438 
-                                  (!type already_seen 437)
+                                (!type pointer 439 nil  gc_unused
+                                 (!type struct 440 
+                                  (!type already_seen 439)
                                   gc_unused "FuncDeclaration"
                                   (!srcfileloc  "d/d-tree.h" 236)
                                   (!fields 0 )
@@ -8797,9 +8813,9 @@
                                 )
                                )
                                (!pair  "module"
-                                (!type pointer 439 nil  gc_unused
-                                 (!type struct 440 
-                                  (!type already_seen 439)
+                                (!type pointer 441 nil  gc_unused
+                                 (!type struct 442 
+                                  (!type already_seen 441)
                                   gc_unused "Module"
                                   (!srcfileloc  "d/d-tree.h" 237)
                                   (!fields 0 )
@@ -8823,14 +8839,14 @@
                                 (!srcfileloc  "d/d-tree.h" 247)
                                 nil )
                                (!pair  "labels"
-                                (!type pointer 441 nil  gc_used
-                                 (!type user_struct 442 
-                                  (!type already_seen 441)
+                                (!type pointer 443 nil  gc_used
+                                 (!type user_struct 444 
+                                  (!type already_seen 443)
                                   gc_pointed_to "hash_map<Statement*,d_label_entry>"
                                   (!srcfileloc  "d/d-tree.h" 250)
                                   (!fields 2 
                                    (!pair  "d_label_entry"
-                                    (!type struct 443 nil  gc_used "d_label_entry"
+                                    (!type struct 445 nil  gc_used "d_label_entry"
                                      (!srcfileloc  "d/d-tree.h" 250)
                                      (!fields 7 
                                       (!pair  "label"
@@ -8838,9 +8854,9 @@
                                        (!srcfileloc  "d/d-tree.h" 153)
                                        nil )
                                       (!pair  "statement"
-                                       (!type pointer 444 nil  gc_used
-                                        (!type struct 445 
-                                         (!type already_seen 444)
+                                       (!type pointer 446 nil  gc_used
+                                        (!type struct 447 
+                                         (!type already_seen 446)
                                          gc_pointed_to "Statement"
                                          (!srcfileloc  "d/d-tree.h" 138)
                                          (!fields 0 )
@@ -8852,29 +8868,29 @@
                                        )
                                       )
                                       (!pair  "level"
-                                       (!type already_seen 432)
+                                       (!type already_seen 434)
                                        (!srcfileloc  "d/d-tree.h" 161)
                                        nil )
                                       (!pair  "fwdrefs"
-                                       (!type pointer 446 nil  gc_used
-                                        (!type struct 447 
-                                         (!type already_seen 446)
+                                       (!type pointer 448 nil  gc_used
+                                        (!type struct 449 
+                                         (!type already_seen 448)
                                          gc_pointed_to "d_label_use_entry"
                                          (!srcfileloc  "d/d-tree.h" 144)
                                          (!fields 3 
                                           (!pair  "next"
-                                           (!type already_seen 446)
+                                           (!type already_seen 448)
                                            (!srcfileloc  "d/d-tree.h" 135)
                                            nil )
                                           (!pair  "statement"
-                                           (!type already_seen 444)
+                                           (!type already_seen 446)
                                            (!srcfileloc  "d/d-tree.h" 138)
                                            (!options 
                                             (!option skip string  "")
                                            )
                                           )
                                           (!pair  "level"
-                                           (!type already_seen 432)
+                                           (!type already_seen 434)
                                            (!srcfileloc  "d/d-tree.h" 143)
                                            nil )
                                          )
@@ -8902,7 +8918,7 @@
                                     (!srcfileloc  "d/d-tree.h" 250)
                                     nil )
                                    (!pair  "Statement"
-                                    (!type already_seen 444)
+                                    (!type already_seen 446)
                                     (!srcfileloc  "d/d-tree.h" 250)
                                     nil )
                                   )
@@ -8912,20 +8928,20 @@
                                 nil )
                               )
                               nil 8 
-                              (!type already_seen 427)
+                              (!type already_seen 429)
                               nil )
                              
-                             (!type struct 448 nil  gc_pointed_to "language_function"
+                             (!type struct 450 nil  gc_pointed_to "language_function"
                               (!srcfileloc  "cp/cp-tree.h" 2088)
                               (!fields 20 
                                (!pair  "base"
-                                (!type struct 449 nil  gc_used "c_language_function"
+                                (!type struct 451 nil  gc_used "c_language_function"
                                  (!srcfileloc  "c-family/c-common.h" 601)
                                  (!fields 2 
                                   (!pair  "x_stmt_tree"
-                                   (!type struct 450 
-                                    (!type pointer 451 nil  gc_unused
-                                     (!type already_seen 450)
+                                   (!type struct 452 
+                                    (!type pointer 453 nil  gc_unused
+                                     (!type already_seen 452)
                                     )
                                     gc_used "stmt_tree_s"
                                     (!srcfileloc  "c-family/c-common.h" 586)
@@ -9015,14 +9031,14 @@
                                 (!srcfileloc  "cp/cp-tree.h" 2079)
                                 nil )
                                (!pair  "x_named_labels"
-                                (!type pointer 452 nil  gc_used
-                                 (!type user_struct 453 
-                                  (!type already_seen 452)
+                                (!type pointer 454 nil  gc_used
+                                 (!type user_struct 455 
+                                  (!type already_seen 454)
                                   gc_pointed_to "hash_table<named_label_hash>"
                                   (!srcfileloc  "cp/cp-tree.h" 2081)
                                   (!fields 1 
                                    (!pair  "named_label_hash"
-                                    (!type struct 454 nil  gc_used "named_label_hash"
+                                    (!type struct 456 nil  gc_used "named_label_hash"
                                      (!srcfileloc  "cp/cp-tree.h" 2081)
                                      (!fields 0 )
                                      nil 516 nil nil )
@@ -9043,14 +9059,14 @@
                                 nil )
                               )
                               nil 516 
-                              (!type already_seen 427)
+                              (!type already_seen 429)
                               nil )
                              
-                             (!type struct 455 nil  gc_pointed_to "language_function"
+                             (!type struct 457 nil  gc_pointed_to "language_function"
                               (!srcfileloc  "c/c-lang.h" 61)
                               (!fields 8 
                                (!pair  "base"
-                                (!type already_seen 449)
+                                (!type already_seen 451)
                                 (!srcfileloc  "c/c-lang.h" 53)
                                 nil )
                                (!pair  "x_in_statement"
@@ -9058,9 +9074,9 @@
                                 (!srcfileloc  "c/c-lang.h" 54)
                                 nil )
                                (!pair  "x_switch_stack"
-                                (!type pointer 456 nil  gc_unused
-                                 (!type struct 457 
-                                  (!type already_seen 456)
+                                (!type pointer 458 nil  gc_unused
+                                 (!type struct 459 
+                                  (!type already_seen 458)
                                   gc_unused "c_switch"nil 
                                   (!fields 0 )
                                   nil 0 nil nil )
@@ -9071,9 +9087,9 @@
                                 )
                                )
                                (!pair  "arg_info"
-                                (!type pointer 458 nil  gc_unused
-                                 (!type struct 459 
-                                  (!type already_seen 458)
+                                (!type pointer 460 nil  gc_unused
+                                 (!type struct 461 
+                                  (!type already_seen 460)
                                   gc_unused "c_arg_info"nil 
                                   (!fields 0 )
                                   nil 0 nil nil )
@@ -9101,16 +9117,16 @@
                                 nil )
                               )
                               nil 258 
-                              (!type already_seen 427)
+                              (!type already_seen 429)
                               nil )
                              
-                             (!type struct 460 nil  gc_pointed_to "language_function"
+                             (!type struct 462 nil  gc_pointed_to "language_function"
                               (!srcfileloc  "ada/gcc-interface/trans.cc" 121)
                               (!fields 4 
                                (!pair  "parm_attr_cache"
-                                (!type pointer 461 nil  gc_used
-                                 (!type user_struct 462 
-                                  (!type already_seen 461)
+                                (!type pointer 463 nil  gc_used
+                                 (!type user_struct 464 
+                                  (!type already_seen 463)
                                   gc_pointed_to "vec<parm_attr,va_gc>"
                                   (!srcfileloc  "ada/gcc-interface/trans.cc" 117)
                                   (!fields 2 
@@ -9119,9 +9135,9 @@
                                     (!srcfileloc  "ada/gcc-interface/trans.cc" 117)
                                     nil )
                                    (!pair  "parm_attr"
-                                    (!type pointer 463 nil  gc_used
-                                     (!type struct 464 
-                                      (!type already_seen 463)
+                                    (!type pointer 465 nil  gc_used
+                                     (!type struct 466 
+                                      (!type already_seen 465)
                                       gc_pointed_to "parm_attr_d"
                                       (!srcfileloc  "ada/gcc-interface/trans.cc" 111)
                                       (!fields 5 
@@ -9169,7 +9185,7 @@
                                 nil )
                               )
                               nil 1 
-                              (!type already_seen 427)
+                              (!type already_seen 429)
                               nil )
                             )
                            )
@@ -9177,19 +9193,7 @@
                           (!srcfileloc  "function.h" 296)
                           nil )
                          (!pair  "used_types_hash"
-                          (!type pointer 465 nil  gc_used
-                           (!type user_struct 466 
-                            (!type already_seen 465)
-                            gc_pointed_to "hash_set<tree>"
-                            (!srcfileloc  "function.h" 299)
-                            (!fields 1 
-                             (!pair  "tree"
-                              (!type already_seen 23)
-                              (!srcfileloc  "function.h" 299)
-                              nil )
-                            )
-                           )
-                          )
+                          (!type already_seen 426)
                           (!srcfileloc  "function.h" 299)
                           nil )
                          (!pair  "fde"
@@ -17483,9 +17487,11 @@
  
  (!type already_seen 422)
  
+ (!type already_seen 427)
+ 
  (!type already_seen 421)
  
- (!type struct 849 nil  gc_unused "anonymous:../../gcc/gcc/config/aarch64/aarch64.h:1007"nil 
+ (!type struct 849 nil  gc_unused "anonymous:../../gcc/gcc/config/aarch64/aarch64.h:1012"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -19306,9 +19312,7 @@
  
  (!type already_seen 408)
  
- (!type already_seen 427)
- 
- (!type already_seen 466)
+ (!type already_seen 429)
  
  (!type struct 1006 nil  gc_pointed_to "types_used_by_vars_entry"
   (!srcfileloc  "function.h" 478)
@@ -21240,7 +21244,7 @@
     (!srcfileloc  "ipa-devirt.cc" 211)
     nil )
    (!pair  "types_set"
-    (!type already_seen 465)
+    (!type already_seen 426)
     (!srcfileloc  "ipa-devirt.cc" 213)
     (!options 
      (!option skip string  "")
@@ -26496,9 +26500,9 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type already_seen 464)
+ (!type already_seen 466)
  
- (!type already_seen 462)
+ (!type already_seen 464)
  
  (!type struct 1861 
   (!type pointer 1862 nil  gc_used
@@ -26803,7 +26807,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type already_seen 459)
+ (!type already_seen 461)
  
  (!type struct 1890 nil  gc_unused "c_declarator"nil 
   (!fields 0 )
@@ -26827,7 +26831,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type already_seen 450)
+ (!type already_seen 452)
  
  (!type already_seen 640)
  
@@ -26980,7 +26984,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type already_seen 449)
+ (!type already_seen 451)
  
  (!type struct 1913 nil  gc_unused "c_fileinfo"nil 
   (!fields 0 )
@@ -27402,7 +27406,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type already_seen 457)
+ (!type already_seen 459)
  
  (!type already_seen 83)
  
@@ -27656,7 +27660,7 @@
     (!srcfileloc  "cp/cp-tree.h" 1857)
     nil )
    (!pair  "x_stmt_tree"
-    (!type already_seen 450)
+    (!type already_seen 452)
     (!srcfileloc  "cp/cp-tree.h" 1859)
     nil )
    (!pair  "class_bindings"
@@ -27801,9 +27805,9 @@
   )
   516 nil nil )
  
- (!type already_seen 454)
+ (!type already_seen 456)
  
- (!type already_seen 453)
+ (!type already_seen 455)
  
  (!type already_seen 534)
  
@@ -30049,7 +30053,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type already_seen 438)
+ (!type already_seen 440)
  
  (!type struct 2241 nil  gc_unused "StructDeclaration"nil 
   (!fields 0 )
@@ -30083,9 +30087,9 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type already_seen 440)
+ (!type already_seen 442)
  
- (!type already_seen 445)
+ (!type already_seen 447)
  
  (!type already_seen 530)
  
@@ -30119,15 +30123,15 @@
   )
  )
  
- (!type already_seen 433)
+ (!type already_seen 435)
  
- (!type already_seen 447)
+ (!type already_seen 449)
  
- (!type already_seen 443)
+ (!type already_seen 445)
  
  (!type already_seen 651)
  
- (!type already_seen 442)
+ (!type already_seen 444)
  
  (!type struct 2255 nil  gc_unused "builtin_data"nil 
   (!fields 0 )
@@ -30958,19 +30962,19 @@
   (!srcfileloc  "d/d-tree.h" 318)
   nil )
  (!pair  "d_label_entry"
-  (!type already_seen 443)
+  (!type already_seen 445)
   (!srcfileloc  "d/d-tree.h" 250)
   nil )
  (!pair  "hash_map<Statement*,d_label_entry>"
-  (!type already_seen 442)
+  (!type already_seen 444)
   (!srcfileloc  "d/d-tree.h" 250)
   nil )
  (!pair  "Module"
-  (!type already_seen 440)
+  (!type already_seen 442)
   (!srcfileloc  "d/d-tree.h" 237)
   nil )
  (!pair  "FuncDeclaration"
-  (!type already_seen 438)
+  (!type already_seen 440)
   (!srcfileloc  "d/d-tree.h" 236)
   nil )
  (!pair  "AggregateDeclaration"
@@ -30982,15 +30986,15 @@
   (!srcfileloc  "d/d-tree.h" 212)
   nil )
  (!pair  "Statement"
-  (!type already_seen 445)
+  (!type already_seen 447)
   (!srcfileloc  "d/d-tree.h" 138)
   nil )
  (!pair  "d_label_use_entry"
-  (!type already_seen 447)
+  (!type already_seen 449)
   (!srcfileloc  "d/d-tree.h" 135)
   nil )
  (!pair  "binding_level"
-  (!type already_seen 433)
+  (!type already_seen 435)
   (!srcfileloc  "d/d-tree.h" 120)
   nil )
  (!pair  "Expressions"
@@ -31502,11 +31506,11 @@
   (!srcfileloc  "cp/cp-tree.h" 2291)
   nil )
  (!pair  "named_label_hash"
-  (!type already_seen 454)
+  (!type already_seen 456)
   (!srcfileloc  "cp/cp-tree.h" 2081)
   nil )
  (!pair  "hash_table<named_label_hash>"
-  (!type already_seen 453)
+  (!type already_seen 455)
   (!srcfileloc  "cp/cp-tree.h" 2081)
   nil )
  (!pair  "omp_declare_target_attr"
@@ -31642,7 +31646,7 @@
   (!srcfileloc  "c-family/c-common.h" 1150)
   nil )
  (!pair  "stmt_tree"
-  (!type already_seen 451)
+  (!type already_seen 453)
   (!srcfileloc  "c-family/c-common.h" 588)
   nil )
  (!pair  "added_includes_t"
@@ -31738,11 +31742,11 @@
   (!srcfileloc  "ada/gcc-interface/trans.cc" 195)
   nil )
  (!pair  "vec<parm_attr,va_gc>"
-  (!type already_seen 462)
+  (!type already_seen 464)
   (!srcfileloc  "ada/gcc-interface/trans.cc" 117)
   nil )
  (!pair  "parm_attr"
-  (!type already_seen 463)
+  (!type already_seen 465)
   (!srcfileloc  "ada/gcc-interface/trans.cc" 113)
   nil )
  (!pair  "vinfo_t"
@@ -33509,10 +33513,6 @@
   (!type already_seen 513)
   (!srcfileloc  "function.h" 310)
   nil )
- (!pair  "hash_set<tree>"
-  (!type already_seen 466)
-  (!srcfileloc  "function.h" 299)
-  nil )
  (!pair  "callinfo_dalloc"
   (!type already_seen 419)
   (!srcfileloc  "function.h" 234)
@@ -34091,7 +34091,11 @@
   nil )
  (!pair  "machine_function"
   (!type already_seen 421)
-  (!srcfileloc  "config/aarch64/aarch64.h" 965)
+  (!srcfileloc  "config/aarch64/aarch64.h" 969)
+  nil )
+ (!pair  "hash_set<tree>"
+  (!type already_seen 427)
+  (!srcfileloc  "config/aarch64/aarch64.h" 968)
   nil )
  (!pair  "uchar"
   (!type already_seen 8)
@@ -35393,11 +35397,11 @@
   (!srcfileloc  "fortran/trans-decl.cc" 57)
   nil )
  (!pair  "global_binding_level"
-  (!type already_seen 432)
+  (!type already_seen 434)
   (!srcfileloc  "fortran/f95-lang.cc" 317)
   nil )
  (!pair  "current_binding_level"
-  (!type already_seen 432)
+  (!type already_seen 434)
   (!srcfileloc  "fortran/f95-lang.cc" 313)
   nil )
  (!pair  "current_translation_unit"
@@ -35405,7 +35409,7 @@
   (!srcfileloc  "fortran/f95-lang.cc" 191)
   nil )
  (!pair  "free_binding_level"
-  (!type already_seen 432)
+  (!type already_seen 434)
   (!srcfileloc  "fortran/f95-lang.cc" 185)
   nil )
  (!pair  "tinfo_types"
@@ -35485,11 +35489,11 @@
   (!srcfileloc  "d/d-tree.h" 432)
   nil )
  (!pair  "global_binding_level"
-  (!type already_seen 432)
+  (!type already_seen 434)
   (!srcfileloc  "d/d-tree.h" 128)
   nil )
  (!pair  "current_binding_level"
-  (!type already_seen 432)
+  (!type already_seen 434)
   (!srcfileloc  "d/d-tree.h" 127)
   nil )
  (!pair  "vlt_register_set_fndecl"
@@ -35505,7 +35509,7 @@
   (!srcfileloc  "cp/vtable-class-hierarchy.cc" 131)
   nil )
  (!pair  "deleted_copy_types"
-  (!type already_seen 465)
+  (!type already_seen 426)
   (!srcfileloc  "cp/tree.cc" 4434)
   nil )
  (!pair  "list_hash_table"
@@ -36272,7 +36276,7 @@
   (!srcfileloc  "c/c-decl.cc" 129)
   nil )
  (!pair  "c_stmt_tree"
-  (!type already_seen 450)
+  (!type already_seen 452)
   (!srcfileloc  "c/c-decl.cc" 122)
   nil )
  (!pair  "gnat_eh_personality_decl"
@@ -36633,21 +36637,21 @@
   nil )
  (!pair  "aarch64_sls_shared_thunks_needed"
   (!type already_seen 2)
-  (!srcfileloc  "config/aarch64/aarch64.cc" 27061)
+  (!srcfileloc  "config/aarch64/aarch64.cc" 27123)
   nil )
  (!pair  "aarch64_sls_shared_thunks"
   (!type array 2389 nil  gc_used "30" 
    (!type already_seen 23)
   )
-  (!srcfileloc  "config/aarch64/aarch64.cc" 27060)
+  (!srcfileloc  "config/aarch64/aarch64.cc" 27122)
   nil )
  (!pair  "va_list_type"
   (!type already_seen 23)
-  (!srcfileloc  "config/aarch64/aarch64.cc" 19474)
+  (!srcfileloc  "config/aarch64/aarch64.cc" 19536)
   nil )
  (!pair  "aarch64_previous_fndecl"
   (!type already_seen 23)
-  (!srcfileloc  "config/aarch64/aarch64.cc" 18450)
+  (!srcfileloc  "config/aarch64/aarch64.cc" 18512)
   nil )
  (!pair  "tls_get_addr_libfunc"
   (!type already_seen 99)
@@ -37057,7 +37061,7 @@
   nil )
  (!pair  "stack_check_libfunc"
   (!type already_seen 99)
-  (!srcfileloc  "explow.cc" 1638)
+  (!srcfileloc  "explow.cc" 1643)
   nil )
  (!pair  "hard_reg_clobbers"
   (!type array 2392 nil  gc_used "NUM_MACHINE_MODES" 
@@ -37865,19 +37869,19 @@
   nil )
  (!pair  "aarch64_bf16_ptr_type_node"
   (!type already_seen 23)
-  (!srcfileloc  "config/aarch64/aarch64.h" 1323)
+  (!srcfileloc  "config/aarch64/aarch64.h" 1328)
   nil )
  (!pair  "aarch64_bf16_type_node"
   (!type already_seen 23)
-  (!srcfileloc  "config/aarch64/aarch64.h" 1322)
+  (!srcfileloc  "config/aarch64/aarch64.h" 1327)
   nil )
  (!pair  "aarch64_fp16_ptr_type_node"
   (!type already_seen 23)
-  (!srcfileloc  "config/aarch64/aarch64.h" 1318)
+  (!srcfileloc  "config/aarch64/aarch64.h" 1323)
   nil )
  (!pair  "aarch64_fp16_type_node"
   (!type already_seen 23)
-  (!srcfileloc  "config/aarch64/aarch64.h" 1317)
+  (!srcfileloc  "config/aarch64/aarch64.h" 1322)
   nil )
  (!pair  "saved_line_table"
   (!type already_seen 694)
