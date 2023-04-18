@@ -132,36 +132,44 @@
 .rm #[ #] #H #V #F C
 .\" ========================================================================
 .\"
-.IX Title "GPROFNG 1"
-.TH GPROFNG 1 "2023-04-17" "binutils-2.40.50" "User Commands"
+.IX Title "GPROFNG.1 1"
+.TH GPROFNG.1 1 "2023-04-18" "binutils-2.40.50" "User Commands"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
 .nh
 .SH "NAME"
-gprofng \- GNU gprofng
+gprofng \- The next generation GNU application profiling tool
 .SH "SYNOPSIS"
 .IX Header "SYNOPSIS"
-gprofng [\s-1OPTION\s0(S)] \s-1ACTION\s0 [\fB\s-1QUALIFIER\s0\fR] [\s-1ARGUMENTS\s0] \s-1TARGET\s0
+\&\fBgprofng\fR [\fIoption(s)\fR] \fIaction\fR [\fIqualifier\fR] [\fIoption(s)\fR] \fItarget\fR [\fIoptions\fR]
 .SH "DESCRIPTION"
 .IX Header "DESCRIPTION"
-This is the driver for the \s-1GPROFNG\s0 tools suite to gather and analyze performance data.
+This is the driver for the gprofng tools suite to gather and analyze performance
+data.
 .PP
-The driver executes the action specified. An example of an action is \f(CW\*(C`collect\*(C'\fR
-to collect performance data. Depending on the action, a qualifier may be needed to
-define the command. Several qualifiers support options. The last item on the command
-is the target the command applies to.
+The driver executes the \fIaction\fR specified. An example of an action is
+\&\fBcollect\fR to collect performance data. Depending on the action, a
+\&\fIqualifier\fR may be needed to further define the command.
+The last item is the \fItarget\fR that the command applies to.
 .PP
-For example, to collect performance data for an application called \f(CW\*(C`a.out\*(C'\fR and
-store the results in experiment directory \f(CW\*(C`mydata.er\*(C'\fR, the following command may
-be used:
+There are three places where options are supported.  The driver supports
+options.  These can be found below.  The \fIaction\fR, possibly in combination
+with the \fIqualifier\fR also supports options. A description of these can be
+found in the man page for the command.  Any options needed to execute the
+target command should follow the target name.
+.PP
+For example, to collect performance data for an application called
+\&\fBa.out\fR and store the results in experiment directory \fBmydata.er\fR,
+the following command may be used:
 .PP
 .Vb 1
-\&        $ gprofng collect app \-o mydata.er a.out
+\&        $ gprofng collect app \-o mydata.er a.out \-t 2
 .Ve
 .PP
-In this example, the action is \f(CW\*(C`collect\*(C'\fR, the qualifier is \f(CW\*(C`app\*(C'\fR, the single
-argument is \f(CW\*(C`\-o mydata.er\*(C'\fR and the target is \f(CW\*(C`a.out\*(C'\fR.
+In this example, the action is \fBcollect\fR, the qualifier is \fBapp\fR, the single
+argument to the command is \f(CW\*(C`\-o mydata.er\*(C'\fR and the target is \fBa.out\fR.
+The target command is invoked with the \fB\-t 2\fR option.
 .PP
 If gprofng is executed without any additional option, action, or target, a usage
 overview is printed.
@@ -169,96 +177,92 @@ overview is printed.
 .IX Header "OPTIONS"
 .IP "\fI\-\-version\fR" 4
 .IX Item "--version"
-print the version number and exit.
+Print the version number and exit.
 .IP "\fI\-\-help\fR" 4
 .IX Item "--help"
-print usage information and exit.
+Print usage information and exit.
 .SH "ENVIRONMENT"
 .IX Header "ENVIRONMENT"
 The following environment variables are supported:
-.ie n .IP """\fBGPROFNG_MAX_CALL_STACK_DEPTH\fP""" 4
-.el .IP "\f(CW\f(CBGPROFNG_MAX_CALL_STACK_DEPTH\f(CW\fR" 4
+.IP "\fB\s-1GPROFNG_MAX_CALL_STACK_DEPTH\s0\fR" 4
 .IX Item "GPROFNG_MAX_CALL_STACK_DEPTH"
-set the depth of the call stack (default is 256).
-.ie n .IP """\fBGPROFNG_USE_JAVA_OPTIONS\fP""" 4
-.el .IP "\f(CW\f(CBGPROFNG_USE_JAVA_OPTIONS\f(CW\fR" 4
+Set the depth of the call stack (default is 256).
+.IP "\fB\s-1GPROFNG_USE_JAVA_OPTIONS\s0\fR" 4
 .IX Item "GPROFNG_USE_JAVA_OPTIONS"
-may be set when profiling a C/\*(C+ application that uses \fBdlopen()\fR to execute Java code.
-.ie n .IP """\fBGPROFNG_SSH_REMOTE_DISPLAY\fP""" 4
-.el .IP "\f(CW\f(CBGPROFNG_SSH_REMOTE_DISPLAY\f(CW\fR" 4
-.IX Item "GPROFNG_SSH_REMOTE_DISPLAY"
-use this variable to define the ssh command executed by the remote display tool.
-.ie n .IP """\fBGPROFNG_SKIP_VALIDATION\fP""" 4
-.el .IP "\f(CW\f(CBGPROFNG_SKIP_VALIDATION\f(CW\fR" 4
-.IX Item "GPROFNG_SKIP_VALIDATION"
-set this variable to disable checking hardware, system, and Java versions.
-.ie n .IP """\fBGPROFNG_ALLOW_CORE_DUMP\fP""" 4
-.el .IP "\f(CW\f(CBGPROFNG_ALLOW_CORE_DUMP\f(CW\fR" 4
+May be set when profiling a C/\*(C+ application that uses \fBdlopen()\fR to execute
+Java code.
+.IP "\fB\s-1GPROFNG_ALLOW_CORE_DUMP\s0\fR" 4
 .IX Item "GPROFNG_ALLOW_CORE_DUMP"
-set this variable to allow a core file to be generated; otherwise an error report is created on /tmp.
-.ie n .IP """\fBGPROFNG_ARCHIVE\fP""" 4
-.el .IP "\f(CW\f(CBGPROFNG_ARCHIVE\f(CW\fR" 4
+Set this variable to allow a core file to be generated; otherwise an error
+report is created on /tmp.
+.IP "\fB\s-1GPROFNG_ARCHIVE\s0\fR" 4
 .IX Item "GPROFNG_ARCHIVE"
-use this variable to define the settings for automatic archiving upon experiment recording completion.
-.ie n .IP """\fBGPROFNG_ARCHIVE_COMMON_DIR\fP""" 4
-.el .IP "\f(CW\f(CBGPROFNG_ARCHIVE_COMMON_DIR\f(CW\fR" 4
+Use this variable to define the settings for automatic archiving upon experiment
+recording completion.
+.IP "\fB\s-1GPROFNG_ARCHIVE_COMMON_DIR\s0\fR" 4
 .IX Item "GPROFNG_ARCHIVE_COMMON_DIR"
-set this variable to the location of the common archive.
-.ie n .IP """\fBGPROFNG_JAVA_MAX_CALL_STACK_DEPTH\fP""" 4
-.el .IP "\f(CW\f(CBGPROFNG_JAVA_MAX_CALL_STACK_DEPTH\f(CW\fR" 4
+Set this variable to the location of the common archive.
+.IP "\fB\s-1GPROFNG_JAVA_MAX_CALL_STACK_DEPTH\s0\fR" 4
 .IX Item "GPROFNG_JAVA_MAX_CALL_STACK_DEPTH"
-set the depth of the Java call stack; the default is 256; set to 0 to disable capturing of call stacks.
-.ie n .IP """\fBGPROFNG_JAVA_NATIVE_MAX_CALL_STACK_DEPTH\fP""" 4
-.el .IP "\f(CW\f(CBGPROFNG_JAVA_NATIVE_MAX_CALL_STACK_DEPTH\f(CW\fR" 4
+Set the depth of the Java call stack; the default is 256; set to 0 to disable
+capturing of call stacks.
+.IP "\fB\s-1GPROFNG_JAVA_NATIVE_MAX_CALL_STACK_DEPTH\s0\fR" 4
 .IX Item "GPROFNG_JAVA_NATIVE_MAX_CALL_STACK_DEPTH"
-set the depth of the Java native call stack; the default is 256; set to 0 to disable capturing of call stacks (\s-1JNI\s0 and assembly call stacks are not captured).
+Set the depth of the Java native call stack; the default is 256; set to 0 to
+disable capturing of call stacks (\s-1JNI\s0 and assembly call stacks are not
+captured).
 .SH "NOTES"
 .IX Header "NOTES"
 The gprofng driver supports the following commands.
+\&\f(CW@vspace\fR{1}
 .PP
-Collect performance data:
+\&\fICollect performance data:\fR
 .ie n .IP """gprofng collect app""" 4
 .el .IP "\f(CWgprofng collect app\fR" 4
 .IX Item "gprofng collect app"
-collect application performance data.
+Collect application performance data.
 .PP
-Display the performance results:
+\&\fIDisplay the performance results:\fR
 .ie n .IP """gprofng display text""" 4
 .el .IP "\f(CWgprofng display text\fR" 4
 .IX Item "gprofng display text"
-display the performance data in \s-1ASCII\s0 format.
+Display the performance data in \s-1ASCII\s0 format.
 .ie n .IP """gprofng display html""" 4
 .el .IP "\f(CWgprofng display html\fR" 4
 .IX Item "gprofng display html"
-generate an \s-1HTML\s0 file from one or more experiments.
+Generate an \s-1HTML\s0 file from one or more experiments.
 .PP
-Miscellaneous commands:
+\&\fIMiscellaneous commands:\fR
 .ie n .IP """gprofng display src""" 4
 .el .IP "\f(CWgprofng display src\fR" 4
 .IX Item "gprofng display src"
-display source or disassembly with compiler annotations.
+Display source or disassembly with compiler annotations.
 .ie n .IP """gprofng archive""" 4
 .el .IP "\f(CWgprofng archive\fR" 4
 .IX Item "gprofng archive"
-include binaries and source code in an experiment directory.
+Include binaries and source code in an experiment directory.
 .PP
 It is also possible to invoke the lower level commands directly, but since
 these are subject to change, in particular the options, we recommend to
 use the driver.
 .SH "SEE ALSO"
 .IX Header "SEE ALSO"
-The man pages for the various gprofng commands are not available yet, but
-the \fB\-\-help\fR option supported on each of the commands lists the options
-and provides more information.
+\&\fBgp\-archive\fR\|(1), \fBgp\-collect\-app\fR\|(1), \fBgp\-display\-html\fR\|(1), \fBgp\-display\-src\fR\|(1),
+\&\fBgp\-display\-text\fR\|(1)
 .PP
-For example this displays the options supported on the \fBgprofng collect app\fR
-command:
+Each gprofng command also supports the \fB\-\-help\fR option. This lists the
+options and a short description for each option.
+.PP
+For example this displays the options supported on the
+\&\fBgprofng collect app\fR command:
 .PP
 .Vb 1
 \&        $ gprofng collect app \-\-help
 .Ve
 .PP
-The user guide is available as an Info entry for \fIgprofng\fR.
+The user guide for gprofng is maintained as a Texinfo manual.  If the
+\&\fBinfo\fR and \fBgprofng\fR programs are correctly installed, the
+command \fBinfo gprofng\fR should give access to this document.
 .SH "COPYRIGHT"
 .IX Header "COPYRIGHT"
 Copyright (c) 2022\-2023 Free Software Foundation, Inc.
