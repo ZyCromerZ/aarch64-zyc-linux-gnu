@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "12.2.1 20230427")
+(!version  "12.2.1 20230428")
 (!srcdir  "../../gcc/gcc")
 (!languages 10 ada c cp d fortran go jit lto objc objcp)
 (!fileslist 228 0
@@ -26121,16 +26121,16 @@
  (!type already_seen 1198)
  
  (!type struct 1795 nil  gc_unused "odr_name_hasher"
-  (!srcfileloc  "ipa-devirt.cc" 491)
+  (!srcfileloc  "ipa-devirt.cc" 504)
   (!fields 0 )
   nil 1023 nil nil )
  
  (!type user_struct 1796 nil  gc_unused "hash_table<odr_name_hasher>"
-  (!srcfileloc  "ipa-devirt.cc" 491)
+  (!srcfileloc  "ipa-devirt.cc" 504)
   (!fields 1 
    (!pair  "odr_name_hasher"
     (!type already_seen 1795)
-    (!srcfileloc  "ipa-devirt.cc" 491)
+    (!srcfileloc  "ipa-devirt.cc" 504)
     nil )
   )
  )
@@ -26140,15 +26140,15 @@
    (!type already_seen 1797)
   )
   gc_pointed_to "vec<odr_type,va_gc>"
-  (!srcfileloc  "ipa-devirt.cc" 498)
+  (!srcfileloc  "ipa-devirt.cc" 511)
   (!fields 2 
    (!pair  "va_gc"
     (!type already_seen 79)
-    (!srcfileloc  "ipa-devirt.cc" 498)
+    (!srcfileloc  "ipa-devirt.cc" 511)
     nil )
    (!pair  "odr_type"
     (!type already_seen 1197)
-    (!srcfileloc  "ipa-devirt.cc" 498)
+    (!srcfileloc  "ipa-devirt.cc" 511)
     nil )
   )
  )
@@ -26166,16 +26166,16 @@
   nil 0 nil nil )
  
  (!type struct 1802 nil  gc_unused "polymorphic_call_target_hasher"
-  (!srcfileloc  "ipa-devirt.cc" 2732)
+  (!srcfileloc  "ipa-devirt.cc" 2745)
   (!fields 0 )
   nil 1023 nil nil )
  
  (!type user_struct 1803 nil  gc_unused "hash_table<polymorphic_call_target_hasher>"
-  (!srcfileloc  "ipa-devirt.cc" 2732)
+  (!srcfileloc  "ipa-devirt.cc" 2745)
   (!fields 1 
    (!pair  "polymorphic_call_target_hasher"
     (!type already_seen 1802)
-    (!srcfileloc  "ipa-devirt.cc" 2732)
+    (!srcfileloc  "ipa-devirt.cc" 2745)
     nil )
   )
  )
@@ -31837,31 +31837,31 @@
   nil )
  (!pair  "polymorphic_call_target_hash_type"
   (!type already_seen 1803)
-  (!srcfileloc  "ipa-devirt.cc" 2733)
+  (!srcfileloc  "ipa-devirt.cc" 2746)
   nil )
  (!pair  "polymorphic_call_target_hasher"
   (!type already_seen 1802)
-  (!srcfileloc  "ipa-devirt.cc" 2732)
+  (!srcfileloc  "ipa-devirt.cc" 2745)
   nil )
  (!pair  "hash_table<polymorphic_call_target_hasher>"
   (!type already_seen 1803)
-  (!srcfileloc  "ipa-devirt.cc" 2732)
+  (!srcfileloc  "ipa-devirt.cc" 2745)
   nil )
  (!pair  "vec<odr_type,va_gc>"
   (!type already_seen 1797)
-  (!srcfileloc  "ipa-devirt.cc" 498)
+  (!srcfileloc  "ipa-devirt.cc" 511)
   nil )
  (!pair  "odr_hash_type"
   (!type already_seen 1796)
-  (!srcfileloc  "ipa-devirt.cc" 491)
+  (!srcfileloc  "ipa-devirt.cc" 504)
   nil )
  (!pair  "odr_name_hasher"
   (!type already_seen 1795)
-  (!srcfileloc  "ipa-devirt.cc" 491)
+  (!srcfileloc  "ipa-devirt.cc" 504)
   nil )
  (!pair  "hash_table<odr_name_hasher>"
   (!type already_seen 1796)
-  (!srcfileloc  "ipa-devirt.cc" 491)
+  (!srcfileloc  "ipa-devirt.cc" 504)
   nil )
  (!pair  "vec<odr_type>"
   (!type already_seen 1198)
@@ -36530,11 +36530,11 @@
   nil )
  (!pair  "odr_enums"
   (!type already_seen 84)
-  (!srcfileloc  "ipa-devirt.cc" 502)
+  (!srcfileloc  "ipa-devirt.cc" 515)
   nil )
  (!pair  "odr_types_ptr"
   (!type already_seen 1798)
-  (!srcfileloc  "ipa-devirt.cc" 498)
+  (!srcfileloc  "ipa-devirt.cc" 511)
   nil )
  (!pair  "ubsan_vptr_type_cache_decl"
   (!type already_seen 23)
