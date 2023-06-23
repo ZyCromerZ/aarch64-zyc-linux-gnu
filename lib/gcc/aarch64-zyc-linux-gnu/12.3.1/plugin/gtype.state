@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "12.3.1 20230622")
+(!version  "12.3.1 20230623")
 (!srcdir  "../../gcc/gcc")
 (!languages 10 ada c cp d fortran go jit lto objc objcp)
 (!fileslist 228 0
@@ -26262,11 +26262,11 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1817 nil  gc_unused "anonymous:../../gcc/gcc/config/aarch64/aarch64-builtins.cc:1565"nil 
+ (!type struct 1817 nil  gc_unused "anonymous:../../gcc/gcc/config/aarch64/aarch64-builtins.cc:1575"nil 
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1818 nil  gc_unused "anonymous:../../gcc/gcc/config/aarch64/aarch64-builtins.cc:1612"nil 
+ (!type struct 1818 nil  gc_unused "anonymous:../../gcc/gcc/config/aarch64/aarch64-builtins.cc:1622"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -31817,11 +31817,11 @@
   nil )
  (!pair  "builtin_simd_arg"
   (!type already_seen 2)
-  (!srcfileloc  "config/aarch64/aarch64-builtins.cc" 1824)
+  (!srcfileloc  "config/aarch64/aarch64-builtins.cc" 1838)
   nil )
  (!pair  "ls64_builtins_data"
   (!type already_seen 1818)
-  (!srcfileloc  "config/aarch64/aarch64-builtins.cc" 1616)
+  (!srcfileloc  "config/aarch64/aarch64-builtins.cc" 1626)
   nil )
  (!pair  "aarch64_fcmla_laneq_builtin_datum"
   (!type already_seen 1814)
@@ -36484,7 +36484,7 @@
   nil )
  (!pair  "ls64_arm_data_t"
   (!type already_seen 23)
-  (!srcfileloc  "config/aarch64/aarch64-builtins.cc" 1618)
+  (!srcfileloc  "config/aarch64/aarch64-builtins.cc" 1628)
   nil )
  (!pair  "aarch64_simd_intXI_type_node"
   (!type already_seen 23)
