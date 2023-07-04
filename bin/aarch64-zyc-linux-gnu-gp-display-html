@@ -173,7 +173,7 @@ my $thresh = 0;
 $driver_cmd       = "gprofng display html";
 $tool_name        = "gp-display-html";
 #$binutils_version = "2.38.50";
-$binutils_version = "2.40.50";
+$binutils_version = "2.41.50";
 $version_info     = $tool_name . " GNU binutils version " . $binutils_version;
 
 #-------------------------------------------------------------------------------
