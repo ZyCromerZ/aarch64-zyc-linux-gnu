@@ -141,9 +141,9 @@ SECTIONS
     SORT(CONSTRUCTORS)
   }
   .data1          : { *(.data1) }
-  PROVIDE (_edata = .); PROVIDE (edata = .);
+  PROVIDE (_edata =  . ); PROVIDE (edata =  . );
   . = .;
-  PROVIDE (__bss_start = .);
+  PROVIDE (__bss_start =  . );
   PROVIDE (__bss_start__ = .);
   .bss            :
   {
@@ -162,10 +162,10 @@ SECTIONS
   . = SEGMENT_START("ldata-segment", .);
   . = ALIGN(32 / 8);
   PROVIDE (__end__ = .);
-  PROVIDE (_end = .); PROVIDE (end = .);
+  PROVIDE (_end =  . ); PROVIDE (end =  . );
   .stack         0x80000 :
   {
-    _stack = .;
+    _stack =  . ;
     *(.stack)
   }
   /* Stabs debugging sections.  */
