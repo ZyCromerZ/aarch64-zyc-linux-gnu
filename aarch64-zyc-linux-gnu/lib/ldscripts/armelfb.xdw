@@ -114,29 +114,29 @@ SECTIONS
   /* Thread Local Storage sections  */
   .tdata	  :
    {
-     PROVIDE_HIDDEN (__tdata_start =  . );
+     PROVIDE_HIDDEN (__tdata_start = .);
      *(.tdata .tdata.* .gnu.linkonce.td.*)
    }
   .tbss		  : { *(.tbss .tbss.* .gnu.linkonce.tb.*) *(.tcommon) }
   .preinit_array    :
   {
-    PROVIDE_HIDDEN (__preinit_array_start =  . );
+    PROVIDE_HIDDEN (__preinit_array_start = .);
     KEEP (*(.preinit_array))
-    PROVIDE_HIDDEN (__preinit_array_end =  . );
+    PROVIDE_HIDDEN (__preinit_array_end = .);
   }
   .init_array    :
   {
-    PROVIDE_HIDDEN (__init_array_start =  . );
+    PROVIDE_HIDDEN (__init_array_start = .);
     KEEP (*(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*)))
     KEEP (*(.init_array EXCLUDE_FILE (*crtbegin.o *crtbegin?.o *crtend.o *crtend?.o ) .ctors))
-    PROVIDE_HIDDEN (__init_array_end =  . );
+    PROVIDE_HIDDEN (__init_array_end = .);
   }
   .fini_array    :
   {
-    PROVIDE_HIDDEN (__fini_array_start =  . );
+    PROVIDE_HIDDEN (__fini_array_start = .);
     KEEP (*(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*)))
     KEEP (*(.fini_array EXCLUDE_FILE (*crtbegin.o *crtbegin?.o *crtend.o *crtend?.o ) .dtors))
-    PROVIDE_HIDDEN (__fini_array_end =  . );
+    PROVIDE_HIDDEN (__fini_array_end = .);
   }
   .ctors          :
   {
@@ -178,19 +178,18 @@ SECTIONS
     SORT(CONSTRUCTORS)
   }
   .data1          : { *(.data1) }
-  _edata =  . ; PROVIDE (edata =  . );
+  _edata = .; PROVIDE (edata = .);
   /* This section contains data that is initialized during load,
      but not during the application's initialization sequence.  */
-  .persistent :
+  .persistent   : ALIGN(32 / 8)
   {
-    . = ALIGN(32 / 8);
     PROVIDE (__persistent_start = .);
     *(.persistent .persistent.* .gnu.linkonce.p.*)
     . = ALIGN(32 / 8);
     PROVIDE (__persistent_end = .);
   }
   . = .;
-  __bss_start =  . ;
+  __bss_start = .;
   __bss_start__ = .;
   .bss            :
   {
@@ -207,9 +206,8 @@ SECTIONS
   _bss_end__ = .; __bss_end__ = .;
   /* This section contains data that is not initialized during load,
      or during the application's initialization sequence.  */
-  .noinit (NOLOAD) :
+  .noinit   (NOLOAD) : ALIGN(32 / 8)
   {
-    . = ALIGN(32 / 8);
     PROVIDE (__noinit_start = .);
     *(.noinit .noinit.* .gnu.linkonce.n.*)
     . = ALIGN(32 / 8);
@@ -219,10 +217,10 @@ SECTIONS
   . = SEGMENT_START("ldata-segment", .);
   . = ALIGN(32 / 8);
   __end__ = .;
-  _end =  . ; PROVIDE (end =  . );
+  _end = .; PROVIDE (end = .);
   .stack         0x80000 :
   {
-    _stack =  . ;
+    _stack = .;
     *(.stack)
   }
   /* Stabs debugging sections.  */
