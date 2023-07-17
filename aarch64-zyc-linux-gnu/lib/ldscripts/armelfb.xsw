@@ -180,7 +180,7 @@ SECTIONS
     . = ALIGN(32 / 8);
     PROVIDE (__persistent_end = .);
   }
-  . = .;
+  . = ALIGN(ALIGNOF(NEXT_SECTION));
   PROVIDE (__bss_start = .);
   PROVIDE (__bss_start__ = .);
   .bss            :
