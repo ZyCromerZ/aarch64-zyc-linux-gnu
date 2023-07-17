@@ -192,7 +192,7 @@ SECTIONS
     . = ALIGN(32 / 8);
     PROVIDE (__persistent_end = .);
   }
-  . = .;
+  . = ALIGN(ALIGNOF(NEXT_SECTION));
   __bss_start = .;
   __bss_start__ = .;
   .bss            :
