@@ -1,0 +1,4 @@
+/* GNU ld script
+*/
+OUTPUT_FORMAT(elf64-littleaarch64)
+GROUP ( /__w/gcc-builder/gcc-builder/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/lib/libm-2.39.9000.a /__w/gcc-builder/gcc-builder/aarch64-zyc-linux-gnu/aarch64-zyc-linux-gnu/lib/libmvec.a )
